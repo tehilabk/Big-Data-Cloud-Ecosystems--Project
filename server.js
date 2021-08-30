@@ -11,10 +11,13 @@ app.set('view engine', 'ejs')
 app.get('/', (req, res) => {
   var data = {
     cards: [
-      {districtId:"haifa", title: "חיפה", value: 500, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "content_copy" },
-      {districtId:"dan", title: "דן", value: 1500, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "store" },
-      {districtId:"central", title: "מרכז", value: 3500, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "info_outline" },
-      {districtId:"south", title: "דרום", value: 700, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "add_shopping_cart" }
+      {districtId:"haifa", title: "HAIFA", value: 500, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "location_city" },
+      {districtId:"north", title: "NORTH", value: 1500, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "cloud_queue" },
+      {districtId:"central", title: "CENTRAL", value: 3500, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "time_to_leave" },
+      {districtId:"south", title: "SOUTH", value: 700, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "filter_hdr" },
+      {districtId:"jerusalem", title: "JERUSALEM", value: 1500, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "account_balance" },
+      {districtId:"tel-aviv", title: "TEL-AVIV", value: 3500, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "domain" },
+      {districtId:"west-bank", title: "WEST-BENK", value: 700, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "filter_b_and_w" }
     ]
   }
   res.render("pages/dashboard", data)

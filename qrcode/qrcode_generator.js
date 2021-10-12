@@ -1,13 +1,11 @@
 
 const QRCode = require('qrcode');
-let data = {
-    id: 1,
-    name: "User",
-    email: "user@gmail.com"
-};
-  
-let strData = JSON.stringify(data)
-
+module.exports = function qrcode_create(package_json)
+  {
+	let strData = JSON.stringify(package_json);
+	generateQR(strData);
+	return 1;
+  }
 const generateQR = async text => {
 	try {
 		await QRCode.toFile('./qrcode_corrent.png', text);
@@ -16,4 +14,3 @@ const generateQR = async text => {
 	}
 }
 
-generateQR(strData);

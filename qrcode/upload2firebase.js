@@ -1,11 +1,13 @@
 const {Storage} = require('@google-cloud/storage');
+const fileSystem = require("fs");
 const express = require("express");
-
+module.exports = function upload_firebase(key)
+{
 const app = new express();
 
 
 const storage = new Storage({
-    keyFilename: "qr-package-firebase-adminsdk-h96h8-39f11ec4bc.json",
+    keyFilename: "../qrcode/qr-package-firebase-adminsdk-h96h8-39f11ec4bc.json",
  });
 
 let bucketName = "gs://qr-package.appspot.com";
@@ -29,9 +31,11 @@ const uploadFile = async() => {
         },
 });
 
-console.log(`${filename} uploaded to ${bucketName}.`);
 }
 
 uploadFile();
 
 app.listen(process.env.PORT || 8088, () => { console.log('node server running');})
+
+return 1;
+}

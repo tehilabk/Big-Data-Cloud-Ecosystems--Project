@@ -6,11 +6,12 @@ var redisClient = redis.createClient();
 var sub = redis.createClient()
 
 // for explanations : https://www.sitepoint.com/using-redis-node-js/
-
+module.exports = function redis_update(package_json,key)
+{
 app.get('/test', function (req, res) {
 
     // Store string  
-    redisClient.set('counter', "12000", function (err, reply) {
+    redisClient.set(key, package_json, function (err, reply) {
         console.log(reply);
     });
 
@@ -31,4 +32,4 @@ redisClient.on('connect', function () {
 server.listen(6062, function () {
     console.log('Sender is running on port 6062');
 });
-
+}

@@ -1,4 +1,4 @@
-const simulator = require("../packge_simulator/simulator.js");
+const simulator = require("../package_simulator/simulator.js");
 const qrcode_gen = require("../qrcode/qrcode_generator.js");
 const firebase_up= require("../qrcode/upload2firebase");
 const redis = require("../redis/RedisForArielSender.js");

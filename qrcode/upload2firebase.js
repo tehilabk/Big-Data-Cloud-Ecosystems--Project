@@ -12,7 +12,7 @@ const storage = new Storage({
 
 let bucketName = "gs://qr-package.appspot.com";
 
-let filename = 'qrcode_corrent.png';
+let filename = '../qrcode/qrcode_corrent.png';
 
 // Testing out upload of file
 const uploadFile = async() => {

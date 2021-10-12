@@ -4,8 +4,8 @@ let cur_date = new Date();
 let corrent_package = {};
 var max_items = 10;
 var district = 7;
-let districts_data = fs.readFileSync('../packge_simulator/districts.json');
-let items_data = fs.readFileSync('../packge_simulator/package_items.json');
+let districts_data = fs.readFileSync('../package_simulator/districts.json');
+let items_data = fs.readFileSync('../package_simulator/package_items.json');
 let districts = JSON.parse(districts_data);
 let items = JSON.parse(items_data);
 function package_create () {
@@ -37,11 +37,22 @@ function get_track_number() { // get a uniqe number for the package tracking num
     return ("0" + cur_date.getDay() + cur_date.getMonth() + cur_date.getUTCFullYear() + cur_date.getMilliseconds() + cur_date.getSeconds() + cur_date.getMinutes() + cur_date.getHours());
 }
 function insert_items(num_item) { // insert items to the package 
+    let total_price = 0;
     corrent_package.itemes_list = [];
     for (let index = 0; index < num_item; index++) {
         let cur_index = Math.floor(Math.random() * items.length);
         corrent_package.itemes_list.push(items[cur_index]);
+        total_price = total_price + items[cur_index].price;
   }
+  if(total_price>75 && total_price < 500)
+  {
+     total_price = total_price + Math.floor(total_price*0.17);
+  }
+  else if (total_price > 499)
+  {
+    total_price = total_price + Math.floor(total_price*0.17) + Math.floor(total_price*0.182);
+    }
+    corrent_package.total_price = total_price;
 }
 function get_distract_and_address(district_num) { // get the district and random an address
     var address_num  = Math.floor(Math.random() * (district-1)) ;

@@ -8,7 +8,7 @@ module.exports = function qrcode_create(package_json)
   }
 const generateQR = async text => {
 	try {
-		await QRCode.toFile('./qrcode_corrent.png', text);
+		await QRCode.toFile('../qrcode/qrcode_corrent.png', text);
 	} catch(err){
 		console.log(err);
 	}

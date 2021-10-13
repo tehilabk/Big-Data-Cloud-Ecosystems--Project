@@ -5,6 +5,6 @@
     ports:
       - "6379:6379"
     expose:
-    	- 6379
+    	- 6062
     restart:
     	always

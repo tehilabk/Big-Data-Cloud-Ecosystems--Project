@@ -4,16 +4,18 @@ var server = require('http').Server(app);
 var redis = require('redis');
 var redisClient = redis.createClient();
 var sub = redis.createClient()
+var myobj;
 
 // for explanations : https://www.sitepoint.com/using-redis-node-js/
-module.exports = function redis_update(package_json,key)
+module.exports = function redis_update(package,key)
 {
 app.get('/test', function (req, res) {
-
+    myobj = JSON.parse(package);
     // Store string  
-    redisClient.set(key, package_json, function (err, reply) {
+    redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
         console.log(reply);
     });
+
 
     res.send('תקשרתי עם רדיס....')
 });

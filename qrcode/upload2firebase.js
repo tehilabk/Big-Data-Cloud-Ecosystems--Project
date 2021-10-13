@@ -1,7 +1,8 @@
 const {Storage} = require('@google-cloud/storage');
 const fileSystem = require("fs");
 const express = require("express");
-module.exports = function upload_firebase(key)
+const { number } = require('mathjs');
+module.exports = function upload_firebase(track_num)
 {
 const app = new express();
 
@@ -12,7 +13,7 @@ const storage = new Storage({
 
 let bucketName = "gs://qr-package.appspot.com";
 
-let filename = '../qrcode/qrcode_corrent.png';
+let filename = '../qrcode/' + track_num + '.png';
 
 // Testing out upload of file
 const uploadFile = async() => {

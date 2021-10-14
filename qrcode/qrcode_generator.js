@@ -7,7 +7,6 @@ module.exports = function qrcode_create(package_json,track_num)
 	 file_name = file_name + track_num + '.png';
 	let strData = JSON.stringify(package_json);
 	generateQR(strData);
-	return 1;
   }
 const generateQR = async text => {
 	try {

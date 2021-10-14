@@ -6,9 +6,9 @@ const fileSystem = require("fs");
 var pack = simulator.package_create();
 var json_pack = JSON.stringify(pack);
 console.log(pack.tracking_number);
-var ok0 = redis_func(json_pack,pack.tracking_number);
-var ok1 = qrcode_gen(json_pack,pack.tracking_number);
-var ok2 = firebase_up(pack.tracking_number);
+redis_func(json_pack,pack.tracking_number);
+qrcode_gen(json_pack,pack.tracking_number);
+firebase_up(pack.tracking_number);
 
 
 

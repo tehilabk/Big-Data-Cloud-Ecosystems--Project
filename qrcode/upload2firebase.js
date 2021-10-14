@@ -38,5 +38,4 @@ uploadFile();
 
 app.listen(process.env.PORT || 8088, () => { console.log('node server running');})
 
-return 1;
 }

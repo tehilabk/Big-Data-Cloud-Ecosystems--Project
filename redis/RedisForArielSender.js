@@ -3,22 +3,28 @@ var app = require('express')();
 var server = require('http').Server(app);
 var redis = require('redis');
 var redisClient = redis.createClient();
+var mongo = require("../mongodb/mongo_insert_data.js");
 var sub = redis.createClient()
 var myobj;
 
 // for explanations : https://www.sitepoint.com/using-redis-node-js/
-module.exports = function redis_update(package,key)
+module.exports = function redis_update(json_package,key)
 {
-app.get('/test', function (req, res) {
-    myobj = JSON.parse(package);
-    // Store string  
-    redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
-        console.log(reply);
-    });
+
+    
+        myobj = JSON.parse(json_package);
+        // Store string  
+        redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
+            console.log(reply);
+        });
+    
+    
+       
+
+    mongo(json_package);
 
 
-    res.send('תקשרתי עם רדיס....')
-});
+ 
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -34,4 +40,5 @@ redisClient.on('connect', function () {
 server.listen(6062, function () {
     console.log('Sender is running on port 6062');
 });
+
 }

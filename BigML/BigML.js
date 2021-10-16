@@ -1,5 +1,7 @@
 var bigml = require('bigml');
-var source = new bigml.Source();
+var connection = new bigml.BigML('TEHILABK123','d8379b7ff213c30f6d894078cc12f543bc9f5844')
+var source = new bigml.Source(connection);
+
 source.create('./data/iris.csv', function(error, sourceInfo) {
   if (!error && sourceInfo) {
     var dataset = new bigml.Dataset();

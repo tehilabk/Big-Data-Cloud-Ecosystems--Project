@@ -3,28 +3,18 @@ var app = require('express')();
 var server = require('http').Server(app);
 var redis = require('redis');
 var redisClient = redis.createClient();
-var mongo = require("../mongodb/mongo_insert_data.js");
+var mongo_up = require("../mongodb/mongoUpdateData.js");
 var sub = redis.createClient()
 var myobj;
 
 // for explanations : https://www.sitepoint.com/using-redis-node-js/
-module.exports = function redis_update(json_package,key)
+module.exports = function delete_key(key)
 {
-
-    
-        myobj = JSON.parse(json_package);
-        // Store string  
-        redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
+        redisClient.del(key, function (err, reply) {
             console.log(reply);
         });
-    
-    
-       
-
-    mongo(json_package);
-
-
- 
+mongo_up(key);
+     
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

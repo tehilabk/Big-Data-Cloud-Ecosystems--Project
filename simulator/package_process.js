@@ -1,7 +1,7 @@
-const simulator = require("../package_simulator/simulator.js");
-const qrcode_gen = require("../qrcode/qrcode_generator.js");
-const firebase_up= require("../qrcode/upload2firebase");
-const redis_func = require("../redis/RedisForArielSender.js");
+const simulator = require("../package_formation/createPackage.js");
+const qrcode_gen = require("../qrcode/qrcodeGenerator.js");
+const firebase_up= require("../qrcode/firebaseUpload.js");
+const redis_func = require("../redis/RedisUpdateData.js");
 const fileSystem = require("fs");
 var pack = simulator.package_create();
 var json_pack = JSON.stringify(pack);

@@ -2,11 +2,13 @@ var QrCode = require('qrcode-reader');
 var qr = new QrCode();
 
 var fs = require('fs');
+var Jimp = require("jimp");
 
-
- var Jimp = require("jimp");
  let file_name =  '04920211471101.png';
+module.exports = function upload_firebase(file_name)
+{
 var buffer = fs.readFileSync(__dirname + '/downloaded_qrcode/'+ file_name);
+
 Jimp.read(buffer, function(err, image) {
     if (err) {
         console.error(err);
@@ -18,8 +20,8 @@ Jimp.read(buffer, function(err, image) {
             console.error(err);
             // TODO handle error
         }
-        console.log(value.result);
-        console.log('-----------------------');
+       return value.result;
     };
     qr.decode(image.bitmap);
 });
+}

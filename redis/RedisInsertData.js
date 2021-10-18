@@ -8,37 +8,28 @@ var sub = redis.createClient()
 var myobj;
 
 // for explanations : https://www.sitepoint.com/using-redis-node-js/
-module.exports = function redis_update(json_package,key)
-{
+module.exports = async function redis_update(json_package, key) {
 
-    
-        myobj = JSON.parse(json_package);
-        // Store string  
-        redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
-            console.log(reply);
-        });
-    
-    
-       
+    myobj = JSON.parse(json_package);
+    // Store string  
+    await redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
+        console.log(reply);
+    });
 
-    mongo_in(json_package);
+   await mongo_in(json_package);
 
+    // catch 404 and forward to error handler
+    app.use(function (req, res, next) {
+        var err = new Error('Not Found');
+        err.status = 404;
+        next(err);
+    });
 
- 
-
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
-
-
-redisClient.on('connect', function () {
-    console.log('Sender connected to Redis');
-});
-server.listen(6062, function () {
-    console.log('Sender is running on port 6062');
-});
+    redisClient.on('connect', function () {
+        console.log('Sender connected to Redis');
+    });
+    server.listen(6062, function () {
+        console.log('Sender is running on port 6062');
+    });
 
 }

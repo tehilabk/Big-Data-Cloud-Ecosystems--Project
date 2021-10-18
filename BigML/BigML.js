@@ -3,7 +3,7 @@ var connection = new bigml.BigML('TEHILABK123','d8379b7ff213c30f6d894078cc12f543
 var source = new bigml.Source(connection);
 
 
-source.create('../BigML/item.csv', function(error, sourceInfo) {
+source.create('../BigML/items.csv', function(error, sourceInfo) {
   if (!error && sourceInfo) {
     var dataset = new bigml.Dataset();
     dataset.create(sourceInfo, function(error, datasetInfo) {

@@ -12,7 +12,15 @@ source.create('../BigML/items.csv', function(error, sourceInfo) {
         model.create(datasetInfo, function (error, modelInfo) {
           if (!error && modelInfo) {
             console.log(modelInfo)
-          //  console.log(datasetInfo)
+            
+            var model = new bigml.Model(connection);
+            model.get(modelInfo.resource,
+                      true,
+                      'only_model=true;limit=-1',
+                      function (error, resource) {
+                if (!error && resource) {
+                  console.log(JSON.stringify(resource, null, "  "));        }
+              })
           }
         });
       }
@@ -20,11 +28,4 @@ source.create('../BigML/items.csv', function(error, sourceInfo) {
   }
 });
 
-    var model = new bigml.Model(connection);
-    model.get('association/616d9ed627dc9b12d7053845',
-              true,
-              'only_model=true;limit=-1',
-              function (error, resource) {
-        if (!error && resource) {
-          console.log(JSON.stringify(resource, null, "  "));        }
-      })
+   

@@ -28,33 +28,33 @@ The above copyright notice and this permission notice shall be included in all c
     <!--ariel ws -->
 </head>
 
-<body class="" onload="setWs()">
-  <div class="wrapper ">
-    <%- include("../partials/sidebar") %>
-      <div class="main-panel">
-        <%- include("../partials/navbar") %>
-          <div class="content">
-            <div class="container-fluid">
-              <div class="row">
-                <!--start-->
-                <% cards.forEach(function(card) { %>
-                  <%- include("../partials/card",card) %>
-                    <% }); %>
-                      <!--end-->
-              </div>
-              <div class="row">
-                <%- include("../partials/graphs") %>
-              </div>
-              <div class="row">
-                <%- include("../partials/taskscard") %>
-                  <%- include("../partials/employeeslist") %>
+  <body class="" onload="setWs()">
+    <div class="wrapper ">
+      <%- include("../partials/sidebar") %>
+        <div class="main-panel">
+          <%- include("../partials/navbar") %>
+            <div class="content">
+              <div class="container-fluid">
+                <div class="row">
+                  <!--start-->
+                  <% cards.forEach(function(card) { %>
+                    <%- include("../partials/card",card) %>
+                      <% }); %>
+                        <!--end-->
+                </div>
+                <div class="row">
+                  <%- include("../partials/graph2") %>
+                  
+                 
+                </div>
+                
               </div>
             </div>
-          </div>
-          <%- include("../partials/footer") %>
-      </div>
-  </div>
-  <%- include("../partials/dashcode") %>
-</body>
+            <%- include("../partials/footer") %>
+        </div>
+    </div>
+    <%- include("../partials/dashcode") %>
+     
+  </body>
 
 </html>

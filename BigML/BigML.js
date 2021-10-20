@@ -11,9 +11,9 @@ source.create('../BigML/items.csv', function(error, sourceInfo) {
         var model = new bigml.Association(connection);
         model.create(datasetInfo, function (error, modelInfo) {
           if (!error && modelInfo) {
-            console.log(modelInfo)
+            // console.log(modelInfo)
             
-            var model = new bigml.Model(connection);
+            // var model = new bigml.Model(connection);
             model.get(modelInfo.resource,
                       true,
                       'only_model=true;limit=-1',
@@ -27,5 +27,3 @@ source.create('../BigML/items.csv', function(error, sourceInfo) {
     });
   }
 });
-
-   

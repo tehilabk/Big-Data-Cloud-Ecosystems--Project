@@ -1,4 +1,4 @@
-# Tracking shipments simulator
+# Tracking Shipments Simulator
 
 
 ![image](https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/diagram.PNG)

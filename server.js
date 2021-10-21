@@ -18,15 +18,33 @@ app.get('/', (req, res) => {
       {districtId:"jerusalem", title: "JERUSALEM", value: 1500, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "account_balance" },
       {districtId:"tel-aviv", title: "TEL-AVIV", value: 3500, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "domain" },
       {districtId:"west-bank", title: "WEST-BENK", value: 700, unit: "חבילות", fotterIcon: "", fotterText: "נפח ממוצע", icon: "filter_b_and_w" }
+    ],
+    sizes:[{title:'center',small:5,medium:8,large:50},
+    {title:'north',small:5,medium:8,large:50},
+    {title:'south',small:5,medium:8,large:50},
+    {title:'hifa',small:5,medium:8,large:50},
+    {title:'jerusalem',small:5,medium:8,large:50},
+    {title:'tel-aviv',small:5,medium:8,large:50},
+    {title:'west-bank',small:5,medium:8,large:50},
+    
     ]
   }
   res.render("pages/dashboard", data)
+  
 })
+
+app.get('/statistics', (req, res) => {
+  res.render('public/statistics');
+ });
+
+
+
 
 app.get('/setData/:districtId/:value', function (req, res) {
   io.emit('newdata',{districtId:req.params.districtId,value:req.params.value})
   res.send(req.params.value)
 })
+
 
 
 const server = express()

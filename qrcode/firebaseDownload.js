@@ -14,39 +14,52 @@ module.exports = async function get_all_files() {
   // directory path
   const dir = '../qrcode/downloaded_qrcode';
   // Testing out upload of file
-  const get_all_files = async () => {
+ async function deliv_process() {
 
-    try {
-     await fs.rmdirSync(dir, { recursive: true });
-    } catch (err) {
-      console.error(`Error while deleting ${dir}.`);
+  try{
+    await delte_dir(dir);}
+    catch
+    {
+      console.log("cant delete dir")
     }
-   await fs.mkdir(dir, function (err) {
-      if (err) {
-        console.log(err)
-      }
-    });
+    try{
+    await create_dir(dir);}
+    catch
+    {
+      console.log("cant delete dir")
+    }
 
     const [files] = await storage.bucket(bucketName).getFiles();
     files.forEach(file => {
       let file_name = file.name;
       let destFilename = '../qrcode/downloaded_qrcode/' + file_name;
       let options = { destination: destFilename, };
-     await storage.bucket(bucketName).file(file_name).download(options);
-      let myobj = qrcode_read(file_name);
-      let key_name = myobj.tracking_number;
+      storage.bucket(bucketName).file(file_name).download(options);
+      qrcode_read(file_name);
+      key_name = file_name.replace(".png","");
       redis_del(key_name);
-     await storage.bucket(bucketName).file(file_name).delete();
+      storage.bucket(bucketName).file(file_name).delete();
 
     });
 
-
-
-
   }
 
-  get_all_files().catch(console.error);
+  await deliv_process();
 
   app.listen(process.env.PORT || 8088, () => { console.log('node server running'); })
 
+}
+async function delte_dir(dir) {
+  try {
+    await fs.rmdirSync(dir, { recursive: true });
+  } catch (err) {
+    console.error(`Error while deleting ${dir}.`);
+  }
+}
+async function create_dir(dir) {
+  await fs.mkdir(dir, function (err) {
+    if (err) {
+      console.log(err)
+    }
+  });
 }

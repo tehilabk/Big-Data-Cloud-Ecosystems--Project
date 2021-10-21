@@ -2,7 +2,7 @@ const { Storage } = require('@google-cloud/storage');
 const fileSystem = require("fs");
 const express = require("express");
 const { number } = require('mathjs');
-module.exports = function upload_firebase(track_num) {
+module.exports =async function upload_firebase(track_num) {
     const app = new express();
 
 
@@ -33,7 +33,7 @@ module.exports = function upload_firebase(track_num) {
 
     }
 
-    uploadFile();
+   await uploadFile();
 
     app.listen(process.env.PORT || 8088, () => { console.log('node server running'); })
 

@@ -12,7 +12,7 @@ module.exports = async function redis_update(json_package, key) {
 
     myobj = JSON.parse(json_package);
     // Store string  
-    await redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
+     redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
         console.log(reply);
     });
 

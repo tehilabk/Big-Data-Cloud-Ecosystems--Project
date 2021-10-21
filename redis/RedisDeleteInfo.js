@@ -9,10 +9,10 @@ var myobj;
 
 // for explanations : https://www.sitepoint.com/using-redis-node-js/
 module.exports = async function delete_key(key) {
-    await redisClient.del(key, function (err, reply) {
+     redisClient.del(key, function (err, reply) {
         console.log(reply);
     });
-    mongo_up(key);
+   await mongo_up(key);
 
     // catch 404 and forward to error handler
     app.use(function (req, res, next) {

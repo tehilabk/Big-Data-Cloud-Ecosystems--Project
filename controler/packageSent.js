@@ -1,10 +1,9 @@
-const package_run = require('../simulator/package_process.js');
-async function sent_packages()
-{
- await package_run();
-}
+const package_run = require('../controler/package_process.js');
+
+
 for (let index = 0; index < 10; index++) {
-   sent_packages();
+ package_run.run_package();
+}
    
-} 
+
    

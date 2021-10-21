@@ -1,4 +1,5 @@
 var bigml = require('bigml');
+var fs = require('fs');
 var connection = new bigml.BigML('tehilabk123','d8379b7ff213c30f6d894078cc12f543bc9f5844')
 var source = new bigml.Source(connection);
 
@@ -19,6 +20,7 @@ source.create('../BigML/items.csv', function(error, sourceInfo) {
                       'only_model=true;limit=-1',
                       function (error, resource) {
                 if (!error && resource) {
+                  fs.writeFileSync('../BigML/dataset.json', JSON.stringify(resource));
                   console.log(JSON.stringify(resource, null, "  "));        }
               })
           }

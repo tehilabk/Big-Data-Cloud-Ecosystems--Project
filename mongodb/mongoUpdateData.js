@@ -9,10 +9,11 @@ MongoClient.connect(url, function(err, db) {
     var dbo = db.db(db_name);
     var myquery = { tracking_number: key };
     var newvalues = { $set: {received:1} };
-    await dbo.collection(collection_name).updateOne(myquery, newvalues, function(err, res) {
-      if (err) throw err;
-      console.log("document updated");
-      db.close();
-    });
+    dbo.collection(collection_name).updateOne(myquery, newvalues, function (err, res) {
+    if (err)
+      throw err;
+    console.log("document updated");
+    db.close();
+  });
   });
 }

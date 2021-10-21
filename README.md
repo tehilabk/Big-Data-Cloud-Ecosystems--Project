@@ -2,7 +2,7 @@
 ## Final Project in Big Data course
 
 
-![image] (https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/diagram.PNG)
+![image](https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/diagram.PNG)
 
 
 

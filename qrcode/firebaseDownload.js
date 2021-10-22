@@ -1,11 +1,15 @@
 const { Storage } = require('@google-cloud/storage');
-const fileSystem = require("fs");
-const express = require("express");
+const fs = require("fs");
+// const express = require("express");
+var app = require('express')();
 const { number } = require('mathjs');
+const { nextTick } = require('process');
+var server = require('http').Server(app);
 const qrcode_read = require("../qrcode/qrcodeReader.js");
 const redis_del = require("../redis/RedisDeleteInfo.js");
-module.exports = async function get_all_files() {
-  const app = new express();
+// module.exports = async
+var key;
+function get_all_files() {
   const storage = new Storage({
     keyFilename: "../qrcode/qr-package-firebase-adminsdk-h96h8-39f11ec4bc.json",
   });
@@ -14,52 +18,55 @@ module.exports = async function get_all_files() {
   // directory path
   const dir = '../qrcode/downloaded_qrcode';
   // Testing out upload of file
- async function deliv_process() {
+  async function deliv_process() {
 
-  try{
-    await delte_dir(dir);}
-    catch
-    {
-      console.log("cant delete dir")
+    try {
+      await delte_dir(dir);
+      await create_dir(dir);
+
+      const [files] = await storage.bucket(bucketName).getFiles();
+      await Promise.all(files.map(async (file) => {
+        let file_name = file.name;
+        let destFilename = '../qrcode/downloaded_qrcode/' + file_name;
+        let options = { destination: destFilename, };
+        await storage.bucket(bucketName).file(file_name).download(options);
+        // var key = file_name.replace('.png', '');
+        await read_key(file_name);
+        await storage.bucket(bucketName).file(file_name).delete();
+        await redis_del(key);
+
+      }))
     }
-    try{
-    await create_dir(dir);}
-    catch
-    {
-      console.log("cant delete dir")
+    catch {
+      nextTick(err);
     }
-
-    const [files] = await storage.bucket(bucketName).getFiles();
-    files.forEach(file => {
-      let file_name = file.name;
-      let destFilename = '../qrcode/downloaded_qrcode/' + file_name;
-      let options = { destination: destFilename, };
-      storage.bucket(bucketName).file(file_name).download(options);
-      qrcode_read(file_name);
-      key_name = file_name.replace(".png","");
-      redis_del(key_name);
-      storage.bucket(bucketName).file(file_name).delete();
-
-    });
 
   }
 
-  await deliv_process();
+  deliv_process();
 
-  app.listen(process.env.PORT || 8088, () => { console.log('node server running'); })
+  // app.listen(process.env.PORT || 8088, () => { console.log('node server running'); })
+
 
 }
+get_all_files();
+server.listen(8089, function () {
+  console.log('firebase is running on port 8089');
+});
 async function delte_dir(dir) {
   try {
-    await fs.rmdirSync(dir, { recursive: true });
+    fs.rmdirSync(dir, { recursive: true });
   } catch (err) {
     console.error(`Error while deleting ${dir}.`);
   }
 }
 async function create_dir(dir) {
-  await fs.mkdir(dir, function (err) {
+  fs.mkdir(dir, function (err) {
     if (err) {
       console.log(err)
     }
   });
+}
+async function read_key(file_name) {
+  key = await qrcode_read.do_all(file_name);
 }

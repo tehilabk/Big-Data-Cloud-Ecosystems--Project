@@ -1,9 +1,11 @@
 const { Storage } = require('@google-cloud/storage');
 const fileSystem = require("fs");
-const express = require("express");
+// const express = require("express");
+var app = require('express')();
 const { number } = require('mathjs');
+var server = require('http').Server(app);
 module.exports =async function upload_firebase(track_num) {
-    const app = new express();
+    // const app = new express();
 
 
     const storage = new Storage({
@@ -20,7 +22,6 @@ module.exports =async function upload_firebase(track_num) {
         // Uploads a local file to the bucket
         await storage.bucket(bucketName).upload(filename, {
             // Support for HTTP requests made with `Accept-Encoding: gzip`
-
             // By setting the option `destination`, you can change the name of the
             // object you are uploading to a bucket.
             metadata: {
@@ -34,7 +35,10 @@ module.exports =async function upload_firebase(track_num) {
     }
 
    await uploadFile();
-
-    app.listen(process.env.PORT || 8088, () => { console.log('node server running'); })
-
 }
+   server.listen(8088, function () {
+    console.log('firebase is running on port 8088');
+});
+
+    // app.listen(process.env.PORT || 8088, () => { console.log('node server running'); })
+

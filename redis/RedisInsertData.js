@@ -3,7 +3,8 @@ var app = require('express')();
 var server = require('http').Server(app);
 var redis = require('redis');
 var redisClient = redis.createClient();
-var mongo_in = require("../mongodb/mongoInsertData.js");
+// var mongo_in = require("../mongodb/mongoInsertData.js");
+
 var sub = redis.createClient()
 var myobj;
 
@@ -12,12 +13,22 @@ module.exports = async function redis_update(json_package, key) {
 
     myobj = JSON.parse(json_package);
     // Store string  
+    redisClient.publish("insert", json_package, function (err){
+        if(err){
+            console.log(err);
+        } 
+        else 
+        console.log('published')
+    });
      redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
         console.log(reply);
     });
+    
+    
+    
 
-   await mongo_in(json_package);
-
+  
+}
     // catch 404 and forward to error handler
     app.use(function (req, res, next) {
         var err = new Error('Not Found');
@@ -32,4 +43,3 @@ module.exports = async function redis_update(json_package, key) {
         console.log('Sender is running on port 6062');
     });
 
-}

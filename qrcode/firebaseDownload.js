@@ -30,7 +30,7 @@ function get_all_files() {
         let destFilename = '../qrcode/downloaded_qrcode/' + file_name;
         let options = { destination: destFilename, };
         await storage.bucket(bucketName).file(file_name).download(options);
-        // var key = file_name.replace('.png', '');
+        var key = file_name.replace('.png','');
         await read_key(file_name);
         await storage.bucket(bucketName).file(file_name).delete();
         await redis_del(key);

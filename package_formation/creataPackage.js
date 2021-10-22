@@ -51,9 +51,14 @@ function insert_items(num_item) { // insert items to the package
       }
       if (total_price > 75 && total_price < 500) {
         total_price = total_price + Math.floor(total_price * 0.17);
+        corrent_package.tax_tag = 1;
       }
       else if (total_price > 499) {
         total_price = total_price + Math.floor(total_price * 0.17) + Math.floor(total_price * 0.182);
+        corrent_package.tax_tag = 2;
+      }
+      else{
+        corrent_package.tax_tag = 0;
       }
       corrent_package.total_price = total_price;
     }

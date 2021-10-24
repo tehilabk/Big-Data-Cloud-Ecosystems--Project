@@ -6,9 +6,9 @@ const { number } = require('mathjs');
 const { nextTick } = require('process');
 var server = require('http').Server(app);
 const qrcode_read = require("../qrcode/qrcodeReader.js");
-const redis_del = require("../redis/RedisDeleteInfo.js");
+const redis_func = require("../redis/RedisDeleteInfo.js");
+
 // module.exports = async
-var key;
 function get_all_files() {
   const storage = new Storage({
     keyFilename: "../qrcode/qr-package-firebase-adminsdk-h96h8-39f11ec4bc.json",
@@ -30,12 +30,12 @@ function get_all_files() {
         let destFilename = '../qrcode/downloaded_qrcode/' + file_name;
         let options = { destination: destFilename, };
         await storage.bucket(bucketName).file(file_name).download(options);
-        var key = file_name.replace('.png','');
-        await read_key(file_name);
+         var key = await read_key(file_name);
         await storage.bucket(bucketName).file(file_name).delete();
-        await redis_del(key);
+        await redis_func.delete_key(key);
 
-      }))
+      }));
+      await redis_func.delete_key();
     }
     catch {
       nextTick(err);
@@ -68,5 +68,13 @@ async function create_dir(dir) {
   });
 }
 async function read_key(file_name) {
-  key = await qrcode_read.do_all(file_name);
+  return file_name.replace('.png', '');
+  try {
+  await qrcode_read.do_all(file_name);
+  }
+  catch
+  {
+    console.log("qr code read")
+  }
 }
+

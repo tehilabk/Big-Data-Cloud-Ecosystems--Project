@@ -6,6 +6,7 @@ var redisClient = redis.createClient();
 var sub = redis.createClient()
 var mongo_in = require("../mongodb/mongoInsertData.js");
 var mongo_up = require("../mongodb/mongoUpdateData.js");
+// var viewUpdate = require("../server.js");
 
 var package_per_dis = [
     Tel_Aviv = 0, Haifa = 0, Jerusalem = 0, West_Bank = 0, Central = 0, South = 0, North = 0
@@ -41,20 +42,24 @@ module.exports = async function reciv_data() {
     });
 
     ;
-    redisClient.on("message", function (channel, json_package) {
+    redisClient.on("message", async function (channel, json_package) {
         if (channel == "insert") {
             mongo_in(json_package);
-            const pack_obj = JSON.parse(json);
+            var pack_obj = JSON.parse(json_package);
             var district_loc = await get_district(pack_obj.district);
             var size_loc = await get_pack_size(pack_obj.items_list.length);
             var tax_loc = pack_obj.tax_tag;
             package_per_dis[district_loc]++;
             district_size[district_loc][size_loc]++;
             district_tax[district_loc][tax_loc]++;
-            
+            // viewUpdate.view_function(package_per_dis,district_size,district_tax);
+            console.log("mongo insert")
         }
-        else {
+        else if(channel == "update"){
             mongo_up(key);
+            console.log("mongo update");
+        }
+        else{
           for (let i = 0; i <  package_per_dis.length; i++) {
             package_per_dis[i] = 0;
             for (let j = 0; j < district_size[i].length; j++) {
@@ -64,8 +69,9 @@ module.exports = async function reciv_data() {
                 district_tax[i][j] = 0;
             } 
           }
+         
         }
-        console.log("mongo insert")
+       
     });
 }
 
@@ -80,7 +86,7 @@ server.listen(6061, function () {
 
 async function get_district(district_name) {
     var district;
-    switch (pack_obj.district) {
+    switch (district_name) {
         case "Tel Aviv":
             district = 0;
             break;

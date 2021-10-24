@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include("../partials/headers") %>
+    <!--ariel ws-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect();
+      function setWs() {
+        socket.on('newdata', function (msg) {
+          var element = document.getElementById(msg.districtId);
+          element.innerText = msg.value;
+        })
+      }
+    </script>
+    <!--ariel ws -->
+</head>
+
+<body class="" onload="setWs()" style="background-color:rgb(201, 178, 177);">
+  <div class="wrapper ">
+    <%- include("../partials/sidebar") %>
+
+
+      <div class="main-panel">
+
+
+        <div class="content">
+          <div>
+            <%- include("../partials/bigmlTable") %>
+          </div>
+        </div>
+ 
+        <button id="btn">
+          update data
+        </button>
+
+      </div>
+  </div>
+  <%- include("../partials/dashcode") %>
+    table
+
+    <script type="text/javascript"> 
+      $("#btn").click(function(){
+        location.reload(true);
+      });
+  </script> 
+
+
+</body>
+
+</html>

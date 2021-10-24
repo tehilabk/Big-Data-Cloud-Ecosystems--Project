@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <%- include("../partials/headers") %>
+    <!--ariel ws-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+     function headphone(name,price,path){
+       
+
+     }
+      
+    </script>
+    <!--ariel ws -->
+</head>
+
+  <body class="" onload="setWs()"style="background-color:rgb(201, 178, 177);">
+    <div class="wrapper ">
+      <%- include("../partials/sidebar") %>
+        <div class="main-panel">
+          
+            <div class="content">
+                
+                <h1 style="color:rgb(3, 3, 3);">list of the products you can order</h1>
+                <template>
+                <div class="row" style="margin-top:50px" >
+
+                    <b style="color:rgb(218, 224, 224); "> <var>name</var> <br> <var>price</var> </b>
+                    <div style="position:absolute; width:20%; height:100%;">
+                    <img src= <var>path</var> style= "float:right";  width="128" height="128" >
+                    </div>
+
+                </template>
+
+        
+              
+
+
+            </div>
+           
+        </div>
+    </div>
+    <%- include("../partials/dashcode") %>
+
+    
+      
+
+    
+     
+  </body>
+
+</html>

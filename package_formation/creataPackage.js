@@ -43,10 +43,10 @@ async function package_Simulator() {
 }
 function insert_items(num_item) { // insert items to the package 
       let total_price = 0;
-      corrent_package.itemes_list = [];
+      corrent_package.items_list = [];
       for (let index = 0; index < num_item; index++) {
         let cur_index = Math.floor(Math.random() * items.length);
-        corrent_package.itemes_list.push(items[cur_index]);
+        corrent_package.items_list.push(items[cur_index]);
         total_price = total_price + items[cur_index].price;
       }
       if (total_price > 75 && total_price < 500) {

@@ -1,133 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
-</style>
-<body>
+<html>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Packages<br>Delivery</b></h3>
+<head>
+  <%- include("../partials/headers") %>
+    <!--ariel ws-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect();
+      function setWs() {
+        socket.on('newdata', function (msg) {
+          var element = document.getElementById(msg.districtId);
+          element.innerText = msg.value;
+        })
+      }
+
+     
+    </script>
+    <!--ariel ws -->
+</head>
+
+<body class="" onload="setWs()" style="background-color:rgb(201, 178, 177);">
+  <div class="wrapper ">
+    <%- include("../partials/sidebar") %>
+
+
+      <div class="main-panel">
+
+
+        <div class="content">
+          <header>
+            <h1>General information about the packages </h1>
+            <p>in this page you can view data about all the packages that has been order </p>
+          </header>
+          <div>
+            <%- include("../partials/statisticsGraph") %>
+          </div>
+        </div>
+
+        <button id="btn">
+          update data
+        </button>
+
+      </div>
   </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Informations</a> 
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Statistics</a> 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Recomendations</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Products</a> 
-   
-  </div>
-</nav>
+  <%- include("../partials/dashcode") %>
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-  <span>Company Name</span>
-</header>
+  <script type="text/javascript"> 
+    $("#btn").click(function(){
+      location.reload(true);
+    });
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>Interior Design</b></h1>
-    
- 
+</script> 
 
 
-
-
-
-  <!--hifa -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Hifa district.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">  
-        
-
-
-  </div>
-  
-
- 
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
-
-
-
-     <!-- Packages / Pricing Tables -->
-  <div class="w3-container" id="packages" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-half w3-margin-bottom">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">district</li>
-        <li class="w3-padding-16">HIFA</li>
-        <li class="w3-padding-16">NORTH</li>
-        <li class="w3-padding-16">CENTRAL</li>
-        <li class="w3-padding-16">SOUTH</li>
-        <li class="w3-padding-16">JERUSALEM</li>
-        <li class="w3-padding-16">TEL-AVIV</li>
-        <li class="w3-padding-16">WEST-BENK</li>
-        </ul>
-    </div>
-        
-    <div class="w3-half">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-red w3-xlarge w3-padding-32">num of packages</li>
-        <li class="w3-padding-16">1</li>
-        <li class="w3-padding-16">50</li>
-        <li class="w3-padding-16">80</li>
-        <li class="w3-padding-16">50</li>
-        <li class="w3-padding-16">40</li>
-        <li class="w3-padding-16">40</li>
-        <li class="w3-padding-16">40</li>
-      </ul>
-    </div>
-  </div>
-  
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-  
-
-
-
-</script>
 
 </body>
+
 </html>

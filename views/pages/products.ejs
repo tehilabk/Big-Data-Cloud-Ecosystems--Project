@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <%- include("../partials/headers") %>
+    <!--ariel ws-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect();
+      function setWs() {
+        socket.on('newdata', function (msg) {
+          var element = document.getElementById(msg.districtId);
+          element.innerText = msg.value;
+        })
+      }
+    </script>
+    <!--ariel ws -->
+</head>
+
+  <body class="" onload="setWs()"style="background-color:rgb(201, 178, 177);">
+    <div class="wrapper ">
+      <%- include("../partials/sidebar") %>
+        <div class="main-panel">
+          
+            <div class="content">
+                
+                <h1 style="color:rgb(3, 3, 3);">list of the products you can order</h1>
+                <div class="row" style="margin-top:50px" >
+
+                    <b style="color:rgb(218, 224, 224); "> Headphone <br>  price:10 </b>
+                    <div style="position:absolute; width:20%; height:100%;">
+                    <img src="/images/headphone.jfif" style= "float:right";  width="128" height="128" >
+                    </div>
+
+        
+                </div>
+                <div class="row" style="margin-top:150px">
+                    <b style="color:rgb(218, 224, 224);"> smartwatch <br>  price:30 </b>
+                    <div style="position:absolute; width:20%; height:100%;">
+                    <img src="/images/watch.png" style= "float:right";  width="128" height="128" >
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:150px">
+                    <b style="color:rgb(218, 224, 224);"> phone <br>  price:100 </b>
+                    <div style="position:absolute; width:20%; height:100%;">
+                    <img src="/images/phone.jfif" style= "float:right";  width="128" height="128" >
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:150px">
+                    <b style="color:rgb(218, 224, 224);"> Keyboard <br>  price:5 </b>
+                    <div style="position:absolute; width:20%; height:100%;">
+                    <img src="/images/keyboard.jfif" style= "float:right";  width="128" height="128" >
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:150px">
+                    <b style="color:rgb(218, 224, 224);"> Earphone <br>  price:7 </b>
+                    <div style="position:absolute; width:20%; height:100%;">
+                    <img src="/images/earphone.jfif" style= "float:right";  width="128" height="128" >
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:150px">
+                    <b style="color:rgb(218, 224, 224);"> Tablet <br>  price:90 </b>
+                    <div style="position:absolute; width:20%; height:100%;">
+                    <img src="/images/tablet.jfif" style= "float:right";  width="128" height="128" >
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:150px">
+                    <b style="color:rgb(218, 224, 224);"> Computer <br>  price:85 </b>
+                    <div style="position:absolute; width:20%; height:100%;">
+                    <img src="/images/tablet.jfif" style= "float:right";  width="128" height="128" >
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:150px">
+                    <b style="color:rgb(218, 224, 224);"> Computer <br>  price:85 </b>
+                    <div style="position:absolute; width:20%; height:100%;">
+                    <img src="/images/tablet.jfif" style= "float:right";  width="128" height="128" >
+                    </div>
+                </div>
+
+            </div>
+           
+        </div>
+    </div>
+    <%- include("../partials/dashcode") %>
+
+    
+      
+
+    
+     
+  </body>
+
+</html>

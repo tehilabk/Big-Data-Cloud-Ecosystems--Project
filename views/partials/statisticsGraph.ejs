@@ -1,0 +1,146 @@
+<html>
+
+<head>
+
+
+    <span>
+        <% var small=size[0].value; %>
+    </span>
+    <span>
+        <% var medium=size[1].value; %>
+    </span>
+    <span>
+        <% var large=size[2].value; %>
+    </span>
+
+
+    <span>
+        <% var tel_aviv=dis[5].value; %>
+    </span>
+    <span>
+        <% var hifa=dis[0].value; %>
+    </span>
+    <span>
+        <% var jerusalem=dis[4].value; %>
+    </span>
+    <span>
+        <% var west_bank=dis[6].value; %>
+    </span>
+    <span>
+        <% var center=dis[2].value; %>
+    </span>
+    <span>
+        <% var south=dis[3].value; %>
+    </span>
+    <span>
+        <% var north=dis[1].value; %>
+    </span>
+
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawAllPackSizes);
+        google.charts.setOnLoadCallback(drawAllDistricts);
+
+        var s =   <%= small  %>;
+        var m =   <%= medium  %>;
+        var l =   <%= large  %>;
+
+        var t =   <%= tel_aviv  %>;
+        var h =   <%= hifa  %>;
+        var j =   <%= jerusalem  %>;
+        var w =   <%= west_bank %>;
+        var c =   <%= center %>;
+        var s =   <%= south %>;
+        var n =   <%= north  %>;
+
+
+
+
+
+        function drawAllPackSizes() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['pack size', 'quantity'],
+                ['small', s],
+                ['medium', m],
+                ['large', l],
+
+            ]);
+
+            var options = {
+                title: 'Distribution by size -all packages'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('all_pac_size'));
+
+            chart.draw(data, options);
+        };
+
+
+        function drawAllDistricts() {
+            var data = new google.visualization.arrayToDataTable([
+                ['Move', 'Percentage'],
+                ["Tel-aviv", t,"red"],
+                ["Hifa", h ,"red"],
+                ["jerusalem", j ,"red"],
+                ["West-Bank", w ,"red"],
+                ["Central", c ,"red"],
+                ["south", s ,"red"],
+                ["north", n ,"red"],
+                
+            ]);
+
+
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                title: "West-bank district \n tax destribution",
+                width: 250,
+                height: 250,
+                bar: { groupWidth: "90%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("all_dist"));
+            chart.draw(view, options);
+        };
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <table class="columns" margin-left: auto; margin-right: auto;>
+
+        <tr style="padding-left: 2ex;">
+            <td style="margin-left: 10ex;">
+                <div id="all_pac_size" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+        </tr>
+
+        <tr style="padding-left: 2ex;">
+            <td style="margin-left: 10ex;">
+                <div id="all_dist" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

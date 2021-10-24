@@ -1,5 +1,6 @@
 const express = require('express')
-const app = express();
+const app = require('express')();
+var server = require('http').Server(app);
 const socketIO = require('socket.io');
 
 
@@ -104,7 +105,9 @@ app.get('/recomendations.ejs', (req, res) => {
   res.render("pages/recomendation");
 });
 
-
+app.post('/bjb/nii',function(){
+  
+})
 
 
 
@@ -120,13 +123,4 @@ const server = express()
   .listen(3000, () => console.log(`Listening Socket on http://localhost:3000/dashboard.ejs`));
 const io = socketIO(server);
 
-//------------
-// io.on('connection', (socket) => {  
-//   socket.on('newdata', (msg) => {
-//     console.log(msg);
-//     io.emit('newdata', msg);
-//   });
-// });
-//-----------
 
-module.exports = { view_function };

@@ -1,4 +1,5 @@
 const simulator = require("../package_formation/creataPackage.js");
+var async = require("async");
 const qrcode_gen = require("../qrcode/qrcodeGenerator.js");
 const redis_func = require("../redis/RedisInsertData.js");
 const redis_sub = require("../redis/RedissubscribetData.js");

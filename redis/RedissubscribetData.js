@@ -6,7 +6,6 @@ var redisClient = redis.createClient();
 var sub = redis.createClient()
 var mongo_in = require("../mongodb/mongoInsertData.js");
 var mongo_up = require("../mongodb/mongoUpdateData.js");
-// var viewUpdate = require("../server.js");
 
 var package_per_dis = [
     Tel_Aviv = 0, Haifa = 0, Jerusalem = 0, West_Bank = 0, Central = 0, South = 0, North = 0
@@ -52,7 +51,7 @@ module.exports = async function reciv_data() {
             package_per_dis[district_loc]++;
             district_size[district_loc][size_loc]++;
             district_tax[district_loc][tax_loc]++;
-            // viewUpdate.view_function(package_per_dis,district_size,district_tax);
+            
             console.log("mongo insert")
         }
         else if(channel == "update"){

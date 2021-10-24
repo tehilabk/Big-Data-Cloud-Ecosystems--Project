@@ -7,8 +7,6 @@ let num;
 const firebase_up = require("../qrcode/firebaseUpload.js");
 module.exports = async function qrcode_create(package_json, track_num) {
 	// directory path
-    // await delete_dir(dir);
-    // await create_dir(dir);
 	file_name = '../qrcode/uploaded_qrcode/' + track_num + '.png';
 	num = track_num;
 	let strData = JSON.stringify(package_json);
@@ -23,21 +21,5 @@ const generateQR = async text => {
 		console.log(err);
 	}
 }
-async function delete_dir(dir)
-{
-	// delete directory recursively
-	try {
-		fs.rmdirSync(dir, { recursive: true });
-   } catch (err) {
-	   console.error(`Error while deleting ${dir}.`);
-   }
-}
-async function create_dir(dir)
-{
-	await fs.promises.mkdir(dir, function (err) {
-		if (err) {
-			console.log(err)
-		}
-	});
-}
+
 

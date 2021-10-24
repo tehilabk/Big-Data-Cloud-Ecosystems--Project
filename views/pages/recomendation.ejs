@@ -13,8 +13,6 @@
           element.innerText = msg.value;
         })
       }
-
-     
     </script>
     <!--ariel ws -->
 </head>
@@ -28,15 +26,11 @@
 
 
         <div class="content">
-          <header>
-            <h1>General information about the packages </h1>
-            <p>in this page you can view data about all the packages that has been order </p>
-          </header>
           <div>
-            <%- include("../partials/statisticsGraph") %>
+            <%- include("../partials/bigmlTable") %>
           </div>
         </div>
-
+ 
         <button id="btn">
           update data
         </button>
@@ -44,14 +38,13 @@
       </div>
   </div>
   <%- include("../partials/dashcode") %>
+    table
 
-  <script type="text/javascript"> 
-    $("#btn").click(function(){
-      location.reload(true);
-    });
-
-</script> 
-
+    <script type="text/javascript"> 
+      $("#btn").click(function(){
+        location.reload(true);
+      });
+  </script> 
 
 
 </body>

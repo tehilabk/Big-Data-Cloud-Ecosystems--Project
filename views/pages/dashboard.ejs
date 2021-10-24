@@ -10,7 +10,7 @@ Coded by Creative Tim
 =========================================================
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
-<html>
+<html >
 
 <head>
   <%- include("../partials/headers") %>
@@ -28,7 +28,7 @@ The above copyright notice and this permission notice shall be included in all c
     <!--ariel ws -->
 </head>
 
-  <body class="" onload="setWs()">
+  <body class="" onload="setWs()" style="background-color:rgb(201, 178, 177);">
     <div class="wrapper ">
       <%- include("../partials/sidebar") %>
         <div class="main-panel">
@@ -43,18 +43,17 @@ The above copyright notice and this permission notice shall be included in all c
                         <!--end-->
                 </div>
                 <div class="row">
-                  <%- include("../partials/graph2") %>
+                  <%- include("../partials/graphs") %>
                   
                  
                 </div>
                 
               </div>
             </div>
-            <%- include("../partials/footer") %>
+           
         </div>
     </div>
-    <%- include("../partials/dashcode") %>
-     
+    <%- include("../partials/dashcode") %>  
   </body>
 
 </html>

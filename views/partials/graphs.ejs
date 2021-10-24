@@ -1,0 +1,792 @@
+<html>
+
+<head>
+
+    <span>
+        <% var title_c=sizes[0].title; %>
+    </span>
+    <span>
+        <% var small_c=sizes[0].small; %>
+    </span>
+    <span>
+        <% var medium_c=sizes[0].medium; %>
+    </span>
+    <span>
+        <% var large_c=sizes[0].large; %>
+    </span>
+
+    <span>
+        <% var title_n=sizes[1].title; %>
+    </span>
+    <span>
+        <% var small_n=sizes[1].small; %>
+    </span>
+    <span>
+        <% var medium_n=sizes[1].medium; %>
+    </span>
+    <span>
+        <% var large_n=sizes[1].large; %>
+    </span>
+
+    <span>
+        <% var title_s=sizes[2].title; %>
+    </span>
+    <span>
+        <% var small_s=sizes[2].small; %>
+    </span>
+    <span>
+        <% var medium_s=sizes[2].medium; %>
+    </span>
+    <span>
+        <% var large_s=sizes[2].large; %>
+    </span>
+
+    <span>
+        <% var title_h=sizes[3].title; %>
+    </span>
+    <span>
+        <% var small_h=sizes[3].small; %>
+    </span>
+    <span>
+        <% var medium_h=sizes[3].medium; %>
+    </span>
+    <span>
+        <% var large_h=sizes[3].large; %>
+    </span>
+
+    <span>
+        <% var title_j=sizes[4].title; %>
+    </span>
+    <span>
+        <% var small_j=sizes[4].small; %>
+    </span>
+    <span>
+        <% var medium_j=sizes[4].medium; %>
+    </span>
+    <span>
+        <% var large_j=sizes[4].large; %>
+    </span>
+
+    <span>
+        <% var title_t=sizes[5].title; %>
+    </span>
+    <span>
+        <% var small_t=sizes[5].small; %>
+    </span>
+    <span>
+        <% var medium_t=sizes[5].medium; %>
+    </span>
+    <span>
+        <% var large_t=sizes[5].large; %>
+    </span>
+
+    <span>
+        <% var title_w=sizes[6].title; %>
+    </span>
+    <span>
+        <% var small_w=sizes[6].small; %>
+    </span>
+    <span>
+        <% var medium_w=sizes[6].medium; %>
+    </span>
+    <span>
+        <% var large_w=sizes[6].large; %>
+    </span>
+
+    <!-- vars for the line chart -->
+    <span>
+        <% var titel_c=tax[0].title; %>
+    </span>
+    <span>
+        <% var low75_c=tax[0].low75; %>
+    </span>
+    <span>
+        <% var low500_c=tax[0].low500; %>
+    </span>
+    <span>
+        <% var high_c=tax[0].high; %>
+    </span>
+
+    <span>
+        <% var titel_n=tax[1].title; %>
+    </span>
+    <span>
+        <% var low75_n=tax[1].low75; %>
+    </span>
+    <span>
+        <% var low500_n=tax[1].low500; %>
+    </span>
+    <span>
+        <% var high_n=tax[1].high; %>
+    </span>
+
+    <span>
+        <% var titel_s=tax[2].title; %>
+    </span>
+    <span>
+        <% var low75_s=tax[2].low75; %>
+    </span>
+    <span>
+        <% var low500_s=tax[2].low500; %>
+    </span>
+    <span>
+        <% var high_s=tax[2].high; %>
+    </span>
+
+    <span>
+        <% var titel_h=tax[3].title; %>
+    </span>
+    <span>
+        <% var low75_h=tax[3].low75; %>
+    </span>
+    <span>
+        <% var low500_h=tax[3].low500; %>
+    </span>
+    <span>
+        <% var high_h=tax[3].high; %>
+    </span>
+
+    <span>
+        <% var titel_j=tax[4].title; %>
+    </span>
+    <span>
+        <% var low75_j=tax[4].low75; %>
+    </span>
+    <span>
+        <% var low500_j=tax[4].low500; %>
+    </span>
+    <span>
+        <% var high_j=tax[4].high; %>
+    </span>
+
+    <span>
+        <% var titel_t=tax[5].title; %>
+    </span>
+    <span>
+        <% var low75_t=tax[5].low75; %>
+    </span>
+    <span>
+        <% var low500_t=tax[5].low500; %>
+    </span>
+    <span>
+        <% var high_t=tax[5].high; %>
+    </span>
+
+    <span>
+        <% var titel_w=tax[6].title; %>
+    </span>
+    <span>
+        <% var low75_w=tax[6].low75; %>
+    </span>
+    <span>
+        <% var low500_w=tax[6].low500; %>
+    </span>
+    <span>
+        <% var high_w=tax[6].high; %>
+    </span>
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        // Load Charts and the corechart package.
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+        google.charts.setOnLoadCallback(drawCenterChart);
+        google.charts.setOnLoadCallback(drawNorthChart);
+        google.charts.setOnLoadCallback(drawSouthChart);
+        google.charts.setOnLoadCallback(drawHaifaChart);
+        google.charts.setOnLoadCallback(drawJerusalemChart);
+        google.charts.setOnLoadCallback(drawTelAvivChart);
+        google.charts.setOnLoadCallback(drawWestBankChart);
+
+        google.charts.setOnLoadCallback(drawlineCenter);
+        google.charts.setOnLoadCallback(drawlineHifa);
+        google.charts.setOnLoadCallback(drawlineNorth);
+        google.charts.setOnLoadCallback(drawlineSouth);
+        google.charts.setOnLoadCallback(drawlinejerusalem);
+        google.charts.setOnLoadCallback(drawlineTelAviv);
+        google.charts.setOnLoadCallback(drawlineWestbank);
+
+
+
+        // variables: 
+
+        var t_c = ' <%= title_c %> ';       //Center district:
+        var s_c =   <%= small_c  %>;       //var test is now assigned to getTest which will only work on browsers
+        var m_c =   <%= medium_c  %>;     //var test is now assigned to getTest which will only work on browsers       
+        var l_c =   <%= large_c  %>;     //var test is now assigned to getTest which will only work on browsers
+
+        var t_n = ' <%= title_c %> ';       //North district:
+        var s_n =   <%= small_n  %>;       //var test is now assigned to getTest which will only work on browsers
+        var m_n =   <%= medium_n  %>;     //var test is now assigned to getTest which will only work on browsers       
+        var l_n =   <%= large_n  %>;     //var test is now assigned to getTest which will only work on browsers
+
+        var t_s = ' <%= title_c %> ';       //South district:
+        var s_s =   <%= small_s  %>;       //var test is now assigned to getTest which will only work on browsers
+        var m_s =   <%= medium_s  %>;     //var test is now assigned to getTest which will only work on browsers       
+        var l_s =   <%= large_s  %>;     //var test is now assigned to getTest which will only work on browsers
+
+        var t_h = ' <%= title_c %> ';       //Haifa district:
+        var s_h =   <%= small_h  %>;       //var test is now assigned to getTest which will only work on browsers
+        var m_h =   <%= medium_h  %>;     //var test is now assigned to getTest which will only work on browsers       
+        var l_h =   <%= large_h  %>;     //var test is now assigned to getTest which will only work on browsers
+
+        var t_j = ' <%= title_c %> ';       //Jerusalem district:
+        var s_j =   <%= small_j  %>;       //var test is now assigned to getTest which will only work on browsers
+        var m_j =   <%= medium_j  %>;     //var test is now assigned to getTest which will only work on browsers       
+        var l_j =   <%= large_j  %>;     //var test is now assigned to getTest which will only work on browsers
+
+        var t_t = ' <%= title_c %> ';       //Dan district:
+        var s_t =   <%= small_t  %>;       //var test is now assigned to getTest which will only work on browsers
+        var m_t =   <%= medium_t  %>;     //var test is now assigned to getTest which will only work on browsers       
+        var l_t =   <%= large_t  %>;     //var test is now assigned to getTest which will only work on browsers
+
+        var t_w = ' <%= title_c %> ';       //Dan district:
+        var s_w =   <%= small_w  %>;       //var test is now assigned to getTest which will only work on browsers
+        var m_w =   <%= medium_w  %>;     //var test is now assigned to getTest which will only work on browsers       
+        var l_w =   <%= large_w %>;   
+        
+        
+
+        var t_c = ' <%= title_c %> ';       
+        var l75_c =   <%= low75_c  %>;       
+        var l500_c =   <%= low500_c  %>;            
+        var h_c =   <%= high_c  %>;
+        
+        var t_n = ' <%= title_c %> ';       
+        var l75_n =   <%= low75_n  %>;       
+        var l500_n =   <%= low500_n  %>;            
+        var h_n =   <%= high_n  %>; 
+
+        var t_s = ' <%= title_c %> ';       
+        var l75_s =   <%= low75_s  %>;       
+        var l500_s =   <%= low500_s  %>;            
+        var h_s =   <%= high_s  %>; 
+
+        var t_h = ' <%= title_c %> ';       
+        var l75_h =   <%= low75_h  %>;       
+        var l500_h =   <%= low500_h  %>;            
+        var h_h =   <%= high_h  %>; 
+
+        var t_j = ' <%= title_c %> ';       
+        var l75_j =   <%= low75_j  %>;       
+        var l500_j =   <%= low500_j  %>;            
+        var h_j =   <%= high_j  %>; 
+
+        var t_t = ' <%= title_c %> ';       
+        var l75_t =   <%= low75_t  %>;       
+        var l500_t =   <%= low500_t  %>;            
+        var h_t =   <%= high_t  %>;
+        
+        var t_w = ' <%= title_c %> ';       
+        var l75_w =   <%= low75_w  %>;       
+        var l500_w =   <%= low500_w  %>;            
+        var h_w =   <%= high_w  %>; 
+
+
+        //################################### CENTER ###################################
+        // Callback that draws the pie chart for Center district packages' size distribution
+        function drawCenterChart() {
+
+            // Create the data table for Center district
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'size');
+            data.addColumn('number', 'packages');
+            data.addRows([
+                ['S', s_c],
+                ['M', m_c],
+                ['L', l_c]
+            ]);
+
+            // Set options for chart
+            var options = {
+                title: 'Center district:\n Packages size distribution',
+                is3D: true,
+                width: 280,
+                height: 280
+            };
+
+            // Instantiate and draw the chart
+            var chart = new google.visualization.PieChart(document.getElementById('center_size_dist'));
+            chart.draw(data, options);
+        }
+
+        //################################### NORTH ###################################
+        // Callback that draws the pie chart for North district packages' size distribution
+        function drawNorthChart() {
+
+            // Create the data table for North district
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'size');
+            data.addColumn('number', 'packages');
+            data.addRows([
+                ['S', s_n],
+                ['M', m_n],
+                ['L', l_n]
+            ]);
+
+            // Set options for chart
+            var options = {
+                title: 'North district:\n Packages size distribution',
+                is3D: true,
+                width: 280,
+                height: 280
+            };
+
+            // Instantiate and draw the chart
+            var chart = new google.visualization.PieChart(document.getElementById('north_size_dist'));
+            chart.draw(data, options);
+        }
+
+        //################################### SOUTH ###################################
+        // Callback that draws the pie chart for South district packages' size distribution
+        function drawSouthChart() {
+
+            // Create the data table for South district
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'size');
+            data.addColumn('number', 'packages');
+            data.addRows([
+                ['S', s_s],
+                ['M', m_s],
+                ['L', l_s]
+            ]);
+
+            // Set options for chart
+            var options = {
+                title: 'South district:\n Packages size distribution',
+                is3D: true,
+                width: 280,
+                height: 280
+            };
+
+            // Instantiate and draw the chart
+            var chart = new google.visualization.PieChart(document.getElementById('south_size_dist'));
+            chart.draw(data, options);
+        }
+
+        //################################### HAIFA ###################################
+        // Callback that draws the pie chart for South district packages' size distribution
+        function drawHaifaChart() {
+
+            // Create the data table for Haifa district
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'size');
+            data.addColumn('number', 'packages');
+            data.addRows([
+                ['S', s_h],
+                ['M', m_h],
+                ['L', l_h]
+            ]);
+
+            // Set options for chart
+            var options = {
+                title: 'Haifa district:\n Packages size distribution',
+                is3D: true,
+                width: 280,
+                height: 280
+            };
+
+            // Instantiate and draw the chart
+            var chart = new google.visualization.PieChart(document.getElementById('haifa_size_dist'));
+            chart.draw(data, options);
+        }
+
+        //################################### JERUSALEM ###################################
+        // Callback that draws the pie chart for Jerusalem district packages' size distribution
+        function drawJerusalemChart() {
+
+            // Create the data table for Jerusalem district
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'size');
+            data.addColumn('number', 'packages');
+            data.addRows([
+                ['S', s_j],
+                ['M', m_j],
+                ['L', l_j]
+            ]);
+
+            // Set options for chart
+            var options = {
+                title: 'Jerusalem district:\n Packages size distribution',
+                is3D: true,
+                width: 280,
+                height: 280
+            };
+
+            // Instantiate and draw the chart
+            var chart = new google.visualization.PieChart(document.getElementById('jerusalem_size_dist'));
+            chart.draw(data, options);
+        }
+
+
+        // Callback that draws the pie chart for South district packages' size distribution
+        function drawTelAvivChart() {
+
+            // Create the data table for South district
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'size');
+            data.addColumn('number', 'packages');
+            data.addRows([
+                ['S', s_t],
+                ['M', m_t],
+                ['L', l_t]
+            ]);
+
+            // Set options for chart
+            var options = {
+                title: 'Tel-aviv district:\n Packages size distribution',
+                is3D: true,
+                width: 280,
+                height: 280
+            };
+
+            // Instantiate and draw the chart
+            var chart = new google.visualization.PieChart(document.getElementById('telaviv_size'));
+            chart.draw(data, options);
+        }
+
+
+        // Callback that draws the pie chart for South district packages' size distribution
+        function drawWestBankChart() {
+
+            // Create the data table for South district
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'size');
+            data.addColumn('number', 'packages');
+            data.addRows([
+                ['S', s_w],
+                ['M', m_w],
+                ['L', l_w]
+            ]);
+
+            // Set options for chart
+            var options = {
+                title: 'West-Bank district:\n Packages size distribution',
+                is3D: true,
+                width: 280,
+                height: 280
+            };
+
+            // Instantiate and draw the chart
+            var chart = new google.visualization.PieChart(document.getElementById('westbank_size'));
+            chart.draw(data, options);
+        }
+
+
+        
+
+        function drawlineHifa() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["No tax", l75_h, "red"],
+                ["VAT", l500_h, "red"],
+                ["VAT ,sales tax and customs", h_h, "red"],
+
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                title: "Hifa district \n tax destribution",
+                width: 280,
+                height: 280,
+                bar: { groupWidth: "90%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("line_Chart_hifa"));
+            chart.draw(view, options);
+        }
+
+        function drawlineCenter() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["No tax", l75_c, "red"],
+                ["VAT", l500_c, "red"],
+                ["VAT ,sales tax and customs", h_c, "red"],
+
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                title: "Central district \n tax destribution",
+                width: 280,
+                height: 280,
+                bar: { groupWidth: "90%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("line_Chart_center"));
+            chart.draw(view, options);
+        }
+
+        function drawlineNorth() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["No tax", l75_n, "red"],
+                ["VAT", l500_n, "red"],
+                ["VAT ,sales tax and customs", h_n, "red"],
+
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                title: "North district \n tax destribution",
+                width: 280,
+                height: 280,
+                bar: { groupWidth: "90%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("line_Chart_north"));
+            chart.draw(view, options);
+        }
+
+        function drawlineSouth() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["No tax", l75_s, "red"],
+                ["VAT", l500_s, "red"],
+                ["VAT ,sales tax and customs", h_s, "red"],
+
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                title: "south district \n tax destribution",
+                width: 280,
+                height: 280,
+                bar: { groupWidth: "90%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("line_Chart_south"));
+            chart.draw(view, options);
+        }
+
+
+        function drawlinejerusalem() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["No tax", l75_j, "red"],
+                ["VAT", l500_j, "red"],
+                ["VAT ,sales tax and customs", h_j, "red"],
+
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                title: "Jerusalem district \n tax destribution",
+                width: 280,
+                height: 280,
+                bar: { groupWidth: "90%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("line_Chart_jerusalem"));
+            chart.draw(view, options);
+        }
+
+        function drawlineTelAviv() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["No tax", l75_t, "red"],
+                ["VAT", l500_t, "red"],
+                ["VAT ,sales tax and customs", h_t, "red"],
+
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                title: "Tel-Aviv district \n tax destribution",
+                width: 280,
+                height: 280,
+                bar: { groupWidth: "90%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("line_Chart_tel-aviv"));
+            chart.draw(view, options);
+        }
+
+        function drawlineWestbank() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["No tax", l75_w, "red"],
+                ["VAT", l500_w, "red"],
+                ["VAT ,sales tax and customs", h_w, "red"],
+
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                title: "West-bank district \n tax destribution",
+                width: 280,
+                height: 280,
+                bar: { groupWidth: "90%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("line_Chart_westBank"));
+            chart.draw(view, options);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <!--Table and divs that hold the pie charts-->
+    <table class="columns" margin-left: auto; margin-right: auto;>
+       
+        <tr style="padding-left: 2ex;">
+            <td style="margin-left: 10ex;">
+                <header> <h2>~Hifa District</h2> </header>
+                <div id="haifa_size_dist" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+            <td style="margin-left: 10ex;">
+                <header> <h2> ~ </h2> </header>
+                <div id="line_Chart_hifa" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+
+        </tr>
+
+        <tr style="padding-left: 2ex;">
+            <td style="margin-left: 10ex;">
+                <header> <h2>~North District</h2> </header>
+                <div id="north_size_dist" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+
+            <td style="margin-left: 10ex;">
+                <header> <h2> ~ </h2> </header>
+                <div id="line_Chart_north" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+
+        </tr>
+
+
+        <tr style="padding-left: 2ex;">
+
+
+            <td style="margin-left: 10ex;">
+                <header> <h2>~Center District</h2> </header>
+                <div id="center_size_dist" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+
+            <td style="margin-left: 10ex;">
+                <header> <h2> ~ </h2> </header>
+                <div id="line_Chart_center" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+        </tr>
+
+
+        <tr style="padding-left: 2ex;">
+
+            <td style="margin-left: 10ex;">
+                <header> <h2>~South District</h2> </header>
+                <div id="south_size_dist" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+
+            <td style="margin-left: 10ex;">
+                <header> <h2> ~ </h2> </header>
+                <div id="line_Chart_south" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+        </tr>
+
+        <tr style="padding-left: 2ex;">
+            </td>
+            <td style="margin-left: 10ex;">
+                <header> <h2>~Jerusalem District</h2> </header>
+                <div id="jerusalem_size_dist" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+            </td>
+            <td style="margin-left: 10ex;">
+                <header> <h2> ~ </h2> </header>
+                <div id="line_Chart_jerusalem" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+        </tr>
+
+        <tr style="padding-left: 2ex;">
+            <td style="margin-left: 10ex;">
+                <header> <h2>~Tel-Aviv District</h2> </header>
+                <div id="telaviv_size" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+            <td style="margin-left: 10ex;">
+                <header> <h2> ~ </h2> </header>
+                <div id="line_Chart_tel-aviv" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+        </tr>
+
+        <tr style="padding-left: 2ex;">
+            <td style="margin-left: 10ex;">
+                <header> <h2>~West-Bank District</h2> </header>
+                <div id="westbank_size" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+            <td style="margin-left: 10ex;">
+                <header> <h2> ~ </h2> </header>
+                <div id="line_Chart_westBank" style="border: 20px solid rgb(230, 138, 95)"></div>
+            </td>
+
+        </tr>
+
+    </table>
+</body>
+
+</html>

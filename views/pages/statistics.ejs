@@ -14,7 +14,7 @@
         })
       }
 
-     
+
     </script>
     <!--ariel ws -->
 </head>
@@ -37,20 +37,22 @@
           </div>
         </div>
 
-        <button id="btn">
-          update data
-        </button>
+        <div style="position:absolute; width:100%; height:100%;">
+          <button id="btn" style="margin-left:85%">
+            Refrash Data
+          </button>
+        </div>
 
       </div>
   </div>
   <%- include("../partials/dashcode") %>
 
-  <script type="text/javascript"> 
-    $("#btn").click(function(){
-      location.reload(true);
-    });
+    <script type="text/javascript">
+      $("#btn").click(function () {
+        location.reload(true);
+      });
 
-</script> 
+    </script>
 
 
 

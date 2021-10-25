@@ -1,39 +1,48 @@
 <div class="col-lg-3 col-md-6 col-sm-6">
-    <div class="card card-stats">
-      <div class="card-header card-header-warning card-header-icon">
-        
-         
-        <div class="card-icon">
-          <style>
-            .card{
-              background-color: #e97f4e;
-            }  
-          </style>
+  <div class="card card-stats" >
 
-          <i class="material-icons"><%= icon %>y</i>
-          <style>
-            .material-icons{
-             
-              color:azure
-            }  
-          
-            </style>
-        </div>
-        <p class="card-category"><%= title %></p>
-        
-        <h3 class="card-title" id="<%= districtId %>"><%= value %>
-          <small><%= unit %></small>
-        </h3>
+    <style>
+      .card {
+        background-color: #b19887;
+      }
+      
+    </style>
+
+    <div class="card-header card-header-warning card-header-icon" style="color:aliceblue">
+
+
+      <div class="card-icon" style=background-color:#867b74>
+
+
+        <i class="material-icons" style="color:aliceblue">
+          <%= icon %>y
+        </i>
+
       </div>
-      <div class="card-footer">
-       
-        <div class="stats">
-          <i class="material-icons text-danger"><%= fotterIcon %></i>
-          
-          <a href="javascript:;"><%= fotterText %></a>
-        </div>
+      <p class="card-category" style="color:aliceblue">
+        <%= title %>
+      </p>
+
+
+      <h3 class="card-title" id="<%= districtId %>" style="color:aliceblue">
+        <%= value %>
+
+          <small>
+            <%= unit %>
+          </small>
+      </h3>
+    </div>
+    <div class="card-footer">
+
+      <div class="stats">
+        <i class="material-icons text-danger">
+          <%= fotterIcon %>
+        </i>
+
+        <a href="javascript:;" style="color:aliceblue">
+          <%= fotterText %>
+        </a>
       </div>
     </div>
   </div>
-
- 
+</div>

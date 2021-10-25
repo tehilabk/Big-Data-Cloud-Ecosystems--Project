@@ -1,5 +1,5 @@
 const express = require('express')
-const app = require('express')();
+const app = express();
 const socketIO = require('socket.io');
 
 
@@ -97,17 +97,32 @@ app.get('/statistics.ejs', (req, res) => {
   res.render("pages/statistics",data);
 });
 
+
+app.get('/recomendations.ejs', (req, res) => {
+  // var data={
+  //   bigml:[
+  //     {list:[],conf:,sup:},
+
+
+  //   ]
+
+
+
+
+  // }
+
+
+
+
+
+  res.render("pages/recomendation");
+});
+
 app.get('/products.ejs', (req, res) => {
   res.render("pages/products");
 });
 
-app.get('/recomendations.ejs', (req, res) => {
-  res.render("pages/recomendation");
-});
 
-app.post('/update_data',(req,res) =>{
-  console.log(req.body);
-});
 
 
 
@@ -123,4 +138,13 @@ const server = express()
   .listen(3000, () => console.log(`Listening Socket on http://localhost:3000/dashboard.ejs`));
 const io = socketIO(server);
 
+//------------
+// io.on('connection', (socket) => {  
+//   socket.on('newdata', (msg) => {
+//     console.log(msg);
+//     io.emit('newdata', msg);
+//   });
+// });
+//-----------
 
+module.exports = { view_function };

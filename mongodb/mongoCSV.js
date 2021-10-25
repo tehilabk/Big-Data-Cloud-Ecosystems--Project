@@ -12,7 +12,7 @@ async function mongodb_update() {
       if (err) throw err;
 
       packages.forEach(function (pack) {
-        let cur_pack = [];
+        var cur_pack = [];
         pack.items_list.forEach(function (cur_item) {
           cur_pack.push(cur_item.item);
         });

@@ -1,6 +1,5 @@
 const express = require('express')
 const app = require('express')();
-var server = require('http').Server(app);
 const socketIO = require('socket.io');
 
 
@@ -25,6 +24,7 @@ size_count = [small = 0, medium = 0, big = 0]];
 
 
 app.use(express.static('public'))
+app.use(express.json())
 
 app.set('view engine', 'ejs')
 
@@ -105,9 +105,9 @@ app.get('/recomendations.ejs', (req, res) => {
   res.render("pages/recomendation");
 });
 
-app.post('/bjb/nii',function(){
-  
-})
+app.post('/update_data',(req,res) =>{
+  console.log(req.body);
+});
 
 
 

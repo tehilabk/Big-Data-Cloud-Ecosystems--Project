@@ -1,46 +1,57 @@
 var MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://liel_berniker:liel1995@cluster0.2ohvu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const collection_name = "packages";
-const db_name = "base1";
 
+var general_info = [package_count = [Tel_Aviv = 0, Haifa = 0, Jerusalem = 0, West_Bank = 0, Central = 0, South = 0, North = 0],
+size_count = [small = 0, medium = 0, big = 0]];
 var dis_name = ["Tel Aviv", "Haifa", "Jerusalem", "West Bank", "Central", "South", "North"];
 var pack_size = ["small", "medium", "big"];
 
 async function mongodb_data() {
-  
-    Promise.resolve("ok").then(async ()=>{
-       const general_info =  await get_for(dis_name.length, 0);
-        console.log("for num 1");
-    }).finally(()=>{
+
+
+    const collection_name = "packages";
+    const db_name = "base1";
+    try {
+        general_info[0] = await get_for(dis_name.length, 0, collection_name, db_name, function () {
+        });
+        general_info[1] = await get_for(pack_size.length, 1, collection_name, db_name, function () {
+        });
+    }
+    catch (err) {
+        console.log(err);
+    } finally {
         console.log(general_info);
-    });
+    }
+
 
 }
 mongodb_data();
 
 
-async function mongodb_find_count(query,pos_1,list) {
-    Promise.resolve("ok").then(()=>{
-        var count;
-        MongoClient.connect(url, function (err, db) {
-            if (err) throw err;
-            var dbo = db.db(db_name);
-        dbo.collection(collection_name).find(query).count(function (err, res) {
-                if (err) throw err;
-                   list[pos_1] = res;
-                db.close();
-                 console.log(res + " " + pos_1);
-            });
-        });
-    }).finally(()=>{
-        return ok;
-    })
+async function mongodb_find_count(query, collection_name, db_name1, callback) {
 
+   var db = await MongoClient.connect(url, { useNewUrlParser: true })
+        .catch(err => { console.log(err); });
+    try {
+        var db_name = db_name1;
+        var dbo = db.db(db_name);
+        var res = await dbo.collection(collection_name).find(query).count();
+    }
+    catch (err) {
+        console.log(err);
+    }
+    finally {
+        db.close();
+        callback();
+        return res;
+    }
 }
 
-async function get_for(size, pos_1) {
+
+
+async function get_for(size, pos_1,collection_name, db_name, callback) {
     var cur_list = [];
-    Promise.resolve("ok").then(async function(){
+    try {
         for (let i = 0; i < size; i++) {
             var query;
             if (pos_1 == 0) {
@@ -51,9 +62,16 @@ async function get_for(size, pos_1) {
                 var cur = pack_size[i];
                 query = { size: cur };
             }
-            var ok = await mongodb_find_count(query, i,cur_list);
+            var ok;
+
+            cur_list[i] = await mongodb_find_count(query, collection_name, db_name, callback);
         }
-    }).then(function(){
-        console.log (cur_list);
-    })  
+    }
+    catch (err) {
+        console.log(err);
+    }
+    finally {
+        return cur_list;
+    }
+
 }

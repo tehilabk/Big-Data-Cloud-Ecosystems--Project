@@ -4,7 +4,7 @@ const url = "mongodb+srv://liel_berniker:liel1995@cluster0.2ohvu.mongodb.net/myF
 const collection_name = "packages";
 const db_name = "base1";
 var items_obj = [];
-async function mongodb_update() {
+module.exports = async function mongodb_update() {
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     var dbo = db.db(db_name);
@@ -33,5 +33,6 @@ async function mongodb_update() {
       db.close();
     });
   });
+  console.log("create csv")
 }
-mongodb_update();
+

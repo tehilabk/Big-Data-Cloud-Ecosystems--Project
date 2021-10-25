@@ -1,1 +1,3973 @@
-{"code":200,"object":{"associations":{"complement":false,"discretization":{"pretty":true,"size":5,"trim":0,"type":"population"},"fields":{"000000":{"column_number":0,"datatype":"string","item_analysis":{"separator":","},"name":"field1","optype":"items","order":0,"preferred":true,"summary":{"average_length":44.91922,"items":[["Phonecharger",875],["Computer",775],["Hdmicable",770],["Microphone",765],["Extender",745],["Earphone",740],["TV",740],["screen",735],["Phone",710],["Mouse",705],["Auxcable",695],["Headphone",695],["Xbox",695],["Mousepad",690],["Diskonkey",685],["Smartwatch",685],["Speaker",665],["Tablet",655],["Spliter",645],["Keyboard",615]],"missing_count":0}}},"items":[{"complement":false,"count":645,"field_id":"000000","name":"Spliter"},{"complement":false,"count":655,"field_id":"000000","name":"Tablet"},{"complement":false,"count":765,"field_id":"000000","name":"Microphone"},{"complement":false,"count":685,"field_id":"000000","name":"Diskonkey"},{"complement":false,"count":745,"field_id":"000000","name":"Extender"},{"complement":false,"count":740,"field_id":"000000","name":"Earphone"},{"complement":false,"count":735,"field_id":"000000","name":"screen"},{"complement":false,"count":775,"field_id":"000000","name":"Computer"},{"complement":false,"count":770,"field_id":"000000","name":"Hdmicable"},{"complement":false,"count":740,"field_id":"000000","name":"TV"},{"complement":false,"count":705,"field_id":"000000","name":"Mouse"},{"complement":false,"count":695,"field_id":"000000","name":"Headphone"},{"complement":false,"count":690,"field_id":"000000","name":"Mousepad"},{"complement":false,"count":710,"field_id":"000000","name":"Phone"},{"complement":false,"count":685,"field_id":"000000","name":"Smartwatch"},{"complement":false,"count":615,"field_id":"000000","name":"Keyboard"},{"complement":false,"count":875,"field_id":"000000","name":"Phonecharger"},{"complement":false,"count":665,"field_id":"000000","name":"Speaker"},{"complement":false,"count":695,"field_id":"000000","name":"Xbox"},{"complement":false,"count":695,"field_id":"000000","name":"Auxcable"}],"max_k":100,"max_lhs":4,"min_confidence":0,"min_leverage":0,"min_lift":1,"min_support":0.00032,"missing_items":false,"rules":[{"confidence":0.36879,"id":"000000","leverage":0.02697,"lhs":[10],"lhs_cover":[0.22779,705],"lift":1.4728,"p_value":7.28664e-16,"rhs":[7],"rhs_cover":[0.2504,775],"support":[0.08401,260]},{"confidence":0.33548,"id":"000001","leverage":0.02697,"lhs":[7],"lhs_cover":[0.2504,775],"lift":1.4728,"p_value":7.28664e-16,"rhs":[10],"rhs_cover":[0.22779,705],"support":[0.08401,260]},{"confidence":0.33577,"id":"000002","leverage":0.02175,"lhs":[3],"lhs_cover":[0.22132,685],"lift":1.41387,"p_value":1.78508e-11,"rhs":[6],"rhs_cover":[0.23748,735],"support":[0.07431,230]},{"confidence":0.31293,"id":"000003","leverage":0.02175,"lhs":[6],"lhs_cover":[0.23748,735],"lift":1.41387,"p_value":1.78508e-11,"rhs":[3],"rhs_cover":[0.22132,685],"support":[0.07431,230]},{"confidence":0.31169,"id":"000004","leverage":0.02168,"lhs":[8],"lhs_cover":[0.24879,770],"lift":1.38802,"p_value":4.68195e-11,"rhs":[11],"rhs_cover":[0.22456,695],"support":[0.07754,240]},{"confidence":0.34532,"id":"000005","leverage":0.02168,"lhs":[11],"lhs_cover":[0.22456,695],"lift":1.38802,"p_value":4.68195e-11,"rhs":[8],"rhs_cover":[0.24879,770],"support":[0.07754,240]},{"confidence":0.32653,"id":"000006","leverage":0.02076,"lhs":[6],"lhs_cover":[0.23748,735],"lift":1.36569,"p_value":3.36247e-10,"rhs":[5],"rhs_cover":[0.2391,740],"support":[0.07754,240]},{"confidence":0.32432,"id":"000007","leverage":0.02076,"lhs":[5],"lhs_cover":[0.2391,740],"lift":1.36569,"p_value":3.36247e-10,"rhs":[6],"rhs_cover":[0.23748,735],"support":[0.07754,240]},{"confidence":0.29927,"id":"000008","leverage":0.02011,"lhs":[14],"lhs_cover":[0.22132,685],"lift":1.43603,"p_value":8.4469e-11,"rhs":[0],"rhs_cover":[0.2084,645],"support":[0.06624,205]},{"confidence":0.31783,"id":"000009","leverage":0.02011,"lhs":[0],"lhs_cover":[0.2084,645],"lift":1.43603,"p_value":8.4469e-11,"rhs":[14],"rhs_cover":[0.22132,685],"support":[0.06624,205]},{"confidence":0.33813,"id":"00000a","leverage":0.0197,"lhs":[18],"lhs_cover":[0.22456,695],"lift":1.35034,"p_value":2.03445e-9,"rhs":[7],"rhs_cover":[0.2504,775],"support":[0.07593,235]},{"confidence":0.30323,"id":"00000b","leverage":0.0197,"lhs":[7],"lhs_cover":[0.2504,775],"lift":1.35034,"p_value":2.03445e-9,"rhs":[18],"rhs_cover":[0.22456,695],"support":[0.07593,235]},{"confidence":0.51351,"id":"00000c","leverage":0.01824,"lhs":[14,3],"lhs_cover":[0.05977,185],"lift":2.46407,"p_value":3.87066e-16,"rhs":[0],"rhs_cover":[0.2084,645],"support":[0.03069,95]},{"confidence":0.29677,"id":"00000d","leverage":0.01808,"lhs":[7],"lhs_cover":[0.2504,775],"lift":1.32161,"p_value":3.26177e-8,"rhs":[19],"rhs_cover":[0.22456,695],"support":[0.07431,230]},{"confidence":0.33094,"id":"00000e","leverage":0.01808,"lhs":[19],"lhs_cover":[0.22456,695],"lift":1.32161,"p_value":3.26177e-8,"rhs":[7],"rhs_cover":[0.2504,775],"support":[0.07431,230]},{"confidence":0.27211,"id":"00000f","leverage":0.01743,"lhs":[6],"lhs_cover":[0.23748,735],"lift":1.36939,"p_value":1.73432e-8,"rhs":[15],"rhs_cover":[0.19871,615],"support":[0.06462,200]},{"confidence":0.3252,"id":"000010","leverage":0.01743,"lhs":[15],"lhs_cover":[0.19871,615],"lift":1.36939,"p_value":1.73432e-8,"rhs":[6],"rhs_cover":[0.23748,735],"support":[0.06462,200]},{"confidence":0.30894,"id":"000011","leverage":0.01741,"lhs":[15],"lhs_cover":[0.19871,615],"lift":1.39588,"p_value":8.93603e-9,"rhs":[14],"rhs_cover":[0.22132,685],"support":[0.06139,190]},{"confidence":0.27737,"id":"000012","leverage":0.01741,"lhs":[14],"lhs_cover":[0.22132,685],"lift":1.39588,"p_value":8.93603e-9,"rhs":[15],"rhs_cover":[0.19871,615],"support":[0.06139,190]},{"confidence":0.29787,"id":"000013","leverage":0.01707,"lhs":[10],"lhs_cover":[0.22779,705],"lift":1.33611,"p_value":6.91699e-8,"rhs":[12],"rhs_cover":[0.22294,690],"support":[0.06785,210]},{"confidence":0.30435,"id":"000014","leverage":0.01707,"lhs":[12],"lhs_cover":[0.22294,690],"lift":1.33611,"p_value":6.91699e-8,"rhs":[10],"rhs_cover":[0.22779,705],"support":[0.06785,210]},{"confidence":0.2953,"id":"000015","leverage":0.01703,"lhs":[4],"lhs_cover":[0.24071,745],"lift":1.31505,"p_value":1.28062e-7,"rhs":[19],"rhs_cover":[0.22456,695],"support":[0.07108,220]},{"confidence":0.31655,"id":"000016","leverage":0.01703,"lhs":[19],"lhs_cover":[0.22456,695],"lift":1.31505,"p_value":1.28062e-7,"rhs":[4],"rhs_cover":[0.24071,745],"support":[0.07108,220]},{"confidence":0.31387,"id":"000017","leverage":0.01691,"lhs":[14],"lhs_cover":[0.22132,685],"lift":1.32166,"p_value":1.22027e-7,"rhs":[6],"rhs_cover":[0.23748,735],"support":[0.06947,215]},{"confidence":0.29252,"id":"000018","leverage":0.01691,"lhs":[6],"lhs_cover":[0.23748,735],"lift":1.32166,"p_value":1.22027e-7,"rhs":[14],"rhs_cover":[0.22132,685],"support":[0.06947,215]},{"confidence":0.32558,"id":"000019","leverage":0.01634,"lhs":[0],"lhs_cover":[0.2084,645],"lift":1.31722,"p_value":2.4526e-7,"rhs":[2],"rhs_cover":[0.24717,765],"support":[0.06785,210]},{"confidence":0.27451,"id":"00001a","leverage":0.01634,"lhs":[2],"lhs_cover":[0.24717,765],"lift":1.31722,"p_value":2.4526e-7,"rhs":[0],"rhs_cover":[0.2084,645],"support":[0.06785,210]},{"confidence":0.45946,"id":"00001b","leverage":0.01559,"lhs":[9,14],"lhs_cover":[0.05977,185],"lift":2.31224,"p_value":2.57635e-10,"rhs":[15],"rhs_cover":[0.19871,615],"support":[0.02746,85]},{"confidence":0.27737,"id":"00001c","leverage":0.01527,"lhs":[3],"lhs_cover":[0.22132,685],"lift":1.33096,"p_value":5.64643e-7,"rhs":[0],"rhs_cover":[0.2084,645],"support":[0.06139,190]},{"confidence":0.29457,"id":"00001d","leverage":0.01527,"lhs":[0],"lhs_cover":[0.2084,645],"lift":1.33096,"p_value":5.64643e-7,"rhs":[3],"rhs_cover":[0.22132,685],"support":[0.06139,190]},{"confidence":0.29143,"id":"00001e","leverage":0.01525,"lhs":[16],"lhs_cover":[0.28271,875],"lift":1.22717,"p_value":0.0000076199,"rhs":[6],"rhs_cover":[0.23748,735],"support":[0.08239,255]},{"confidence":0.34694,"id":"00001f","leverage":0.01525,"lhs":[6],"lhs_cover":[0.23748,735],"lift":1.22717,"p_value":0.0000076199,"rhs":[16],"rhs_cover":[0.28271,875],"support":[0.08239,255]},{"confidence":0.30233,"id":"000020","leverage":0.0152,"lhs":[0],"lhs_cover":[0.2084,645],"lift":1.31788,"p_value":8.30184e-7,"rhs":[13],"rhs_cover":[0.2294,710],"support":[0.063,195]},{"confidence":0.27465,"id":"000021","leverage":0.0152,"lhs":[13],"lhs_cover":[0.2294,710],"lift":1.31788,"p_value":8.30184e-7,"rhs":[0],"rhs_cover":[0.2084,645],"support":[0.063,195]},{"confidence":0.4359,"id":"000022","leverage":0.01494,"lhs":[4,6],"lhs_cover":[0.063,195],"lift":2.19366,"p_value":4.44158e-9,"rhs":[15],"rhs_cover":[0.19871,615],"support":[0.02746,85]},{"confidence":0.51429,"id":"000023","leverage":0.01492,"lhs":[5,10],"lhs_cover":[0.05654,175],"lift":2.05382,"p_value":0.00000407982,"rhs":[7],"rhs_cover":[0.2504,775],"support":[0.02908,90]},{"confidence":0.29197,"id":"000024","leverage":0.01492,"lhs":[14],"lhs_cover":[0.22132,685],"lift":1.30022,"p_value":0.00000171662,"rhs":[19],"rhs_cover":[0.22456,695],"support":[0.06462,200]},{"confidence":0.28777,"id":"000025","leverage":0.01492,"lhs":[19],"lhs_cover":[0.22456,695],"lift":1.30022,"p_value":0.00000171662,"rhs":[14],"rhs_cover":[0.22132,685],"support":[0.06462,200]},{"confidence":0.31081,"id":"000026","leverage":0.01483,"lhs":[5],"lhs_cover":[0.2391,740],"lift":1.2493,"p_value":0.0000065866,"rhs":[8],"rhs_cover":[0.24879,770],"support":[0.07431,230]},{"confidence":0.2987,"id":"000027","leverage":0.01483,"lhs":[8],"lhs_cover":[0.24879,770],"lift":1.2493,"p_value":0.0000065866,"rhs":[5],"rhs_cover":[0.2391,740],"support":[0.07431,230]},{"confidence":0.29054,"id":"000028","leverage":0.01462,"lhs":[9],"lhs_cover":[0.2391,740],"lift":1.26651,"p_value":0.00000523424,"rhs":[13],"rhs_cover":[0.2294,710],"support":[0.06947,215]},{"confidence":0.30282,"id":"000029","leverage":0.01462,"lhs":[13],"lhs_cover":[0.2294,710],"lift":1.26651,"p_value":0.00000523424,"rhs":[9],"rhs_cover":[0.2391,740],"support":[0.06947,215]},{"confidence":0.28188,"id":"00002a","leverage":0.01419,"lhs":[4],"lhs_cover":[0.24071,745],"lift":1.26437,"p_value":0.00000818951,"rhs":[12],"rhs_cover":[0.22294,690],"support":[0.06785,210]},{"confidence":0.30435,"id":"00002b","leverage":0.01419,"lhs":[12],"lhs_cover":[0.22294,690],"lift":1.26437,"p_value":0.00000818951,"rhs":[4],"rhs_cover":[0.24071,745],"support":[0.06785,210]},{"confidence":0.48571,"id":"00002c","leverage":0.01404,"lhs":[4,15],"lhs_cover":[0.05654,175],"lift":2.04529,"p_value":1.09552e-7,"rhs":[6],"rhs_cover":[0.23748,735],"support":[0.02746,85]},{"confidence":0.30894,"id":"00002d","leverage":0.01388,"lhs":[15],"lhs_cover":[0.19871,615],"lift":1.29213,"p_value":0.0000055719,"rhs":[9],"rhs_cover":[0.2391,740],"support":[0.06139,190]},{"confidence":0.25676,"id":"00002e","leverage":0.01388,"lhs":[9],"lhs_cover":[0.2391,740],"lift":1.29213,"p_value":0.0000055719,"rhs":[15],"rhs_cover":[0.19871,615],"support":[0.06139,190]},{"confidence":0.44737,"id":"00002f","leverage":0.01388,"lhs":[9,15],"lhs_cover":[0.06139,190],"lift":2.02132,"p_value":7.76919e-7,"rhs":[14],"rhs_cover":[0.22132,685],"support":[0.02746,85]},{"confidence":0.28571,"id":"000030","leverage":0.01349,"lhs":[17],"lhs_cover":[0.21486,665],"lift":1.28157,"p_value":0.0000105915,"rhs":[12],"rhs_cover":[0.22294,690],"support":[0.06139,190]},{"confidence":0.27536,"id":"000031","leverage":0.01349,"lhs":[12],"lhs_cover":[0.22294,690],"lift":1.28157,"p_value":0.0000105915,"rhs":[17],"rhs_cover":[0.21486,665],"support":[0.06139,190]},{"confidence":0.5,"id":"000032","leverage":0.01319,"lhs":[14,1],"lhs_cover":[0.04523,140],"lift":2.39922,"p_value":3.60028e-13,"rhs":[0],"rhs_cover":[0.2084,645],"support":[0.02262,70]},{"confidence":0.44737,"id":"000033","leverage":0.01279,"lhs":[14,15],"lhs_cover":[0.06139,190],"lift":1.87109,"p_value":7.76919e-7,"rhs":[9],"rhs_cover":[0.2391,740],"support":[0.02746,85]},{"confidence":0.28105,"id":"000034","leverage":0.01276,"lhs":[2],"lhs_cover":[0.24717,765],"lift":1.22512,"p_value":0.0000692738,"rhs":[13],"rhs_cover":[0.2294,710],"support":[0.06947,215]},{"confidence":0.30282,"id":"000035","leverage":0.01276,"lhs":[13],"lhs_cover":[0.2294,710],"lift":1.22512,"p_value":0.0000692738,"rhs":[2],"rhs_cover":[0.24717,765],"support":[0.06947,215]},{"confidence":0.29577,"id":"000036","leverage":0.01263,"lhs":[13],"lhs_cover":[0.2294,710],"lift":1.22876,"p_value":0.0000715697,"rhs":[4],"rhs_cover":[0.24071,745],"support":[0.06785,210]},{"confidence":0.28188,"id":"000037","leverage":0.01263,"lhs":[4],"lhs_cover":[0.24071,745],"lift":1.22876,"p_value":0.0000715697,"rhs":[13],"rhs_cover":[0.2294,710],"support":[0.06785,210]},{"confidence":0.25,"id":"000038","leverage":0.01226,"lhs":[5],"lhs_cover":[0.2391,740],"lift":1.25813,"p_value":0.0000510651,"rhs":[15],"rhs_cover":[0.19871,615],"support":[0.05977,185]},{"confidence":0.30081,"id":"000039","leverage":0.01226,"lhs":[15],"lhs_cover":[0.19871,615],"lift":1.25813,"p_value":0.0000510651,"rhs":[5],"rhs_cover":[0.2391,740],"support":[0.05977,185]},{"confidence":0.27465,"id":"00003a","leverage":0.01223,"lhs":[13],"lhs_cover":[0.2294,710],"lift":1.24093,"p_value":0.0000768814,"rhs":[3],"rhs_cover":[0.22132,685],"support":[0.063,195]},{"confidence":0.28467,"id":"00003b","leverage":0.01223,"lhs":[3],"lhs_cover":[0.22132,685],"lift":1.24093,"p_value":0.0000768814,"rhs":[13],"rhs_cover":[0.2294,710],"support":[0.063,195]},{"confidence":0.425,"id":"00003c","leverage":0.01201,"lhs":[7,4],"lhs_cover":[0.06462,200],"lift":1.77753,"p_value":2.13385e-7,"rhs":[9],"rhs_cover":[0.2391,740],"support":[0.02746,85]},{"confidence":0.425,"id":"00003d","leverage":0.01191,"lhs":[6,15],"lhs_cover":[0.06462,200],"lift":1.7656,"p_value":1.09552e-7,"rhs":[4],"rhs_cover":[0.24071,745],"support":[0.02746,85]},{"confidence":0.46875,"id":"00003e","leverage":0.01179,"lhs":[8,13],"lhs_cover":[0.0517,160],"lift":1.94736,"p_value":9.40499e-8,"rhs":[4],"rhs_cover":[0.24071,745],"support":[0.02423,75]},{"confidence":0.46667,"id":"00003f","leverage":0.01173,"lhs":[7,13],"lhs_cover":[0.04847,150],"lift":2.07818,"p_value":1.65751e-11,"rhs":[18],"rhs_cover":[0.22456,695],"support":[0.02262,70]},{"confidence":0.41026,"id":"000040","leverage":0.0117,"lhs":[16,9],"lhs_cover":[0.063,195],"lift":1.82697,"p_value":1.1867e-10,"rhs":[11],"rhs_cover":[0.22456,695],"support":[0.02585,80]},{"confidence":0.41463,"id":"000041","leverage":0.01152,"lhs":[7,9],"lhs_cover":[0.06624,205],"lift":1.72254,"p_value":0.00000127445,"rhs":[4],"rhs_cover":[0.24071,745],"support":[0.02746,85]},{"confidence":0.41026,"id":"000042","leverage":0.01139,"lhs":[2,4],"lhs_cover":[0.063,195],"lift":1.78837,"p_value":0.00000424374,"rhs":[13],"rhs_cover":[0.2294,710],"support":[0.02585,80]},{"confidence":0.4,"id":"000043","leverage":0.01134,"lhs":[16,3],"lhs_cover":[0.06462,200],"lift":1.78129,"p_value":2.39279e-7,"rhs":[11],"rhs_cover":[0.22456,695],"support":[0.02585,80]},{"confidence":0.5,"id":"000044","leverage":0.01103,"lhs":[12,15],"lhs_cover":[0.042,130],"lift":2.10544,"p_value":0.00000225549,"rhs":[6],"rhs_cover":[0.23748,735],"support":[0.021,65]},{"confidence":0.41463,"id":"000045","leverage":0.01098,"lhs":[16,10],"lhs_cover":[0.06624,205],"lift":1.66661,"p_value":0.0000038998,"rhs":[8],"rhs_cover":[0.24879,770],"support":[0.02746,85]},{"confidence":0.4375,"id":"000046","leverage":0.01084,"lhs":[8,14],"lhs_cover":[0.0517,160],"lift":1.92066,"p_value":1.00035e-9,"rhs":[10],"rhs_cover":[0.22779,705],"support":[0.02262,70]},{"confidence":0.40476,"id":"000047","leverage":0.01047,"lhs":[4,9],"lhs_cover":[0.06785,210],"lift":1.61644,"p_value":0.00000127445,"rhs":[7],"rhs_cover":[0.2504,775],"support":[0.02746,85]},{"confidence":0.4375,"id":"000048","leverage":0.01026,"lhs":[7,12],"lhs_cover":[0.0517,160],"lift":1.82981,"p_value":6.88286e-10,"rhs":[9],"rhs_cover":[0.2391,740],"support":[0.02262,70]},{"confidence":0.46429,"id":"000049","leverage":0.00982,"lhs":[13,17],"lhs_cover":[0.04523,140],"lift":1.87838,"p_value":0.0000029448,"rhs":[2],"rhs_cover":[0.24717,765],"support":[0.021,65]},{"confidence":0.4375,"id":"00004a","leverage":0.00967,"lhs":[5,0],"lhs_cover":[0.0517,160],"lift":1.74718,"p_value":4.26013e-7,"rhs":[7],"rhs_cover":[0.2504,775],"support":[0.02262,70]},{"confidence":0.64286,"id":"00004b","leverage":0.0095,"lhs":[7,9,10],"lhs_cover":[0.02262,70],"lift":2.88354,"p_value":8.6686e-8,"rhs":[12],"rhs_cover":[0.22294,690],"support":[0.01454,45]},{"confidence":0.40625,"id":"00004c","leverage":0.00939,"lhs":[8,1],"lhs_cover":[0.0517,160],"lift":1.80913,"p_value":0.00000179042,"rhs":[18],"rhs_cover":[0.22456,695],"support":[0.021,65]},{"confidence":0.64286,"id":"00004d","leverage":0.00888,"lhs":[9,10,12],"lhs_cover":[0.02262,70],"lift":2.56728,"p_value":1.52093e-9,"rhs":[7],"rhs_cover":[0.2504,775],"support":[0.01454,45]},{"confidence":0.72727,"id":"00004e","leverage":0.0087,"lhs":[8,4,3],"lhs_cover":[0.01777,55],"lift":3.06246,"p_value":2.72762e-12,"rhs":[6],"rhs_cover":[0.23748,735],"support":[0.01292,40]},{"confidence":0.42857,"id":"00004f","leverage":0.00857,"lhs":[2,10],"lhs_cover":[0.04523,140],"lift":1.79247,"p_value":1.02705e-7,"rhs":[5],"rhs_cover":[0.2391,740],"support":[0.01939,60]},{"confidence":0.44444,"id":"000050","leverage":0.00853,"lhs":[17,1],"lhs_cover":[0.04362,135],"lift":1.78644,"p_value":5.72024e-9,"rhs":[8],"rhs_cover":[0.24879,770],"support":[0.01939,60]},{"confidence":0.57143,"id":"000051","leverage":0.00843,"lhs":[5,6,3],"lhs_cover":[0.02262,70],"lift":2.87573,"p_value":2.56409e-7,"rhs":[15],"rhs_cover":[0.19871,615],"support":[0.01292,40]},{"confidence":0.875,"id":"000052","leverage":0.00824,"lhs":[4,12,15],"lhs_cover":[0.01292,40],"lift":3.68452,"p_value":4.99398e-9,"rhs":[6],"rhs_cover":[0.23748,735],"support":[0.01131,35]},{"confidence":0.875,"id":"000053","leverage":0.0082,"lhs":[8,6,15],"lhs_cover":[0.01292,40],"lift":3.63507,"p_value":7.15076e-11,"rhs":[4],"rhs_cover":[0.24071,745],"support":[0.01131,35]},{"confidence":0.66667,"id":"000054","leverage":0.0081,"lhs":[4,6,3],"lhs_cover":[0.01939,60],"lift":2.67965,"p_value":1.53177e-13,"rhs":[8],"rhs_cover":[0.24879,770],"support":[0.01292,40]},{"confidence":0.7,"id":"000055","leverage":0.00794,"lhs":[9,12,14],"lhs_cover":[0.01616,50],"lift":3.35891,"p_value":4.50313e-8,"rhs":[0],"rhs_cover":[0.2084,645],"support":[0.01131,35]},{"confidence":0.7,"id":"000056","leverage":0.00794,"lhs":[13,12,1],"lhs_cover":[0.01616,50],"lift":3.35891,"p_value":9.23053e-12,"rhs":[0],"rhs_cover":[0.2084,645],"support":[0.01131,35]},{"confidence":0.77778,"id":"000057","leverage":0.00771,"lhs":[6,18,12],"lhs_cover":[0.01454,45],"lift":3.1467,"p_value":3.3141e-13,"rhs":[2],"rhs_cover":[0.24717,765],"support":[0.01131,35]},{"confidence":0.7,"id":"000058","leverage":0.00771,"lhs":[19,14,0],"lhs_cover":[0.01616,50],"lift":3.13986,"p_value":2.8732e-12,"rhs":[12],"rhs_cover":[0.22294,690],"support":[0.01131,35]},{"confidence":0.63636,"id":"000059","leverage":0.00755,"lhs":[16,13,0],"lhs_cover":[0.01777,55],"lift":3.00694,"p_value":6.44974e-7,"rhs":[1],"rhs_cover":[0.21163,655],"support":[0.01131,35]},{"confidence":0.7,"id":"00005a","leverage":0.00747,"lhs":[2,18,12],"lhs_cover":[0.01616,50],"lift":2.94762,"p_value":3.3141e-13,"rhs":[6],"rhs_cover":[0.23748,735],"support":[0.01131,35]},{"confidence":0.85714,"id":"00005b","leverage":0.00745,"lhs":[9,14,17],"lhs_cover":[0.01131,35],"lift":4.31359,"p_value":1.47677e-11,"rhs":[15],"rhs_cover":[0.19871,615],"support":[0.00969,30]},{"confidence":0.63636,"id":"00005c","leverage":0.00738,"lhs":[9,12,0],"lhs_cover":[0.01777,55],"lift":2.87525,"p_value":3.61651e-7,"rhs":[14],"rhs_cover":[0.22132,685],"support":[0.01131,35]},{"confidence":0.85714,"id":"00005d","leverage":0.00719,"lhs":[9,17,15],"lhs_cover":[0.01131,35],"lift":3.87278,"p_value":1.04374e-10,"rhs":[14],"rhs_cover":[0.22132,685],"support":[0.00969,30]},{"confidence":0.75,"id":"00005e","leverage":0.007,"lhs":[13,12,14],"lhs_cover":[0.01292,40],"lift":3.59884,"p_value":6.69361e-8,"rhs":[0],"rhs_cover":[0.2084,645],"support":[0.00969,30]},{"confidence":0.66667,"id":"00005f","leverage":0.0068,"lhs":[7,9,6],"lhs_cover":[0.01454,45],"lift":3.35501,"p_value":2.18387e-7,"rhs":[15],"rhs_cover":[0.19871,615],"support":[0.00969,30]},{"confidence":0.66667,"id":"000060","leverage":0.0068,"lhs":[5,12,3],"lhs_cover":[0.01454,45],"lift":3.35501,"p_value":8.1735e-8,"rhs":[15],"rhs_cover":[0.19871,615],"support":[0.00969,30]},{"confidence":0.58333,"id":"000061","leverage":0.00667,"lhs":[12,14,0],"lhs_cover":[0.01939,60],"lift":2.43975,"p_value":2.66835e-7,"rhs":[9],"rhs_cover":[0.2391,740],"support":[0.01131,35]},{"confidence":0.53846,"id":"000062","leverage":0.00663,"lhs":[9,14,0],"lhs_cover":[0.021,65],"lift":2.41527,"p_value":2.66835e-7,"rhs":[12],"rhs_cover":[0.22294,690],"support":[0.01131,35]},{"confidence":0.75,"id":"000063","leverage":0.0066,"lhs":[7,6,15],"lhs_cover":[0.01292,40],"lift":3.13682,"p_value":8.03338e-9,"rhs":[9],"rhs_cover":[0.2391,740],"support":[0.00969,30]}],"rules_summary":{"confidence":{"bins":[[0.25,1],[0.25676,1],[0.27515,7],[0.28383,6],[0.29497,11],[0.30296,7],[0.3127,8],[0.32541,4],[0.33508,4],[0.34613,2],[0.36879,1],[0.40367,3],[0.41245,4],[0.42619,3],[0.4371,4],[0.44639,3],[0.45946,1],[0.46657,3],[0.48571,1],[0.5,2],[0.5139,2],[0.53846,1],[0.57143,1],[0.58333,1],[0.63961,4],[0.66667,3],[0.7,4],[0.72727,1],[0.75,2],[0.77778,1],[0.85714,2],[0.875,2]],"exact_histogram":{"populations":[2,7,17,15,8,2,1,0,7,7,4,3,1,4,1,0,1,1,0,2,2,3,0,4,1,2,1,0,0,0,2,2],"start":0.24,"width":0.02},"maximum":0.875,"mean":0.42826,"median":0.34613,"minimum":0.25,"population":100,"standard_deviation":0.16761,"sum":42.82642,"sum_squares":21.12235,"variance":0.02809},"k":100,"leverage":{"bins":[[0.0067,5],[0.0071,2],[0.00755,6],[0.00794,2],[0.00818,3],[0.00856,4],[0.00888,1],[0.00945,2],[0.00975,2],[0.01037,2],[0.01095,3],[0.01142,3],[0.01183,5],[0.01225,4],[0.01271,5],[0.01319,1],[0.01349,2],[0.01388,3],[0.01414,3],[0.01462,2],[0.01489,6],[0.01524,6],[0.01559,1],[0.01634,2],[0.017,6],[0.01742,4],[0.01813,3],[0.0197,2],[0.02011,2],[0.02076,2],[0.02172,4],[0.02697,2]],"exact_histogram":{"populations":[5,10,8,4,4,8,10,6,11,7,4,8,3,2,4,4,0,0,0,0,2],"start":0.006,"width":0.001},"maximum":0.02697,"mean":0.01345,"median":0.01334,"minimum":0.0066,"population":100,"standard_deviation":0.00459,"sum":1.34504,"sum_squares":0.02018,"variance":0.00002},"lhs_cover":{"bins":[[0.01238,6],[0.01454,3],[0.01685,7],[0.01939,2],[0.021,1],[0.02262,3],[0.042,1],[0.04483,4],[0.04847,1],[0.0517,5],[0.05654,2],[0.05977,2],[0.06139,2],[0.063,3],[0.06462,3],[0.06624,2],[0.06785,1],[0.19871,4],[0.2084,4],[0.21486,1],[0.22132,7],[0.22294,3],[0.22456,5],[0.22779,2],[0.2294,5],[0.23748,5],[0.2391,5],[0.24071,3],[0.24717,2],[0.24879,2],[0.2504,3],[0.28271,1]],"exact_histogram":{"populations":[18,4,0,6,9,11,0,0,0,0,0,0,0,0,0,0,0,0,4,4,1,22,10,7,3,0,0,1],"start":0.01,"width":0.01},"maximum":0.28271,"mean":0.13748,"median":0.19871,"minimum":0.01131,"population":100,"standard_deviation":0.09771,"sum":13.74797,"sum_squares":2.83518,"variance":0.00955},"lift":{"bins":[[1.24504,16],[1.31344,20],[1.36181,6],[1.39926,6],[1.43603,2],[1.4728,2],[1.61644,1],[1.66661,1],[1.73486,2],[1.78195,6],[1.82197,3],[1.87473,2],[1.93401,2],[2.04014,3],[2.09181,2],[2.19366,1],[2.31224,1],[2.40725,2],[2.45191,2],[2.56728,1],[2.67965,1],[2.87817,3],[2.94762,1],[3.00694,1],[3.06246,1],[3.14113,3],[3.35696,4],[3.59884,1],[3.63507,1],[3.68452,1],[3.87278,1],[4.31359,1]],"exact_histogram":{"populations":[20,26,6,0,2,8,5,2,4,2,0,2,3,1,1,0,3,1,2,3,0,4,0,1,2,0,1,0,0,0,0,1],"start":1.2,"width":0.1},"maximum":4.31359,"mean":1.88484,"median":1.45442,"minimum":1.22512,"population":100,"standard_deviation":0.77248,"sum":188.48413,"sum_squares":414.33772,"variance":0.59672},"p_value":{"bins":[[2e-9,37],[3.7e-8,3],[6.8e-8,3],[8.7e-8,3],[1.17e-7,7],[2.16e-7,2],[2.47e-7,4],[2.67e-7,2],[3.62e-7,1],[4.26e-7,1],[5.65e-7,2],[6.45e-7,1],[7.77e-7,2],[8.3e-7,2],[0.000001274,2],[0.000001717,2],[0.00000179,1],[0.000002255,1],[0.000002945,1],[0.0000039,1],[0.00000408,1],[0.000004244,1],[0.000005234,2],[0.000005572,2],[0.000006587,2],[0.00000762,2],[0.00000819,2],[0.000010592,2],[0.000051065,2],[0.000069274,2],[0.00007157,2],[0.000076881,2]],"exact_histogram":{"populations":[80,10,2,0,0,0,0,0,0,0,2,0,0,2,2,2],"start":0,"width":0.000005},"maximum":0.000076881,"mean":0.00000659566,"median":0,"minimum":0,"population":100,"standard_deviation":0.0000183368,"sum":0.000659566,"sum_squares":3.76378e-8,"variance":3.36238e-10},"population":3095,"rhs_cover":{"counts":[[0.19871,10],[0.2084,9],[0.21163,1],[0.21486,1],[0.22132,10],[0.22294,6],[0.22456,9],[0.22779,3],[0.2294,6],[0.23748,10],[0.2391,11],[0.24071,7],[0.24717,4],[0.24879,5],[0.2504,7],[0.28271,1]],"exact_histogram":{"populations":[10,9,2,34,21,16,7,0,0,1],"start":0.19,"width":0.01},"maximum":0.28271,"mean":0.22879,"median":0.2294,"minimum":0.19871,"population":100,"standard_deviation":0.01641,"sum":22.87885,"sum_squares":5.26107,"variance":0.00027},"support":{"counts":[[0.00969,6],[0.01131,11],[0.01292,3],[0.01454,2],[0.01939,2],[0.021,3],[0.02262,5],[0.02423,1],[0.02585,3],[0.02746,10],[0.02908,1],[0.03069,1],[0.05977,2],[0.06139,8],[0.063,4],[0.06462,4],[0.06624,2],[0.06785,8],[0.06947,6],[0.07108,2],[0.07431,6],[0.07593,2],[0.07754,4],[0.08239,2],[0.08401,2]],"exact_histogram":{"populations":[6,16,2,9,14,1,0,0,0,0,2,16,16,8,6,4],"start":0.005,"width":0.005},"maximum":0.08401,"mean":0.04497,"median":0.06058,"minimum":0.00969,"population":100,"standard_deviation":0.02623,"sum":4.4975,"sum_squares":0.27039,"variance":0.00069}},"search_strategy":"leverage","significance_level":0.05},"category":0,"code":200,"columns":1,"configuration":null,"configuration_status":false,"created":"2021-10-25T10:26:30.751000","creator":"tehilabk123","credits":0,"credits_per_prediction":0,"dataset":"dataset/6176865327dc9b12d207b449","dataset_field_types":{"categorical":0,"datetime":0,"items":1,"numeric":0,"preferred":1,"text":0,"total":1},"dataset_status":true,"description":"","excluded_fields":[],"fields_meta":{"count":1,"limit":-1,"offset":0,"query_total":1,"total":1},"input_fields":["000000"],"locale":"en_US","max_columns":1,"max_rows":3095,"name":"items","name_options":"max. k=100, search strategy=leverage, min. lift=1, min. support=0.00032","number_of_associationsets":0,"number_of_public_associationsets":0,"ordering":0,"out_of_bag":false,"price":0,"private":true,"project":null,"range":null,"replacement":false,"resource":"association/6176865647d775129e05fb5a","rows":3095,"sample_rate":1,"shared":false,"size":142119,"source":"source/6176865247d77512a006a338","source_status":true,"status":{"code":5,"elapsed":9853,"message":"The association has been created","progress":1},"subscription":false,"tags":[],"type":0,"updated":"2021-10-25T10:26:42.209000","white_box":false},"resource":"association/6176865647d775129e05fb5a","location":"https://bigml.io/andromeda/association/6176865647d775129e05fb5a","error":null}
+{
+  "code": 200,
+  "object": {
+    "associations": {
+      "complement": false,
+      "discretization": {
+        "pretty": true,
+        "size": 5,
+        "trim": 0,
+        "type": "population"
+      },
+      "fields": {
+        "000000": {
+          "column_number": 0,
+          "datatype": "string",
+          "item_analysis": {
+            "separator": ","
+          },
+          "name": "field1",
+          "optype": "items",
+          "order": 0,
+          "preferred": true,
+          "summary": {
+            "average_length": 44.55289,
+            "items": [
+              [
+                "Phonecharger",
+                960
+              ],
+              [
+                "Hdmicable",
+                895
+              ],
+              [
+                "Microphone",
+                875
+              ],
+              [
+                "Computer",
+                865
+              ],
+              [
+                "Earphone",
+                850
+              ],
+              [
+                "screen",
+                845
+              ],
+              [
+                "Mouse",
+                835
+              ],
+              [
+                "TV",
+                825
+              ],
+              [
+                "Mousepad",
+                815
+              ],
+              [
+                "Auxcable",
+                810
+              ],
+              [
+                "Extender",
+                810
+              ],
+              [
+                "Phone",
+                790
+              ],
+              [
+                "Smartwatch",
+                790
+              ],
+              [
+                "Xbox",
+                785
+              ],
+              [
+                "Diskonkey",
+                780
+              ],
+              [
+                "Headphone",
+                775
+              ],
+              [
+                "Tablet",
+                765
+              ],
+              [
+                "Spliter",
+                755
+              ],
+              [
+                "Speaker",
+                740
+              ],
+              [
+                "Keyboard",
+                705
+              ]
+            ],
+            "missing_count": 0
+          }
+        }
+      },
+      "items": [
+        {
+          "complement": false,
+          "count": 755,
+          "field_id": "000000",
+          "name": "Spliter"
+        },
+        {
+          "complement": false,
+          "count": 765,
+          "field_id": "000000",
+          "name": "Tablet"
+        },
+        {
+          "complement": false,
+          "count": 875,
+          "field_id": "000000",
+          "name": "Microphone"
+        },
+        {
+          "complement": false,
+          "count": 780,
+          "field_id": "000000",
+          "name": "Diskonkey"
+        },
+        {
+          "complement": false,
+          "count": 810,
+          "field_id": "000000",
+          "name": "Extender"
+        },
+        {
+          "complement": false,
+          "count": 850,
+          "field_id": "000000",
+          "name": "Earphone"
+        },
+        {
+          "complement": false,
+          "count": 845,
+          "field_id": "000000",
+          "name": "screen"
+        },
+        {
+          "complement": false,
+          "count": 865,
+          "field_id": "000000",
+          "name": "Computer"
+        },
+        {
+          "complement": false,
+          "count": 895,
+          "field_id": "000000",
+          "name": "Hdmicable"
+        },
+        {
+          "complement": false,
+          "count": 825,
+          "field_id": "000000",
+          "name": "TV"
+        },
+        {
+          "complement": false,
+          "count": 835,
+          "field_id": "000000",
+          "name": "Mouse"
+        },
+        {
+          "complement": false,
+          "count": 775,
+          "field_id": "000000",
+          "name": "Headphone"
+        },
+        {
+          "complement": false,
+          "count": 815,
+          "field_id": "000000",
+          "name": "Mousepad"
+        },
+        {
+          "complement": false,
+          "count": 790,
+          "field_id": "000000",
+          "name": "Phone"
+        },
+        {
+          "complement": false,
+          "count": 790,
+          "field_id": "000000",
+          "name": "Smartwatch"
+        },
+        {
+          "complement": false,
+          "count": 705,
+          "field_id": "000000",
+          "name": "Keyboard"
+        },
+        {
+          "complement": false,
+          "count": 960,
+          "field_id": "000000",
+          "name": "Phonecharger"
+        },
+        {
+          "complement": false,
+          "count": 740,
+          "field_id": "000000",
+          "name": "Speaker"
+        },
+        {
+          "complement": false,
+          "count": 785,
+          "field_id": "000000",
+          "name": "Xbox"
+        },
+        {
+          "complement": false,
+          "count": 810,
+          "field_id": "000000",
+          "name": "Auxcable"
+        }
+      ],
+      "max_k": 100,
+      "max_lhs": 4,
+      "min_confidence": 0,
+      "min_leverage": 0,
+      "min_lift": 1,
+      "min_support": 0.00028,
+      "missing_items": false,
+      "rules": [
+        {
+          "confidence": 0.34731,
+          "id": "000000",
+          "leverage": 0.02433,
+          "lhs": [
+            10
+          ],
+          "lhs_cover": [
+            0.23554,
+            835
+          ],
+          "lift": 1.42335,
+          "p_value": 6.66738e-15,
+          "rhs": [
+            7
+          ],
+          "rhs_cover": [
+            0.24401,
+            865
+          ],
+          "support": [
+            0.08181,
+            290
+          ]
+        },
+        {
+          "confidence": 0.33526,
+          "id": "000001",
+          "leverage": 0.02433,
+          "lhs": [
+            7
+          ],
+          "lhs_cover": [
+            0.24401,
+            865
+          ],
+          "lift": 1.42335,
+          "p_value": 6.66738e-15,
+          "rhs": [
+            10
+          ],
+          "rhs_cover": [
+            0.23554,
+            835
+          ],
+          "support": [
+            0.08181,
+            290
+          ]
+        },
+        {
+          "confidence": 0.35484,
+          "id": "000002",
+          "leverage": 0.02238,
+          "lhs": [
+            11
+          ],
+          "lhs_cover": [
+            0.21862,
+            775
+          ],
+          "lift": 1.40548,
+          "p_value": 3.22907e-13,
+          "rhs": [
+            8
+          ],
+          "rhs_cover": [
+            0.25247,
+            895
+          ],
+          "support": [
+            0.07757,
+            275
+          ]
+        },
+        {
+          "confidence": 0.30726,
+          "id": "000003",
+          "leverage": 0.02238,
+          "lhs": [
+            8
+          ],
+          "lhs_cover": [
+            0.25247,
+            895
+          ],
+          "lift": 1.40548,
+          "p_value": 3.22907e-13,
+          "rhs": [
+            11
+          ],
+          "rhs_cover": [
+            0.21862,
+            775
+          ],
+          "support": [
+            0.07757,
+            275
+          ]
+        },
+        {
+          "confidence": 0.31214,
+          "id": "000004",
+          "leverage": 0.02041,
+          "lhs": [
+            7
+          ],
+          "lhs_cover": [
+            0.24401,
+            865
+          ],
+          "lift": 1.36609,
+          "p_value": 3.09263e-11,
+          "rhs": [
+            19
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.07616,
+            270
+          ]
+        },
+        {
+          "confidence": 0.33333,
+          "id": "000005",
+          "leverage": 0.02041,
+          "lhs": [
+            19
+          ],
+          "lhs_cover": [
+            0.22849,
+            810
+          ],
+          "lift": 1.36609,
+          "p_value": 3.09263e-11,
+          "rhs": [
+            7
+          ],
+          "rhs_cover": [
+            0.24401,
+            865
+          ],
+          "support": [
+            0.07616,
+            270
+          ]
+        },
+        {
+          "confidence": 0.30058,
+          "id": "000006",
+          "leverage": 0.01931,
+          "lhs": [
+            7
+          ],
+          "lhs_cover": [
+            0.24401,
+            865
+          ],
+          "lift": 1.35739,
+          "p_value": 2.00255e-10,
+          "rhs": [
+            18
+          ],
+          "rhs_cover": [
+            0.22144,
+            785
+          ],
+          "support": [
+            0.07334,
+            260
+          ]
+        },
+        {
+          "confidence": 0.33121,
+          "id": "000007",
+          "leverage": 0.01931,
+          "lhs": [
+            18
+          ],
+          "lhs_cover": [
+            0.22144,
+            785
+          ],
+          "lift": 1.35739,
+          "p_value": 2.00255e-10,
+          "rhs": [
+            7
+          ],
+          "rhs_cover": [
+            0.24401,
+            865
+          ],
+          "support": [
+            0.07334,
+            260
+          ]
+        },
+        {
+          "confidence": 0.31765,
+          "id": "000008",
+          "leverage": 0.01901,
+          "lhs": [
+            5
+          ],
+          "lhs_cover": [
+            0.23977,
+            850
+          ],
+          "lift": 1.33261,
+          "p_value": 7.35668e-10,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.07616,
+            270
+          ]
+        },
+        {
+          "confidence": 0.31953,
+          "id": "000009",
+          "leverage": 0.01901,
+          "lhs": [
+            6
+          ],
+          "lhs_cover": [
+            0.23836,
+            845
+          ],
+          "lift": 1.33261,
+          "p_value": 7.35668e-10,
+          "rhs": [
+            5
+          ],
+          "rhs_cover": [
+            0.23977,
+            850
+          ],
+          "support": [
+            0.07616,
+            270
+          ]
+        },
+        {
+          "confidence": 0.31126,
+          "id": "00000a",
+          "leverage": 0.01883,
+          "lhs": [
+            0
+          ],
+          "lhs_cover": [
+            0.21298,
+            755
+          ],
+          "lift": 1.39672,
+          "p_value": 1.04956e-10,
+          "rhs": [
+            14
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.06629,
+            235
+          ]
+        },
+        {
+          "confidence": 0.29747,
+          "id": "00000b",
+          "leverage": 0.01883,
+          "lhs": [
+            14
+          ],
+          "lhs_cover": [
+            0.22285,
+            790
+          ],
+          "lift": 1.39672,
+          "p_value": 1.04956e-10,
+          "rhs": [
+            0
+          ],
+          "rhs_cover": [
+            0.21298,
+            755
+          ],
+          "support": [
+            0.06629,
+            235
+          ]
+        },
+        {
+          "confidence": 0.30464,
+          "id": "00000c",
+          "leverage": 0.01742,
+          "lhs": [
+            0
+          ],
+          "lhs_cover": [
+            0.21298,
+            755
+          ],
+          "lift": 1.367,
+          "p_value": 1.98922e-9,
+          "rhs": [
+            13
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.06488,
+            230
+          ]
+        },
+        {
+          "confidence": 0.29114,
+          "id": "00000d",
+          "leverage": 0.01742,
+          "lhs": [
+            13
+          ],
+          "lhs_cover": [
+            0.22285,
+            790
+          ],
+          "lift": 1.367,
+          "p_value": 1.98922e-9,
+          "rhs": [
+            0
+          ],
+          "rhs_cover": [
+            0.21298,
+            755
+          ],
+          "support": [
+            0.06488,
+            230
+          ]
+        },
+        {
+          "confidence": 0.29586,
+          "id": "00000e",
+          "leverage": 0.0174,
+          "lhs": [
+            6
+          ],
+          "lhs_cover": [
+            0.23836,
+            845
+          ],
+          "lift": 1.32762,
+          "p_value": 7.05972e-9,
+          "rhs": [
+            14
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.07052,
+            250
+          ]
+        },
+        {
+          "confidence": 0.31646,
+          "id": "00000f",
+          "leverage": 0.0174,
+          "lhs": [
+            14
+          ],
+          "lhs_cover": [
+            0.22285,
+            790
+          ],
+          "lift": 1.32762,
+          "p_value": 7.05972e-9,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.07052,
+            250
+          ]
+        },
+        {
+          "confidence": 0.30247,
+          "id": "000010",
+          "leverage": 0.0169,
+          "lhs": [
+            19
+          ],
+          "lhs_cover": [
+            0.22849,
+            810
+          ],
+          "lift": 1.32377,
+          "p_value": 1.51192e-8,
+          "rhs": [
+            4
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.06911,
+            245
+          ]
+        },
+        {
+          "confidence": 0.30247,
+          "id": "000011",
+          "leverage": 0.0169,
+          "lhs": [
+            4
+          ],
+          "lhs_cover": [
+            0.22849,
+            810
+          ],
+          "lift": 1.32377,
+          "p_value": 1.51192e-8,
+          "rhs": [
+            19
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.06911,
+            245
+          ]
+        },
+        {
+          "confidence": 0.3141,
+          "id": "000012",
+          "leverage": 0.01666,
+          "lhs": [
+            3
+          ],
+          "lhs_cover": [
+            0.22003,
+            780
+          ],
+          "lift": 1.31774,
+          "p_value": 2.4256e-8,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.06911,
+            245
+          ]
+        },
+        {
+          "confidence": 0.28994,
+          "id": "000013",
+          "leverage": 0.01666,
+          "lhs": [
+            6
+          ],
+          "lhs_cover": [
+            0.23836,
+            845
+          ],
+          "lift": 1.31774,
+          "p_value": 2.4256e-8,
+          "rhs": [
+            3
+          ],
+          "rhs_cover": [
+            0.22003,
+            780
+          ],
+          "support": [
+            0.06911,
+            245
+          ]
+        },
+        {
+          "confidence": 0.29787,
+          "id": "000014",
+          "leverage": 0.01492,
+          "lhs": [
+            15
+          ],
+          "lhs_cover": [
+            0.19887,
+            705
+          ],
+          "lift": 1.33665,
+          "p_value": 1.17345e-7,
+          "rhs": [
+            14
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.05924,
+            210
+          ]
+        },
+        {
+          "confidence": 0.26582,
+          "id": "000015",
+          "leverage": 0.01492,
+          "lhs": [
+            14
+          ],
+          "lhs_cover": [
+            0.22285,
+            790
+          ],
+          "lift": 1.33665,
+          "p_value": 1.17345e-7,
+          "rhs": [
+            15
+          ],
+          "rhs_cover": [
+            0.19887,
+            705
+          ],
+          "support": [
+            0.05924,
+            210
+          ]
+        },
+        {
+          "confidence": 0.2963,
+          "id": "000016",
+          "leverage": 0.01453,
+          "lhs": [
+            4
+          ],
+          "lhs_cover": [
+            0.22849,
+            810
+          ],
+          "lift": 1.27318,
+          "p_value": 0.00000106887,
+          "rhs": [
+            9
+          ],
+          "rhs_cover": [
+            0.23272,
+            825
+          ],
+          "support": [
+            0.0677,
+            240
+          ]
+        },
+        {
+          "confidence": 0.29091,
+          "id": "000017",
+          "leverage": 0.01453,
+          "lhs": [
+            9
+          ],
+          "lhs_cover": [
+            0.23272,
+            825
+          ],
+          "lift": 1.27318,
+          "p_value": 0.00000106887,
+          "rhs": [
+            4
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.0677,
+            240
+          ]
+        },
+        {
+          "confidence": 0.46341,
+          "id": "000018",
+          "leverage": 0.01448,
+          "lhs": [
+            14,
+            3
+          ],
+          "lhs_cover": [
+            0.05783,
+            205
+          ],
+          "lift": 2.1759,
+          "p_value": 1.7555e-13,
+          "rhs": [
+            0
+          ],
+          "rhs_cover": [
+            0.21298,
+            755
+          ],
+          "support": [
+            0.0268,
+            95
+          ]
+        },
+        {
+          "confidence": 0.46154,
+          "id": "000019",
+          "leverage": 0.01445,
+          "lhs": [
+            9,
+            14
+          ],
+          "lhs_cover": [
+            0.05501,
+            195
+          ],
+          "lift": 2.32079,
+          "p_value": 4.93542e-12,
+          "rhs": [
+            15
+          ],
+          "rhs_cover": [
+            0.19887,
+            705
+          ],
+          "support": [
+            0.02539,
+            90
+          ]
+        },
+        {
+          "confidence": 0.33136,
+          "id": "00001a",
+          "leverage": 0.01443,
+          "lhs": [
+            6
+          ],
+          "lhs_cover": [
+            0.23836,
+            845
+          ],
+          "lift": 1.22362,
+          "p_value": 0.00000458818,
+          "rhs": [
+            16
+          ],
+          "rhs_cover": [
+            0.2708,
+            960
+          ],
+          "support": [
+            0.07898,
+            280
+          ]
+        },
+        {
+          "confidence": 0.29167,
+          "id": "00001b",
+          "leverage": 0.01443,
+          "lhs": [
+            16
+          ],
+          "lhs_cover": [
+            0.2708,
+            960
+          ],
+          "lift": 1.22362,
+          "p_value": 0.00000458818,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.07898,
+            280
+          ]
+        },
+        {
+          "confidence": 0.30496,
+          "id": "00001c",
+          "leverage": 0.01437,
+          "lhs": [
+            15
+          ],
+          "lhs_cover": [
+            0.19887,
+            705
+          ],
+          "lift": 1.31042,
+          "p_value": 4.50511e-7,
+          "rhs": [
+            9
+          ],
+          "rhs_cover": [
+            0.23272,
+            825
+          ],
+          "support": [
+            0.06065,
+            215
+          ]
+        },
+        {
+          "confidence": 0.26061,
+          "id": "00001d",
+          "leverage": 0.01437,
+          "lhs": [
+            9
+          ],
+          "lhs_cover": [
+            0.23272,
+            825
+          ],
+          "lift": 1.31042,
+          "p_value": 4.50511e-7,
+          "rhs": [
+            15
+          ],
+          "rhs_cover": [
+            0.19887,
+            705
+          ],
+          "support": [
+            0.06065,
+            215
+          ]
+        },
+        {
+          "confidence": 0.28,
+          "id": "00001e",
+          "leverage": 0.01411,
+          "lhs": [
+            2
+          ],
+          "lhs_cover": [
+            0.24683,
+            875
+          ],
+          "lift": 1.25646,
+          "p_value": 0.00000259766,
+          "rhs": [
+            13
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.06911,
+            245
+          ]
+        },
+        {
+          "confidence": 0.31013,
+          "id": "00001f",
+          "leverage": 0.01411,
+          "lhs": [
+            13
+          ],
+          "lhs_cover": [
+            0.22285,
+            790
+          ],
+          "lift": 1.25646,
+          "p_value": 0.00000259766,
+          "rhs": [
+            2
+          ],
+          "rhs_cover": [
+            0.24683,
+            875
+          ],
+          "support": [
+            0.06911,
+            245
+          ]
+        },
+        {
+          "confidence": 0.46341,
+          "id": "000020",
+          "leverage": 0.01391,
+          "lhs": [
+            3,
+            0
+          ],
+          "lhs_cover": [
+            0.05783,
+            205
+          ],
+          "lift": 2.0795,
+          "p_value": 4.98369e-8,
+          "rhs": [
+            14
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.0268,
+            95
+          ]
+        },
+        {
+          "confidence": 0.29012,
+          "id": "000021",
+          "leverage": 0.01376,
+          "lhs": [
+            4
+          ],
+          "lhs_cover": [
+            0.22849,
+            810
+          ],
+          "lift": 1.26195,
+          "p_value": 0.000003249,
+          "rhs": [
+            12
+          ],
+          "rhs_cover": [
+            0.2299,
+            815
+          ],
+          "support": [
+            0.06629,
+            235
+          ]
+        },
+        {
+          "confidence": 0.28834,
+          "id": "000022",
+          "leverage": 0.01376,
+          "lhs": [
+            12
+          ],
+          "lhs_cover": [
+            0.2299,
+            815
+          ],
+          "lift": 1.26195,
+          "p_value": 0.000003249,
+          "rhs": [
+            4
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.06629,
+            235
+          ]
+        },
+        {
+          "confidence": 0.29012,
+          "id": "000023",
+          "leverage": 0.01376,
+          "lhs": [
+            19
+          ],
+          "lhs_cover": [
+            0.22849,
+            810
+          ],
+          "lift": 1.26195,
+          "p_value": 0.000003249,
+          "rhs": [
+            12
+          ],
+          "rhs_cover": [
+            0.2299,
+            815
+          ],
+          "support": [
+            0.06629,
+            235
+          ]
+        },
+        {
+          "confidence": 0.28834,
+          "id": "000024",
+          "leverage": 0.01376,
+          "lhs": [
+            12
+          ],
+          "lhs_cover": [
+            0.2299,
+            815
+          ],
+          "lift": 1.26195,
+          "p_value": 0.000003249,
+          "rhs": [
+            19
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.06629,
+            235
+          ]
+        },
+        {
+          "confidence": 0.29448,
+          "id": "000025",
+          "leverage": 0.01355,
+          "lhs": [
+            12
+          ],
+          "lhs_cover": [
+            0.2299,
+            815
+          ],
+          "lift": 1.25021,
+          "p_value": 0.00000547479,
+          "rhs": [
+            10
+          ],
+          "rhs_cover": [
+            0.23554,
+            835
+          ],
+          "support": [
+            0.0677,
+            240
+          ]
+        },
+        {
+          "confidence": 0.28743,
+          "id": "000026",
+          "leverage": 0.01355,
+          "lhs": [
+            10
+          ],
+          "lhs_cover": [
+            0.23554,
+            835
+          ],
+          "lift": 1.25021,
+          "p_value": 0.00000547479,
+          "rhs": [
+            12
+          ],
+          "rhs_cover": [
+            0.2299,
+            815
+          ],
+          "support": [
+            0.0677,
+            240
+          ]
+        },
+        {
+          "confidence": 0.29714,
+          "id": "000027",
+          "leverage": 0.01312,
+          "lhs": [
+            2
+          ],
+          "lhs_cover": [
+            0.24683,
+            875
+          ],
+          "lift": 1.21777,
+          "p_value": 0.0000193348,
+          "rhs": [
+            7
+          ],
+          "rhs_cover": [
+            0.24401,
+            865
+          ],
+          "support": [
+            0.07334,
+            260
+          ]
+        },
+        {
+          "confidence": 0.30058,
+          "id": "000028",
+          "leverage": 0.01312,
+          "lhs": [
+            7
+          ],
+          "lhs_cover": [
+            0.24401,
+            865
+          ],
+          "lift": 1.21777,
+          "p_value": 0.0000193348,
+          "rhs": [
+            2
+          ],
+          "rhs_cover": [
+            0.24683,
+            875
+          ],
+          "support": [
+            0.07334,
+            260
+          ]
+        },
+        {
+          "confidence": 0.42222,
+          "id": "000029",
+          "leverage": 0.01274,
+          "lhs": [
+            16,
+            7
+          ],
+          "lhs_cover": [
+            0.06347,
+            225
+          ],
+          "lift": 1.90672,
+          "p_value": 0.00000403127,
+          "rhs": [
+            18
+          ],
+          "rhs_cover": [
+            0.22144,
+            785
+          ],
+          "support": [
+            0.0268,
+            95
+          ]
+        },
+        {
+          "confidence": 0.28481,
+          "id": "00002a",
+          "leverage": 0.01255,
+          "lhs": [
+            14
+          ],
+          "lhs_cover": [
+            0.22285,
+            790
+          ],
+          "lift": 1.24648,
+          "p_value": 0.0000160708,
+          "rhs": [
+            19
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.06347,
+            225
+          ]
+        },
+        {
+          "confidence": 0.27778,
+          "id": "00002b",
+          "leverage": 0.01255,
+          "lhs": [
+            19
+          ],
+          "lhs_cover": [
+            0.22849,
+            810
+          ],
+          "lift": 1.24648,
+          "p_value": 0.0000160708,
+          "rhs": [
+            14
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.06347,
+            225
+          ]
+        },
+        {
+          "confidence": 0.29139,
+          "id": "00002c",
+          "leverage": 0.0125,
+          "lhs": [
+            0
+          ],
+          "lhs_cover": [
+            0.21298,
+            755
+          ],
+          "lift": 1.2521,
+          "p_value": 0.0000147102,
+          "rhs": [
+            9
+          ],
+          "rhs_cover": [
+            0.23272,
+            825
+          ],
+          "support": [
+            0.06206,
+            220
+          ]
+        },
+        {
+          "confidence": 0.26667,
+          "id": "00002d",
+          "leverage": 0.0125,
+          "lhs": [
+            9
+          ],
+          "lhs_cover": [
+            0.23272,
+            825
+          ],
+          "lift": 1.2521,
+          "p_value": 0.0000147102,
+          "rhs": [
+            0
+          ],
+          "rhs_cover": [
+            0.21298,
+            755
+          ],
+          "support": [
+            0.06206,
+            220
+          ]
+        },
+        {
+          "confidence": 0.30539,
+          "id": "00002e",
+          "leverage": 0.01247,
+          "lhs": [
+            10
+          ],
+          "lhs_cover": [
+            0.23554,
+            835
+          ],
+          "lift": 1.20961,
+          "p_value": 0.0000427386,
+          "rhs": [
+            8
+          ],
+          "rhs_cover": [
+            0.25247,
+            895
+          ],
+          "support": [
+            0.07193,
+            255
+          ]
+        },
+        {
+          "confidence": 0.28492,
+          "id": "00002f",
+          "leverage": 0.01247,
+          "lhs": [
+            8
+          ],
+          "lhs_cover": [
+            0.25247,
+            895
+          ],
+          "lift": 1.20961,
+          "p_value": 0.0000427386,
+          "rhs": [
+            10
+          ],
+          "rhs_cover": [
+            0.23554,
+            835
+          ],
+          "support": [
+            0.07193,
+            255
+          ]
+        },
+        {
+          "confidence": 0.26286,
+          "id": "000030",
+          "leverage": 0.01231,
+          "lhs": [
+            2
+          ],
+          "lhs_cover": [
+            0.24683,
+            875
+          ],
+          "lift": 1.23421,
+          "p_value": 0.0000265837,
+          "rhs": [
+            0
+          ],
+          "rhs_cover": [
+            0.21298,
+            755
+          ],
+          "support": [
+            0.06488,
+            230
+          ]
+        },
+        {
+          "confidence": 0.30464,
+          "id": "000031",
+          "leverage": 0.01231,
+          "lhs": [
+            0
+          ],
+          "lhs_cover": [
+            0.21298,
+            755
+          ],
+          "lift": 1.23421,
+          "p_value": 0.0000265837,
+          "rhs": [
+            2
+          ],
+          "rhs_cover": [
+            0.24683,
+            875
+          ],
+          "support": [
+            0.06488,
+            230
+          ]
+        },
+        {
+          "confidence": 0.40426,
+          "id": "000032",
+          "leverage": 0.01221,
+          "lhs": [
+            14,
+            0
+          ],
+          "lhs_cover": [
+            0.06629,
+            235
+          ],
+          "lift": 1.83729,
+          "p_value": 4.98369e-8,
+          "rhs": [
+            3
+          ],
+          "rhs_cover": [
+            0.22003,
+            780
+          ],
+          "support": [
+            0.0268,
+            95
+          ]
+        },
+        {
+          "confidence": 0.40476,
+          "id": "000033",
+          "leverage": 0.0122,
+          "lhs": [
+            6,
+            4
+          ],
+          "lhs_cover": [
+            0.05924,
+            210
+          ],
+          "lift": 2.03529,
+          "p_value": 8.87228e-12,
+          "rhs": [
+            15
+          ],
+          "rhs_cover": [
+            0.19887,
+            705
+          ],
+          "support": [
+            0.02398,
+            85
+          ]
+        },
+        {
+          "confidence": 0.44444,
+          "id": "000034",
+          "leverage": 0.01218,
+          "lhs": [
+            16,
+            10
+          ],
+          "lhs_cover": [
+            0.06347,
+            225
+          ],
+          "lift": 1.7604,
+          "p_value": 1.52e-7,
+          "rhs": [
+            8
+          ],
+          "rhs_cover": [
+            0.25247,
+            895
+          ],
+          "support": [
+            0.02821,
+            100
+          ]
+        },
+        {
+          "confidence": 0.29299,
+          "id": "000035",
+          "leverage": 0.0121,
+          "lhs": [
+            18
+          ],
+          "lhs_cover": [
+            0.22144,
+            785
+          ],
+          "lift": 1.22919,
+          "p_value": 0.0000371221,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.06488,
+            230
+          ]
+        },
+        {
+          "confidence": 0.27219,
+          "id": "000036",
+          "leverage": 0.0121,
+          "lhs": [
+            6
+          ],
+          "lhs_cover": [
+            0.23836,
+            845
+          ],
+          "lift": 1.22919,
+          "p_value": 0.0000371221,
+          "rhs": [
+            18
+          ],
+          "rhs_cover": [
+            0.22144,
+            785
+          ],
+          "support": [
+            0.06488,
+            230
+          ]
+        },
+        {
+          "confidence": 0.4186,
+          "id": "000037",
+          "leverage": 0.01187,
+          "lhs": [
+            9,
+            15
+          ],
+          "lhs_cover": [
+            0.06065,
+            215
+          ],
+          "lift": 1.87842,
+          "p_value": 0.00000358968,
+          "rhs": [
+            14
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.02539,
+            90
+          ]
+        },
+        {
+          "confidence": 0.29787,
+          "id": "000038",
+          "leverage": 0.01183,
+          "lhs": [
+            15
+          ],
+          "lhs_cover": [
+            0.19887,
+            705
+          ],
+          "lift": 1.24965,
+          "p_value": 0.0000287981,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.05924,
+            210
+          ]
+        },
+        {
+          "confidence": 0.24852,
+          "id": "000039",
+          "leverage": 0.01183,
+          "lhs": [
+            6
+          ],
+          "lhs_cover": [
+            0.23836,
+            845
+          ],
+          "lift": 1.24965,
+          "p_value": 0.0000287981,
+          "rhs": [
+            15
+          ],
+          "rhs_cover": [
+            0.19887,
+            705
+          ],
+          "support": [
+            0.05924,
+            210
+          ]
+        },
+        {
+          "confidence": 0.40909,
+          "id": "00003a",
+          "leverage": 0.01182,
+          "lhs": [
+            16,
+            3
+          ],
+          "lhs_cover": [
+            0.06206,
+            220
+          ],
+          "lift": 1.87126,
+          "p_value": 3.44817e-10,
+          "rhs": [
+            11
+          ],
+          "rhs_cover": [
+            0.21862,
+            775
+          ],
+          "support": [
+            0.02539,
+            90
+          ]
+        },
+        {
+          "confidence": 0.42857,
+          "id": "00003b",
+          "leverage": 0.0116,
+          "lhs": [
+            14,
+            15
+          ],
+          "lhs_cover": [
+            0.05924,
+            210
+          ],
+          "lift": 1.84156,
+          "p_value": 0.00000358968,
+          "rhs": [
+            9
+          ],
+          "rhs_cover": [
+            0.23272,
+            825
+          ],
+          "support": [
+            0.02539,
+            90
+          ]
+        },
+        {
+          "confidence": 0.42857,
+          "id": "00003c",
+          "leverage": 0.0116,
+          "lhs": [
+            7,
+            4
+          ],
+          "lhs_cover": [
+            0.05924,
+            210
+          ],
+          "lift": 1.84156,
+          "p_value": 0.00000131018,
+          "rhs": [
+            9
+          ],
+          "rhs_cover": [
+            0.23272,
+            825
+          ],
+          "support": [
+            0.02539,
+            90
+          ]
+        },
+        {
+          "confidence": 0.29787,
+          "id": "00003d",
+          "leverage": 0.01155,
+          "lhs": [
+            15
+          ],
+          "lhs_cover": [
+            0.19887,
+            705
+          ],
+          "lift": 1.2423,
+          "p_value": 0.0000442131,
+          "rhs": [
+            5
+          ],
+          "rhs_cover": [
+            0.23977,
+            850
+          ],
+          "support": [
+            0.05924,
+            210
+          ]
+        },
+        {
+          "confidence": 0.24706,
+          "id": "00003e",
+          "leverage": 0.01155,
+          "lhs": [
+            5
+          ],
+          "lhs_cover": [
+            0.23977,
+            850
+          ],
+          "lift": 1.2423,
+          "p_value": 0.0000442131,
+          "rhs": [
+            15
+          ],
+          "rhs_cover": [
+            0.19887,
+            705
+          ],
+          "support": [
+            0.05924,
+            210
+          ]
+        },
+        {
+          "confidence": 0.45946,
+          "id": "00003f",
+          "leverage": 0.01154,
+          "lhs": [
+            4,
+            15
+          ],
+          "lhs_cover": [
+            0.05219,
+            185
+          ],
+          "lift": 1.92755,
+          "p_value": 3.62716e-8,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.02398,
+            85
+          ]
+        },
+        {
+          "confidence": 0.41463,
+          "id": "000040",
+          "leverage": 0.01134,
+          "lhs": [
+            16,
+            9
+          ],
+          "lhs_cover": [
+            0.05783,
+            205
+          ],
+          "lift": 1.89662,
+          "p_value": 2.26781e-11,
+          "rhs": [
+            11
+          ],
+          "rhs_cover": [
+            0.21862,
+            775
+          ],
+          "support": [
+            0.02398,
+            85
+          ]
+        },
+        {
+          "confidence": 0.25767,
+          "id": "000041",
+          "leverage": 0.01125,
+          "lhs": [
+            12
+          ],
+          "lhs_cover": [
+            0.2299,
+            815
+          ],
+          "lift": 1.23437,
+          "p_value": 0.000071232,
+          "rhs": [
+            17
+          ],
+          "rhs_cover": [
+            0.20874,
+            740
+          ],
+          "support": [
+            0.05924,
+            210
+          ]
+        },
+        {
+          "confidence": 0.28378,
+          "id": "000042",
+          "leverage": 0.01125,
+          "lhs": [
+            17
+          ],
+          "lhs_cover": [
+            0.20874,
+            740
+          ],
+          "lift": 1.23437,
+          "p_value": 0.000071232,
+          "rhs": [
+            12
+          ],
+          "rhs_cover": [
+            0.2299,
+            815
+          ],
+          "support": [
+            0.05924,
+            210
+          ]
+        },
+        {
+          "confidence": 0.46875,
+          "id": "000043",
+          "leverage": 0.01116,
+          "lhs": [
+            7,
+            13
+          ],
+          "lhs_cover": [
+            0.04513,
+            160
+          ],
+          "lift": 2.11684,
+          "p_value": 3.46841e-12,
+          "rhs": [
+            18
+          ],
+          "rhs_cover": [
+            0.22144,
+            785
+          ],
+          "support": [
+            0.02116,
+            75
+          ]
+        },
+        {
+          "confidence": 0.41463,
+          "id": "000044",
+          "leverage": 0.01109,
+          "lhs": [
+            2,
+            4
+          ],
+          "lhs_cover": [
+            0.05783,
+            205
+          ],
+          "lift": 1.86061,
+          "p_value": 4.13608e-8,
+          "rhs": [
+            13
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.02398,
+            85
+          ]
+        },
+        {
+          "confidence": 0.45714,
+          "id": "000045",
+          "leverage": 0.01108,
+          "lhs": [
+            7,
+            12
+          ],
+          "lhs_cover": [
+            0.04937,
+            175
+          ],
+          "lift": 1.96433,
+          "p_value": 1.10853e-11,
+          "rhs": [
+            9
+          ],
+          "rhs_cover": [
+            0.23272,
+            825
+          ],
+          "support": [
+            0.02257,
+            80
+          ]
+        },
+        {
+          "confidence": 0.44118,
+          "id": "000046",
+          "leverage": 0.01094,
+          "lhs": [
+            13,
+            17
+          ],
+          "lhs_cover": [
+            0.04795,
+            170
+          ],
+          "lift": 2.07148,
+          "p_value": 1.29951e-13,
+          "rhs": [
+            0
+          ],
+          "rhs_cover": [
+            0.21298,
+            755
+          ],
+          "support": [
+            0.02116,
+            75
+          ]
+        },
+        {
+          "confidence": 0.45455,
+          "id": "000047",
+          "leverage": 0.01078,
+          "lhs": [
+            0,
+            17
+          ],
+          "lhs_cover": [
+            0.04654,
+            165
+          ],
+          "lift": 2.0397,
+          "p_value": 1.29951e-13,
+          "rhs": [
+            13
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.02116,
+            75
+          ]
+        },
+        {
+          "confidence": 0.425,
+          "id": "000048",
+          "leverage": 0.01053,
+          "lhs": [
+            19,
+            18
+          ],
+          "lhs_cover": [
+            0.05642,
+            200
+          ],
+          "lift": 1.78299,
+          "p_value": 0.00000244395,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.02398,
+            85
+          ]
+        },
+        {
+          "confidence": 0.46154,
+          "id": "000049",
+          "leverage": 0.01049,
+          "lhs": [
+            3,
+            11
+          ],
+          "lhs_cover": [
+            0.05501,
+            195
+          ],
+          "lift": 1.70433,
+          "p_value": 5.58568e-7,
+          "rhs": [
+            16
+          ],
+          "rhs_cover": [
+            0.2708,
+            960
+          ],
+          "support": [
+            0.02539,
+            90
+          ]
+        },
+        {
+          "confidence": 0.40476,
+          "id": "00004a",
+          "leverage": 0.01044,
+          "lhs": [
+            6,
+            15
+          ],
+          "lhs_cover": [
+            0.05924,
+            210
+          ],
+          "lift": 1.77146,
+          "p_value": 3.62716e-8,
+          "rhs": [
+            4
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.02398,
+            85
+          ]
+        },
+        {
+          "confidence": 0.36735,
+          "id": "00004b",
+          "leverage": 0.01018,
+          "lhs": [
+            16,
+            11
+          ],
+          "lhs_cover": [
+            0.06911,
+            245
+          ],
+          "lift": 1.66954,
+          "p_value": 5.58568e-7,
+          "rhs": [
+            3
+          ],
+          "rhs_cover": [
+            0.22003,
+            780
+          ],
+          "support": [
+            0.02539,
+            90
+          ]
+        },
+        {
+          "confidence": 0.375,
+          "id": "00004c",
+          "leverage": 0.00938,
+          "lhs": [
+            7,
+            14
+          ],
+          "lhs_cover": [
+            0.05642,
+            200
+          ],
+          "lift": 1.79645,
+          "p_value": 1.1078e-7,
+          "rhs": [
+            17
+          ],
+          "rhs_cover": [
+            0.20874,
+            740
+          ],
+          "support": [
+            0.02116,
+            75
+          ]
+        },
+        {
+          "confidence": 0.41667,
+          "id": "00004d",
+          "leverage": 0.00898,
+          "lhs": [
+            2,
+            10
+          ],
+          "lhs_cover": [
+            0.05078,
+            180
+          ],
+          "lift": 1.73775,
+          "p_value": 2.66435e-7,
+          "rhs": [
+            5
+          ],
+          "rhs_cover": [
+            0.23977,
+            850
+          ],
+          "support": [
+            0.02116,
+            75
+          ]
+        },
+        {
+          "confidence": 0.625,
+          "id": "00004e",
+          "leverage": 0.0086,
+          "lhs": [
+            16,
+            8,
+            18
+          ],
+          "lhs_cover": [
+            0.02257,
+            80
+          ],
+          "lift": 2.56142,
+          "p_value": 8.54029e-7,
+          "rhs": [
+            7
+          ],
+          "rhs_cover": [
+            0.24401,
+            865
+          ],
+          "support": [
+            0.0141,
+            50
+          ]
+        },
+        {
+          "confidence": 0.69231,
+          "id": "00004f",
+          "leverage": 0.00838,
+          "lhs": [
+            16,
+            8,
+            3
+          ],
+          "lhs_cover": [
+            0.01834,
+            65
+          ],
+          "lift": 2.9392,
+          "p_value": 1.03082e-14,
+          "rhs": [
+            10
+          ],
+          "rhs_cover": [
+            0.23554,
+            835
+          ],
+          "support": [
+            0.01269,
+            45
+          ]
+        },
+        {
+          "confidence": 0.37838,
+          "id": "000050",
+          "leverage": 0.00812,
+          "lhs": [
+            16,
+            17
+          ],
+          "lhs_cover": [
+            0.05219,
+            185
+          ],
+          "lift": 1.69791,
+          "p_value": 6.90975e-8,
+          "rhs": [
+            13
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.01975,
+            70
+          ]
+        },
+        {
+          "confidence": 0.38235,
+          "id": "000051",
+          "leverage": 0.00799,
+          "lhs": [
+            19,
+            11
+          ],
+          "lhs_cover": [
+            0.04795,
+            170
+          ],
+          "lift": 1.77182,
+          "p_value": 9.47903e-8,
+          "rhs": [
+            1
+          ],
+          "rhs_cover": [
+            0.2158,
+            765
+          ],
+          "support": [
+            0.01834,
+            65
+          ]
+        },
+        {
+          "confidence": 0.69231,
+          "id": "000052",
+          "leverage": 0.00773,
+          "lhs": [
+            8,
+            10,
+            3
+          ],
+          "lhs_cover": [
+            0.01834,
+            65
+          ],
+          "lift": 2.55649,
+          "p_value": 1.13193e-10,
+          "rhs": [
+            16
+          ],
+          "rhs_cover": [
+            0.2708,
+            960
+          ],
+          "support": [
+            0.01269,
+            45
+          ]
+        },
+        {
+          "confidence": 0.72727,
+          "id": "000053",
+          "leverage": 0.00745,
+          "lhs": [
+            6,
+            12,
+            18
+          ],
+          "lhs_cover": [
+            0.01551,
+            55
+          ],
+          "lift": 2.94649,
+          "p_value": 2.04094e-11,
+          "rhs": [
+            2
+          ],
+          "rhs_cover": [
+            0.24683,
+            875
+          ],
+          "support": [
+            0.01128,
+            40
+          ]
+        },
+        {
+          "confidence": 0.77778,
+          "id": "000054",
+          "leverage": 0.00717,
+          "lhs": [
+            12,
+            14,
+            13
+          ],
+          "lhs_cover": [
+            0.01269,
+            45
+          ],
+          "lift": 3.65195,
+          "p_value": 3.5909e-10,
+          "rhs": [
+            0
+          ],
+          "rhs_cover": [
+            0.21298,
+            755
+          ],
+          "support": [
+            0.00987,
+            35
+          ]
+        },
+        {
+          "confidence": 0.61538,
+          "id": "000055",
+          "leverage": 0.00709,
+          "lhs": [
+            8,
+            6,
+            3
+          ],
+          "lhs_cover": [
+            0.01834,
+            65
+          ],
+          "lift": 2.69326,
+          "p_value": 1.22825e-14,
+          "rhs": [
+            4
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.01128,
+            40
+          ]
+        },
+        {
+          "confidence": 0.61538,
+          "id": "000056",
+          "leverage": 0.00709,
+          "lhs": [
+            8,
+            6,
+            19
+          ],
+          "lhs_cover": [
+            0.01834,
+            65
+          ],
+          "lift": 2.69326,
+          "p_value": 2.18479e-9,
+          "rhs": [
+            4
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.01128,
+            40
+          ]
+        },
+        {
+          "confidence": 0.66667,
+          "id": "000057",
+          "leverage": 0.00701,
+          "lhs": [
+            6,
+            4,
+            3
+          ],
+          "lhs_cover": [
+            0.01693,
+            60
+          ],
+          "lift": 2.6406,
+          "p_value": 8.28042e-10,
+          "rhs": [
+            8
+          ],
+          "rhs_cover": [
+            0.25247,
+            895
+          ],
+          "support": [
+            0.01128,
+            40
+          ]
+        },
+        {
+          "confidence": 0.77778,
+          "id": "000058",
+          "leverage": 0.00697,
+          "lhs": [
+            8,
+            6,
+            15
+          ],
+          "lhs_cover": [
+            0.01269,
+            45
+          ],
+          "lift": 3.40398,
+          "p_value": 1.10449e-8,
+          "rhs": [
+            4
+          ],
+          "rhs_cover": [
+            0.22849,
+            810
+          ],
+          "support": [
+            0.00987,
+            35
+          ]
+        },
+        {
+          "confidence": 0.61538,
+          "id": "000059",
+          "leverage": 0.00691,
+          "lhs": [
+            7,
+            10,
+            17
+          ],
+          "lhs_cover": [
+            0.01834,
+            65
+          ],
+          "lift": 2.5817,
+          "p_value": 8.28042e-10,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.01128,
+            40
+          ]
+        },
+        {
+          "confidence": 0.61538,
+          "id": "00005a",
+          "leverage": 0.00691,
+          "lhs": [
+            8,
+            4,
+            3
+          ],
+          "lhs_cover": [
+            0.01834,
+            65
+          ],
+          "lift": 2.5817,
+          "p_value": 8.28042e-10,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.01128,
+            40
+          ]
+        },
+        {
+          "confidence": 0.7,
+          "id": "00005b",
+          "leverage": 0.00687,
+          "lhs": [
+            12,
+            13,
+            1
+          ],
+          "lhs_cover": [
+            0.0141,
+            50
+          ],
+          "lift": 3.28675,
+          "p_value": 3.55663e-7,
+          "rhs": [
+            0
+          ],
+          "rhs_cover": [
+            0.21298,
+            755
+          ],
+          "support": [
+            0.00987,
+            35
+          ]
+        },
+        {
+          "confidence": 0.7,
+          "id": "00005c",
+          "leverage": 0.00687,
+          "lhs": [
+            9,
+            12,
+            14
+          ],
+          "lhs_cover": [
+            0.0141,
+            50
+          ],
+          "lift": 3.28675,
+          "p_value": 5.426e-8,
+          "rhs": [
+            0
+          ],
+          "rhs_cover": [
+            0.21298,
+            755
+          ],
+          "support": [
+            0.00987,
+            35
+          ]
+        },
+        {
+          "confidence": 0.61538,
+          "id": "00005d",
+          "leverage": 0.00665,
+          "lhs": [
+            2,
+            14,
+            0
+          ],
+          "lhs_cover": [
+            0.01834,
+            65
+          ],
+          "lift": 2.43747,
+          "p_value": 1.85211e-10,
+          "rhs": [
+            8
+          ],
+          "rhs_cover": [
+            0.25247,
+            895
+          ],
+          "support": [
+            0.01128,
+            40
+          ]
+        },
+        {
+          "confidence": 0.7,
+          "id": "00005e",
+          "leverage": 0.00651,
+          "lhs": [
+            5,
+            0,
+            15
+          ],
+          "lhs_cover": [
+            0.0141,
+            50
+          ],
+          "lift": 2.93669,
+          "p_value": 2.06559e-8,
+          "rhs": [
+            6
+          ],
+          "rhs_cover": [
+            0.23836,
+            845
+          ],
+          "support": [
+            0.00987,
+            35
+          ]
+        },
+        {
+          "confidence": 1,
+          "id": "00005f",
+          "leverage": 0.00633,
+          "lhs": [
+            11,
+            1,
+            17
+          ],
+          "lhs_cover": [
+            0.00846,
+            30
+          ],
+          "lift": 3.96089,
+          "p_value": 1.0948e-14,
+          "rhs": [
+            8
+          ],
+          "rhs_cover": [
+            0.25247,
+            895
+          ],
+          "support": [
+            0.00846,
+            30
+          ]
+        },
+        {
+          "confidence": 0.5,
+          "id": "000060",
+          "leverage": 0.00632,
+          "lhs": [
+            8,
+            6,
+            4
+          ],
+          "lhs_cover": [
+            0.02257,
+            80
+          ],
+          "lift": 2.27244,
+          "p_value": 9.76368e-8,
+          "rhs": [
+            3
+          ],
+          "rhs_cover": [
+            0.22003,
+            780
+          ],
+          "support": [
+            0.01128,
+            40
+          ]
+        },
+        {
+          "confidence": 0.7,
+          "id": "000061",
+          "leverage": 0.00631,
+          "lhs": [
+            12,
+            4,
+            15
+          ],
+          "lhs_cover": [
+            0.0141,
+            50
+          ],
+          "lift": 2.77263,
+          "p_value": 6.21684e-8,
+          "rhs": [
+            8
+          ],
+          "rhs_cover": [
+            0.25247,
+            895
+          ],
+          "support": [
+            0.00987,
+            35
+          ]
+        },
+        {
+          "confidence": 0.85714,
+          "id": "000062",
+          "leverage": 0.00616,
+          "lhs": [
+            5,
+            4,
+            18
+          ],
+          "lhs_cover": [
+            0.00987,
+            35
+          ],
+          "lift": 3.68312,
+          "p_value": 5.70506e-11,
+          "rhs": [
+            9
+          ],
+          "rhs_cover": [
+            0.23272,
+            825
+          ],
+          "support": [
+            0.00846,
+            30
+          ]
+        },
+        {
+          "confidence": 0.75,
+          "id": "000063",
+          "leverage": 0.00595,
+          "lhs": [
+            16,
+            12,
+            17
+          ],
+          "lhs_cover": [
+            0.01128,
+            40
+          ],
+          "lift": 3.36551,
+          "p_value": 2.99546e-13,
+          "rhs": [
+            13
+          ],
+          "rhs_cover": [
+            0.22285,
+            790
+          ],
+          "support": [
+            0.00846,
+            30
+          ]
+        }
+      ],
+      "rules_summary": {
+        "confidence": {
+          "bins": [
+            [
+              0.24779,
+              2
+            ],
+            [
+              0.26038,
+              3
+            ],
+            [
+              0.26625,
+              2
+            ],
+            [
+              0.27219,
+              1
+            ],
+            [
+              0.27889,
+              2
+            ],
+            [
+              0.28869,
+              13
+            ],
+            [
+              0.29643,
+              9
+            ],
+            [
+              0.30367,
+              9
+            ],
+            [
+              0.31191,
+              4
+            ],
+            [
+              0.31788,
+              3
+            ],
+            [
+              0.33279,
+              4
+            ],
+            [
+              0.34731,
+              1
+            ],
+            [
+              0.35484,
+              1
+            ],
+            [
+              0.36735,
+              1
+            ],
+            [
+              0.37858,
+              3
+            ],
+            [
+              0.40572,
+              4
+            ],
+            [
+              0.41613,
+              4
+            ],
+            [
+              0.42609,
+              4
+            ],
+            [
+              0.44281,
+              2
+            ],
+            [
+              0.46015,
+              7
+            ],
+            [
+              0.46875,
+              1
+            ],
+            [
+              0.5,
+              1
+            ],
+            [
+              0.61538,
+              5
+            ],
+            [
+              0.625,
+              1
+            ],
+            [
+              0.66667,
+              1
+            ],
+            [
+              0.69231,
+              2
+            ],
+            [
+              0.7,
+              4
+            ],
+            [
+              0.72727,
+              1
+            ],
+            [
+              0.75,
+              1
+            ],
+            [
+              0.77778,
+              2
+            ],
+            [
+              0.85714,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "exact_histogram": {
+            "populations": [
+              2,
+              30,
+              21,
+              5,
+              14,
+              8,
+              1,
+              0,
+              6,
+              3,
+              5,
+              3,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "start": 0.2,
+            "width": 0.05
+          },
+          "maximum": 1,
+          "mean": 0.41041,
+          "median": 0.33235,
+          "minimum": 0.24706,
+          "population": 100,
+          "standard_deviation": 0.16235,
+          "sum": 41.04108,
+          "sum_squares": 19.45305,
+          "variance": 0.02636
+        },
+        "k": 100,
+        "leverage": {
+          "bins": [
+            [
+              0.00595,
+              1
+            ],
+            [
+              0.00628,
+              4
+            ],
+            [
+              0.00658,
+              2
+            ],
+            [
+              0.00699,
+              9
+            ],
+            [
+              0.00745,
+              1
+            ],
+            [
+              0.00773,
+              1
+            ],
+            [
+              0.00806,
+              2
+            ],
+            [
+              0.00849,
+              2
+            ],
+            [
+              0.00898,
+              1
+            ],
+            [
+              0.00938,
+              1
+            ],
+            [
+              0.01018,
+              1
+            ],
+            [
+              0.01049,
+              3
+            ],
+            [
+              0.01086,
+              2
+            ],
+            [
+              0.01119,
+              6
+            ],
+            [
+              0.01157,
+              5
+            ],
+            [
+              0.01184,
+              4
+            ],
+            [
+              0.0122,
+              7
+            ],
+            [
+              0.01254,
+              7
+            ],
+            [
+              0.01312,
+              2
+            ],
+            [
+              0.01355,
+              2
+            ],
+            [
+              0.01379,
+              5
+            ],
+            [
+              0.01411,
+              2
+            ],
+            [
+              0.01445,
+              8
+            ],
+            [
+              0.01492,
+              2
+            ],
+            [
+              0.01666,
+              2
+            ],
+            [
+              0.0169,
+              2
+            ],
+            [
+              0.01741,
+              4
+            ],
+            [
+              0.01892,
+              4
+            ],
+            [
+              0.01931,
+              2
+            ],
+            [
+              0.02041,
+              2
+            ],
+            [
+              0.02238,
+              2
+            ],
+            [
+              0.02433,
+              2
+            ]
+          ],
+          "exact_histogram": {
+            "populations": [
+              1,
+              11,
+              7,
+              4,
+              1,
+              6,
+              15,
+              14,
+              9,
+              12,
+              0,
+              4,
+              4,
+              2,
+              4,
+              2,
+              0,
+              2,
+              0,
+              2
+            ],
+            "start": 0.005,
+            "width": 0.001
+          },
+          "maximum": 0.02433,
+          "mean": 0.01264,
+          "median": 0.01226,
+          "minimum": 0.00595,
+          "population": 100,
+          "standard_deviation": 0.00427,
+          "sum": 1.26393,
+          "sum_squares": 0.01778,
+          "variance": 0.00002
+        },
+        "lhs_cover": {
+          "bins": [
+            [
+              0.00917,
+              2
+            ],
+            [
+              0.01128,
+              1
+            ],
+            [
+              0.01363,
+              6
+            ],
+            [
+              0.01551,
+              1
+            ],
+            [
+              0.01816,
+              8
+            ],
+            [
+              0.02257,
+              2
+            ],
+            [
+              0.04584,
+              2
+            ],
+            [
+              0.04795,
+              2
+            ],
+            [
+              0.04937,
+              1
+            ],
+            [
+              0.05078,
+              1
+            ],
+            [
+              0.05219,
+              2
+            ],
+            [
+              0.05572,
+              4
+            ],
+            [
+              0.05783,
+              4
+            ],
+            [
+              0.05924,
+              4
+            ],
+            [
+              0.06136,
+              2
+            ],
+            [
+              0.06347,
+              2
+            ],
+            [
+              0.06629,
+              1
+            ],
+            [
+              0.06911,
+              1
+            ],
+            [
+              0.19887,
+              4
+            ],
+            [
+              0.20874,
+              1
+            ],
+            [
+              0.21298,
+              4
+            ],
+            [
+              0.21933,
+              2
+            ],
+            [
+              0.2225,
+              8
+            ],
+            [
+              0.229,
+              11
+            ],
+            [
+              0.23272,
+              3
+            ],
+            [
+              0.23554,
+              3
+            ],
+            [
+              0.23836,
+              6
+            ],
+            [
+              0.23977,
+              2
+            ],
+            [
+              0.24401,
+              4
+            ],
+            [
+              0.24683,
+              3
+            ],
+            [
+              0.25247,
+              2
+            ],
+            [
+              0.2708,
+              1
+            ]
+          ],
+          "exact_histogram": {
+            "populations": [
+              2,
+              16,
+              2,
+              0,
+              5,
+              15,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              1,
+              5,
+              20,
+              14,
+              7,
+              2,
+              0,
+              1
+            ],
+            "start": 0,
+            "width": 0.01
+          },
+          "maximum": 0.2708,
+          "mean": 0.14186,
+          "median": 0.20381,
+          "minimum": 0.00846,
+          "population": 100,
+          "standard_deviation": 0.09721,
+          "sum": 14.18621,
+          "sum_squares": 2.94803,
+          "variance": 0.00945
+        },
+        "lift": {
+          "bins": [
+            [
+              1.2248,
+              12
+            ],
+            [
+              1.25492,
+              18
+            ],
+            [
+              1.3248,
+              12
+            ],
+            [
+              1.36349,
+              6
+            ],
+            [
+              1.40852,
+              6
+            ],
+            [
+              1.66954,
+              1
+            ],
+            [
+              1.70112,
+              2
+            ],
+            [
+              1.73775,
+              1
+            ],
+            [
+              1.77662,
+              5
+            ],
+            [
+              1.84014,
+              3
+            ],
+            [
+              1.8701,
+              3
+            ],
+            [
+              1.90167,
+              2
+            ],
+            [
+              1.92755,
+              1
+            ],
+            [
+              1.96433,
+              1
+            ],
+            [
+              2.03749,
+              2
+            ],
+            [
+              2.07549,
+              2
+            ],
+            [
+              2.11684,
+              1
+            ],
+            [
+              2.1759,
+              1
+            ],
+            [
+              2.27244,
+              1
+            ],
+            [
+              2.32079,
+              1
+            ],
+            [
+              2.43747,
+              1
+            ],
+            [
+              2.57033,
+              4
+            ],
+            [
+              2.6406,
+              1
+            ],
+            [
+              2.69326,
+              2
+            ],
+            [
+              2.77263,
+              1
+            ],
+            [
+              2.94079,
+              3
+            ],
+            [
+              3.28675,
+              2
+            ],
+            [
+              3.36551,
+              1
+            ],
+            [
+              3.40398,
+              1
+            ],
+            [
+              3.65195,
+              1
+            ],
+            [
+              3.68312,
+              1
+            ],
+            [
+              3.96089,
+              1
+            ]
+          ],
+          "exact_histogram": {
+            "populations": [
+              30,
+              20,
+              4,
+              0,
+              2,
+              7,
+              7,
+              3,
+              4,
+              2,
+              1,
+              1,
+              1,
+              4,
+              3,
+              1,
+              0,
+              3,
+              0,
+              0,
+              2,
+              1,
+              1,
+              0,
+              2,
+              0,
+              0,
+              1
+            ],
+            "start": 1.2,
+            "width": 0.1
+          },
+          "maximum": 3.96089,
+          "mean": 1.78426,
+          "median": 1.4011,
+          "minimum": 1.20961,
+          "population": 100,
+          "standard_deviation": 0.68325,
+          "sum": 178.42618,
+          "sum_squares": 364.57488,
+          "variance": 0.46683
+        },
+        "p_value": {
+          "bins": [
+            [
+              3e-10,
+              36
+            ],
+            [
+              1.11e-8,
+              5
+            ],
+            [
+              2.31e-8,
+              3
+            ],
+            [
+              3.8e-8,
+              3
+            ],
+            [
+              5.13e-8,
+              3
+            ],
+            [
+              6.56e-8,
+              2
+            ],
+            [
+              9.62e-8,
+              2
+            ],
+            [
+              1.152e-7,
+              3
+            ],
+            [
+              1.52e-7,
+              1
+            ],
+            [
+              2.664e-7,
+              1
+            ],
+            [
+              3.557e-7,
+              1
+            ],
+            [
+              4.505e-7,
+              2
+            ],
+            [
+              5.586e-7,
+              2
+            ],
+            [
+              8.54e-7,
+              1
+            ],
+            [
+              0.0000010689,
+              2
+            ],
+            [
+              0.0000013102,
+              1
+            ],
+            [
+              0.000002444,
+              1
+            ],
+            [
+              0.0000025977,
+              2
+            ],
+            [
+              0.000003249,
+              4
+            ],
+            [
+              0.0000035897,
+              2
+            ],
+            [
+              0.0000040313,
+              1
+            ],
+            [
+              0.0000045882,
+              2
+            ],
+            [
+              0.0000054748,
+              2
+            ],
+            [
+              0.0000147102,
+              2
+            ],
+            [
+              0.0000160708,
+              2
+            ],
+            [
+              0.0000193348,
+              2
+            ],
+            [
+              0.0000265837,
+              2
+            ],
+            [
+              0.0000287981,
+              2
+            ],
+            [
+              0.0000371221,
+              2
+            ],
+            [
+              0.0000427386,
+              2
+            ],
+            [
+              0.0000442131,
+              2
+            ],
+            [
+              0.000071232,
+              2
+            ]
+          ],
+          "exact_histogram": {
+            "populations": [
+              82,
+              6,
+              4,
+              2,
+              4,
+              0,
+              0,
+              2
+            ],
+            "start": 0,
+            "width": 0.00001
+          },
+          "maximum": 0.000071232,
+          "mean": 0.00000661746,
+          "median": 0,
+          "minimum": 0,
+          "population": 100,
+          "standard_deviation": 0.0000145882,
+          "sum": 0.000661746,
+          "sum_squares": 2.54477e-8,
+          "variance": 2.12815e-10
+        },
+        "population": 3545,
+        "rhs_cover": {
+          "counts": [
+            [
+              0.19887,
+              6
+            ],
+            [
+              0.20874,
+              2
+            ],
+            [
+              0.21298,
+              9
+            ],
+            [
+              0.2158,
+              1
+            ],
+            [
+              0.21862,
+              3
+            ],
+            [
+              0.22003,
+              4
+            ],
+            [
+              0.22144,
+              4
+            ],
+            [
+              0.22285,
+              12
+            ],
+            [
+              0.22849,
+              11
+            ],
+            [
+              0.2299,
+              4
+            ],
+            [
+              0.23272,
+              7
+            ],
+            [
+              0.23554,
+              4
+            ],
+            [
+              0.23836,
+              11
+            ],
+            [
+              0.23977,
+              3
+            ],
+            [
+              0.24401,
+              5
+            ],
+            [
+              0.24683,
+              4
+            ],
+            [
+              0.25247,
+              7
+            ],
+            [
+              0.2708,
+              3
+            ]
+          ],
+          "exact_histogram": {
+            "populations": [
+              6,
+              0,
+              2,
+              9,
+              4,
+              20,
+              15,
+              7,
+              18,
+              5,
+              4,
+              7,
+              0,
+              0,
+              0,
+              3
+            ],
+            "start": 0.195,
+            "width": 0.005
+          },
+          "maximum": 0.2708,
+          "mean": 0.22972,
+          "median": 0.22849,
+          "minimum": 0.19887,
+          "population": 100,
+          "standard_deviation": 0.01528,
+          "sum": 22.97178,
+          "sum_squares": 5.30014,
+          "variance": 0.00023
+        },
+        "support": {
+          "counts": [
+            [
+              0.00846,
+              3
+            ],
+            [
+              0.00987,
+              6
+            ],
+            [
+              0.01128,
+              8
+            ],
+            [
+              0.01269,
+              2
+            ],
+            [
+              0.0141,
+              1
+            ],
+            [
+              0.01834,
+              1
+            ],
+            [
+              0.01975,
+              1
+            ],
+            [
+              0.02116,
+              5
+            ],
+            [
+              0.02257,
+              1
+            ],
+            [
+              0.02398,
+              6
+            ],
+            [
+              0.02539,
+              7
+            ],
+            [
+              0.0268,
+              4
+            ],
+            [
+              0.02821,
+              1
+            ],
+            [
+              0.05924,
+              8
+            ],
+            [
+              0.06065,
+              2
+            ],
+            [
+              0.06206,
+              2
+            ],
+            [
+              0.06347,
+              2
+            ],
+            [
+              0.06488,
+              6
+            ],
+            [
+              0.06629,
+              6
+            ],
+            [
+              0.0677,
+              4
+            ],
+            [
+              0.06911,
+              6
+            ],
+            [
+              0.07052,
+              2
+            ],
+            [
+              0.07193,
+              2
+            ],
+            [
+              0.07334,
+              4
+            ],
+            [
+              0.07616,
+              4
+            ],
+            [
+              0.07757,
+              2
+            ],
+            [
+              0.07898,
+              2
+            ],
+            [
+              0.08181,
+              2
+            ]
+          ],
+          "exact_histogram": {
+            "populations": [
+              9,
+              11,
+              2,
+              12,
+              12,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8,
+              12,
+              16,
+              8,
+              8,
+              2
+            ],
+            "start": 0.005,
+            "width": 0.005
+          },
+          "maximum": 0.08181,
+          "mean": 0.04516,
+          "median": 0.05924,
+          "minimum": 0.00846,
+          "population": 100,
+          "standard_deviation": 0.02586,
+          "sum": 4.51618,
+          "sum_squares": 0.27015,
+          "variance": 0.00067
+        }
+      },
+      "search_strategy": "leverage",
+      "significance_level": 0.05
+    },
+    "category": 0,
+    "code": 200,
+    "columns": 1,
+    "configuration": null,
+    "configuration_status": false,
+    "created": "2021-10-25T11:40:23.825000",
+    "creator": "tehilabk123",
+    "credits": 0,
+    "credits_per_prediction": 0,
+    "dataset": "dataset/617697a547d77512a7153411",
+    "dataset_field_types": {
+      "categorical": 0,
+      "datetime": 0,
+      "items": 1,
+      "numeric": 0,
+      "preferred": 1,
+      "text": 0,
+      "total": 1
+    },
+    "dataset_status": true,
+    "description": "",
+    "excluded_fields": [],
+    "fields_meta": {
+      "count": 1,
+      "limit": -1,
+      "offset": 0,
+      "query_total": 1,
+      "total": 1
+    },
+    "input_fields": [
+      "000000"
+    ],
+    "locale": "en_US",
+    "max_columns": 1,
+    "max_rows": 3545,
+    "name": "items",
+    "name_options": "",
+    "number_of_associationsets": 0,
+    "number_of_public_associationsets": 0,
+    "ordering": 0,
+    "out_of_bag": false,
+    "price": 0,
+    "private": true,
+    "project": null,
+    "range": null,
+    "replacement": false,
+    "resource": "association/617697a727dc9b12cc022150",
+    "rows": 3545,
+    "sample_rate": 1,
+    "shared": false,
+    "size": 161484,
+    "source": "source/617697a327dc9b12d207b488",
+    "source_status": true,
+    "status": {
+      "code": 5,
+      "elapsed": 11794,
+      "message": "The association has been created",
+      "progress": 1
+    },
+    "subscription": false,
+    "tags": [],
+    "type": 0,
+    "updated": "2021-10-25T11:40:34.795000",
+    "white_box": false
+  },
+  "resource": "association/617697a727dc9b12cc022150",
+  "location": "https://bigml.io/andromeda/association/617697a727dc9b12cc022150",
+  "error": null
+}

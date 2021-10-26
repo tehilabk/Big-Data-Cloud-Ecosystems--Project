@@ -1,39 +1,533 @@
 <!DOCTYPE html>
 <html>
-<style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
-<body>
 
-<h1>BigML Result's</h1>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
 
-<table class="columns" margin-left: auto; margin-right: auto;>
-  <tr style="padding-left: 2ex;">
-    <th>Antecedet</th>
-    <th>consequent</th>
-    <th>support</th>
-    <th>Confidence</th>
-  </tr>
-  <tr style="padding-left: 2ex;">
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td>Germany</td>
-  </tr>
-  <tr style="padding-left: 2ex;">
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-    <td>Mexico</td>
-  </tr>
+    
 
+    <body>
+
+        <h1>BigML Result's</h1>
+
+        <span>
+            <% var pro0_1=bigml_list[0][0].slice(0,bigml_list[0][0].length-1); %>
+        </span>
+        <span>
+            <% var pro0_2=bigml_list[0][0][bigml_list[0][0].length-1]; %>
+        </span>
+        <span>
+            <% var sup0 =bigml_list[0][1]; %>
+        </span>
+        <span>
+            <% var conf0=bigml_list[0][2]; %>
+        </span>
 
 
+        <span>
+          <% var pro1_1=bigml_list[1][0].slice(0,bigml_list[1][0].length-1); %>
+      </span>
+      <span>
+          <% var pro1_2=bigml_list[1][0][bigml_list[1][0].length-1]; %>
+      </span>
+      <span>
+          <% var sup1 =bigml_list[1][1]; %>
+      </span>
+      <span>
+          <% var conf1=bigml_list[1][2]; %>
+      </span>
 
 
-</table>
+      <span>
+        <% var pro2_1=bigml_list[2][0].slice(0,bigml_list[2][0].length-1); %>
+    </span>
+    <span>
+        <% var pro2_2=bigml_list[2][0][bigml_list[2][0].length-1]; %>
+    </span>
+    <span>
+        <% var sup2 =bigml_list[2][1]; %>
+    </span>
+    <span>
+        <% var conf2=bigml_list[2][2]; %>
+    </span>
 
-</body>
+
+    <span>
+      <% var pro3_1=bigml_list[3][0].slice(0,bigml_list[3][0].length-1); %>
+  </span>
+  <span>
+      <% var pro3_2=bigml_list[3][0][bigml_list[3][0].length-1]; %>
+  </span>
+  <span>
+      <% var sup3 =bigml_list[3][1]; %>
+  </span>
+  <span>
+      <% var conf3=bigml_list[3][2]; %>
+  </span>
+
+
+  <span>
+    <% var pro4_1=bigml_list[4][0].slice(0,bigml_list[4][0].length-1); %>
+</span>
+<span>
+    <% var pro4_2=bigml_list[4][0][bigml_list[4][0].length-1]; %>
+</span>
+<span>
+    <% var sup4 =bigml_list[4][1]; %>
+</span>
+<span>
+    <% var conf4=bigml_list[4][2]; %>
+</span>
+
+
+<span>
+  <% var pro5_1=bigml_list[5][0].slice(0,bigml_list[5][0].length-1); %>
+</span>
+<span>
+  <% var pro5_2=bigml_list[5][0][bigml_list[5][0].length-1]; %>
+</span>
+<span>
+  <% var sup5 =bigml_list[5][1]; %>
+</span>
+<span>
+  <% var conf5=bigml_list[5][2]; %>
+</span>
+
+
+<span>
+  <% var pro6_1=bigml_list[6][0].slice(0,bigml_list[6][0].length-1); %>
+</span>
+<span>
+  <% var pro6_2=bigml_list[6][0][bigml_list[6][0].length-1]; %>
+</span>
+<span>
+  <% var sup6 =bigml_list[6][1]; %>
+</span>
+<span>
+  <% var conf6=bigml_list[6][2]; %>
+</span>
+
+
+<span>
+  <% var pro7_1=bigml_list[7][0].slice(0,bigml_list[7][0].length-1); %>
+</span>
+<span>
+  <% var pro7_2=bigml_list[7][0][bigml_list[7][0].length-1]; %>
+</span>
+<span>
+  <% var sup7 =bigml_list[7][1]; %>
+</span>
+<span>
+  <% var conf7=bigml_list[7][2]; %>
+</span>
+
+
+<span>
+  <% var pro8_1=bigml_list[8][0].slice(0,bigml_list[8][0].length-1); %>
+</span>
+<span>
+  <% var pro8_2=bigml_list[8][0][bigml_list[8][0].length-1]; %>
+</span>
+<span>
+  <% var sup8 =bigml_list[8][1]; %>
+</span>
+<span>
+  <% var conf8=bigml_list[8][2]; %>
+</span>
+
+
+<span>
+  <% var pro9_1=bigml_list[9][0].slice(0,bigml_list[9][0].length-1); %>
+</span>
+<span>
+  <% var pro9_2=bigml_list[9][0][bigml_list[9][0].length-1]; %>
+</span>
+<span>
+  <% var sup9 =bigml_list[9][1]; %>
+</span>
+<span>
+  <% var conf9=bigml_list[9][2]; %>
+</span>
+
+
+<span>
+  <% var pro10_1=bigml_list[10][0].slice(0,bigml_list[10][0].length-1); %>
+</span>
+<span>
+  <% var pro10_2=bigml_list[10][0][bigml_list[10][0].length-1]; %>
+</span>
+<span>
+  <% var sup10 =bigml_list[10][1]; %>
+</span>
+<span>
+  <% var conf10=bigml_list[10][2]; %>
+</span>
+
+
+<span>
+  <% var pro11_1=bigml_list[11][0].slice(0,bigml_list[11][0].length-1); %>
+</span>
+<span>
+  <% var pro11_2=bigml_list[11][0][bigml_list[11][0].length-1]; %>
+</span>
+<span>
+  <% var sup11 =bigml_list[11][1]; %>
+</span>
+<span>
+  <% var conf11=bigml_list[11][2]; %>
+</span>
+
+
+<span>
+  <% var pro12_1=bigml_list[12][0].slice(0,bigml_list[12][0].length-1); %>
+</span>
+<span>
+  <% var pro12_2=bigml_list[12][0][bigml_list[12][0].length-1]; %>
+</span>
+<span>
+  <% var sup12 =bigml_list[12][1]; %>
+</span>
+<span>
+  <% var conf12=bigml_list[12][2]; %>
+</span>
+
+
+<span>
+  <% var pro13_1=bigml_list[13][0].slice(0,bigml_list[13][0].length-1); %>
+</span>
+<span>
+  <% var pro13_2=bigml_list[13][0][bigml_list[13][0].length-1]; %>
+</span>
+<span>
+  <% var sup13 =bigml_list[13][1]; %>
+</span>
+<span>
+  <% var conf13=bigml_list[13][2]; %>
+</span>
+
+
+<span>
+  <% var pro14_1=bigml_list[14][0].slice(0,bigml_list[14][0].length-1); %>
+</span>
+<span>
+  <% var pro14_2=bigml_list[14][0][bigml_list[14][0].length-1]; %>
+</span>
+<span>
+  <% var sup14 =bigml_list[14][1]; %>
+</span>
+<span>
+  <% var conf14=bigml_list[14][2]; %>
+</span>
+      
+        
+        
+   
+
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="zero_config" class="table ">
+
+                        <thead>
+                            <tr>
+                                <th>Antecedent</th>
+                                <th>Consequent</th>
+                                <th>Support</th>
+                                <th>confidence</th>
+
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+                           
+                              <tr>
+                                <th id="th0_1">Antecedent</th>
+                                <th id="th0_2">Consequent</th>
+                                <th id="th0_3">Support</th>
+                                <th id="th0_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th1_1">Antecedent</th>
+                                <th id="th1_2">Consequent</th>
+                                <th id="th1_3">Support</th>
+                                <th id="th1_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th2_1">Antecedent</th>
+                                <th id="th2_2">Consequent</th>
+                                <th id="th2_3">Support</th>
+                                <th id="th2_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th3_1">Antecedent</th>
+                                <th id="th3_2">Consequent</th>
+                                <th id="th3_3">Support</th>
+                                <th id="th3_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th4_1">Antecedent</th>
+                                <th id="th4_2">Consequent</th>
+                                <th id="th4_3">Support</th>
+                                <th id="th4_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th5_1">Antecedent</th>
+                                <th id="th5_2">Consequent</th>
+                                <th id="th5_3">Support</th>
+                                <th id="th5_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th6_1">Antecedent</th>
+                                <th id="th6_2">Consequent</th>
+                                <th id="th6_3">Support</th>
+                                <th id="th6_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th7_1">Antecedent</th>
+                                <th id="th7_2">Consequent</th>
+                                <th id="th7_3">Support</th>
+                                <th id="th7_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th8_1">Antecedent</th>
+                                <th id="th8_2">Consequent</th>
+                                <th id="th8_3">Support</th>
+                                <th id="th8_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th9_1">Antecedent</th>
+                                <th id="th9_2">Consequent</th>
+                                <th id="th9_3">Support</th>
+                                <th id="th9_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th10_1">Antecedent</th>
+                                <th id="th10_2">Consequent</th>
+                                <th id="th10_3">Support</th>
+                                <th id="th10_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th11_1">Antecedent</th>
+                                <th id="th11_2">Consequent</th>
+                                <th id="th11_3">Support</th>
+                                <th id="th11_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th12_1">Antecedent</th>
+                                <th id="th12_2">Consequent</th>
+                                <th id="th12_3">Support</th>
+                                <th id="th12_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th13_1">Antecedent</th>
+                                <th id="th13_2">Consequent</th>
+                                <th id="th13_3">Support</th>
+                                <th id="th13_4">confidence</th>
+                              </tr>
+
+                              <tr>
+                                <th id="th14_1">Antecedent</th>
+                                <th id="th14_2">Consequent</th>
+                                <th id="th14_3">Support</th>
+                                <th id="th14_4">confidence</th>
+                              </tr>
+                         
+
+
+
+
+                            <script>
+
+                                var p0_0 = ' <%= pro0_1 %> ';     
+                                var p0_1 =   '<%= pro0_2  %>';       
+                                var s0 =   '<%= sup0  %>';            
+                                var c0=   '<%= conf0  %>';
+
+                                var p1_0 = ' <%= pro1_1 %> ';     
+                                var p1_1 =   '<%= pro1_2  %>';       
+                                var s1 =   '<%= sup1  %>';            
+                                var c1=   '<%= conf1  %>';
+
+                                var p2_0 = ' <%= pro2_1 %> ';     
+                                var p2_1 =   '<%= pro2_2  %>';       
+                                var s2 =   '<%= sup2  %>';            
+                                var c2=   '<%= conf2  %>';
+
+                                var p3_0 = ' <%= pro3_1 %> ';     
+                                var p3_1 =   '<%= pro3_2  %>';       
+                                var s3 =   '<%= sup3  %>';            
+                                var c3=   '<%= conf3  %>';
+
+                                var p4_0 = ' <%= pro4_1 %> ';     
+                                var p4_1 =   '<%= pro4_2  %>';       
+                                var s4 =   '<%= sup4  %>';            
+                                var c4=   '<%= conf4  %>';
+
+                                var p5_0 = ' <%= pro5_1 %> ';     
+                                var p5_1 =   '<%= pro5_2  %>';       
+                                var s5 =   '<%= sup5  %>';            
+                                var c5=   '<%= conf5  %>';
+
+                                var p6_0 = ' <%= pro6_1 %> ';     
+                                var p6_1 =   '<%= pro6_2  %>';       
+                                var s6 =   '<%= sup6  %>';            
+                                var c6=   '<%= conf6  %>';
+
+                                var p7_0 = ' <%= pro7_1 %> ';     
+                                var p7_1 =   '<%= pro7_2  %>';       
+                                var s7 =   '<%= sup7  %>';            
+                                var c7=   '<%= conf7  %>';
+
+                                var p8_0 = ' <%= pro8_1 %> ';     
+                                var p8_1 =   '<%= pro8_2  %>';       
+                                var s8 =   '<%= sup8  %>';            
+                                var c8=   '<%= conf8  %>';
+
+                                var p9_0 = ' <%= pro9_1 %> ';     
+                                var p9_1 =   '<%= pro9_2  %>';       
+                                var s9 =   '<%= sup9  %>';            
+                                var c9=   '<%= conf9  %>';
+
+                                var p10_0 = ' <%= pro10_1 %> ';     
+                                var p10_1 =   '<%= pro10_2  %>';       
+                                var s10 =   '<%= sup10  %>';            
+                                var c10=   '<%= conf10  %>';
+
+                                var p11_0 = ' <%= pro11_1 %> ';     
+                                var p11_1 =   '<%= pro11_2  %>';       
+                                var s11 =   '<%= sup11  %>';            
+                                var c11=   '<%= conf11  %>';
+
+                                var p12_0 = ' <%= pro12_1 %> ';     
+                                var p12_1 =   '<%= pro12_2  %>';       
+                                var s12 =   '<%= sup12  %>';            
+                                var c12=   '<%= conf12  %>';
+
+                                var p13_0 = ' <%= pro13_1 %> ';     
+                                var p13_1 =   '<%= pro13_2  %>';       
+                                var s13 =   '<%= sup13  %>';            
+                                var c13=   '<%= conf13  %>';
+
+                                var p14_0 = ' <%= pro14_1 %> ';     
+                                var p14_1 =   '<%= pro14_2  %>';       
+                                var s14 =   '<%= sup14  %>';            
+                                var c14=   '<%= conf14  %>';
+
+                                
+                                document.getElementById("th0_1").innerHTML = p0_0;
+                                document.getElementById("th0_2").innerHTML = p0_1;
+                                document.getElementById("th0_3").innerHTML = s0;
+                                document.getElementById("th0_4").innerHTML = c0;
+
+                                document.getElementById("th1_1").innerHTML = p1_0;
+                                document.getElementById("th1_2").innerHTML = p1_1;
+                                document.getElementById("th1_3").innerHTML = s1;
+                                document.getElementById("th1_4").innerHTML = c1;
+
+                                document.getElementById("th2_1").innerHTML = p2_0;
+                                document.getElementById("th2_2").innerHTML = p2_1;
+                                document.getElementById("th2_3").innerHTML = s2;
+                                document.getElementById("th2_4").innerHTML = c2;
+
+                                document.getElementById("th3_1").innerHTML = p3_0;
+                                document.getElementById("th3_2").innerHTML = p3_1;
+                                document.getElementById("th3_3").innerHTML = s3;
+                                document.getElementById("th3_4").innerHTML = c3;
+
+                                document.getElementById("th4_1").innerHTML = p4_0;
+                                document.getElementById("th4_2").innerHTML = p4_1;
+                                document.getElementById("th4_3").innerHTML = s4;
+                                document.getElementById("th4_4").innerHTML = c4;
+
+                                document.getElementById("th5_1").innerHTML = p5_0;
+                                document.getElementById("th5_2").innerHTML = p5_1;
+                                document.getElementById("th5_3").innerHTML = s5;
+                                document.getElementById("th5_4").innerHTML = c5;
+
+                                document.getElementById("th6_1").innerHTML = p6_0;
+                                document.getElementById("th6_2").innerHTML = p6_1;
+                                document.getElementById("th6_3").innerHTML = s6;
+                                document.getElementById("th6_4").innerHTML = c6;
+
+                                document.getElementById("th7_1").innerHTML = p7_0;
+                                document.getElementById("th7_2").innerHTML = p7_1;
+                                document.getElementById("th7_3").innerHTML = s7;
+                                document.getElementById("th7_4").innerHTML = c7;
+
+                                document.getElementById("th8_1").innerHTML = p8_0;
+                                document.getElementById("th8_2").innerHTML = p8_1;
+                                document.getElementById("th8_3").innerHTML = s8;
+                                document.getElementById("th8_4").innerHTML = c8;
+
+                                document.getElementById("th9_1").innerHTML = p9_0;
+                                document.getElementById("th9_2").innerHTML = p9_1;
+                                document.getElementById("th9_3").innerHTML = s9;
+                                document.getElementById("th9_4").innerHTML = c9;
+
+                                document.getElementById("th10_1").innerHTML = p10_0;
+                                document.getElementById("th10_2").innerHTML = p0_1;
+                                document.getElementById("th10_3").innerHTML = s10;
+                                document.getElementById("th10_4").innerHTML = c10;
+
+                                document.getElementById("th11_1").innerHTML = p11_0;
+                                document.getElementById("th11_2").innerHTML = p11_1;
+                                document.getElementById("th11_3").innerHTML = s11;
+                                document.getElementById("th11_4").innerHTML = c11;
+                                
+                                document.getElementById("th12_1").innerHTML = p12_0;
+                                document.getElementById("th12_2").innerHTML = p12_1;
+                                document.getElementById("th12_3").innerHTML = s12;
+                                document.getElementById("th12_4").innerHTML = c12;
+
+                                document.getElementById("th13_1").innerHTML = p13_0;
+                                document.getElementById("th13_2").innerHTML = p13_1;
+                                document.getElementById("th13_3").innerHTML = s13;
+                                document.getElementById("th13_4").innerHTML = c13;
+
+                                document.getElementById("th14_1").innerHTML = p14_0;
+                                document.getElementById("th14_2").innerHTML = p14_1;
+                                document.getElementById("th14_3").innerHTML = s14;
+                                document.getElementById("th14_4").innerHTML = c14;
+                                
+                                
+
+
+
+                            </script>
+                            
+                        </tfoot>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </table>
+
+    </body>
+
 </html>

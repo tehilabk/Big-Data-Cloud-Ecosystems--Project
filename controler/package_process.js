@@ -31,7 +31,7 @@ setInterval(async function ()
      down_base();
   
   // }
-}, 30000);
+}, 45000);
 
 
 

@@ -129,27 +129,48 @@ app.post("/statistic_data", (req, res) => {
 })
 app.post("/update_bigml", (req, res) => {
   const body = req.body;
-  var pack = JSON.parse(body.package);
-  bigml_obj = pack;
+
+  var pack= JSON.parse(body.package);
+ 
+
+  for(let i=0;i<bigml_obj.length;i++){
+    for(let j=0 ;j<bigml_obj[i].product.length ; j++){
+      
+      bigml_obj[i].product[j]=pack[i].products[j];
+    }
+     
+    bigml_obj[i].conf=pack[i].conf;
+    bigml_obj[i].sup=pack[i].sup;
+  }
+
+
 })
 app.get('/recomendations.ejs', (req, res) => {
-  // var data={
-  //   bigml:[
-  //     {list:[],conf:,sup:},
+  var data={
+    bigml_list:[
+      [product=bigml_obj[0].product,sup=bigml_obj[0].sup,conf=bigml_obj[0].conf],
+      [product=bigml_obj[1].product,sup=bigml_obj[1].sup,conf=bigml_obj[1].conf],
+      [product=bigml_obj[2].product,sup=bigml_obj[2].sup,conf=bigml_obj[2].conf],
+      [product=bigml_obj[3].product,sup=bigml_obj[3].sup,conf=bigml_obj[3].conf],
+      [product=bigml_obj[4].product,sup=bigml_obj[4].sup,conf=bigml_obj[4].conf],
+      [product=bigml_obj[5].product,sup=bigml_obj[5].sup,conf=bigml_obj[5].conf],
+      [product=bigml_obj[6].product,sup=bigml_obj[6].sup,conf=bigml_obj[6].conf],
+      [product=bigml_obj[7].product,sup=bigml_obj[7].sup,conf=bigml_obj[7].conf],
+      [product=bigml_obj[8].product,sup=bigml_obj[8].sup,conf=bigml_obj[8].conf],
+      [product=bigml_obj[9].product,sup=bigml_obj[9].sup,conf=bigml_obj[9].conf],
+      [product=bigml_obj[10].product,sup=bigml_obj[10].sup,conf=bigml_obj[10].conf],
+      [product=bigml_obj[11].product,sup=bigml_obj[11].sup,conf=bigml_obj[11].conf],
+      [product=bigml_obj[12].product,sup=bigml_obj[12].sup,conf=bigml_obj[12].conf],
+      [product=bigml_obj[13].product,sup=bigml_obj[13].sup,conf=bigml_obj[13].conf],
+      [product=bigml_obj[14].product,sup=bigml_obj[14].sup,conf=bigml_obj[14].conf],
+    ]
+  }
 
 
-  //   ]
 
 
 
-
-  // }
-
-
-
-
-
-  res.render("pages/recomendation");
+  res.render("pages/recomendation",data);
 });
 
 app.get('/products.ejs', (req, res) => {

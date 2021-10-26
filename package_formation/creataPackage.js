@@ -16,7 +16,6 @@ async function package_create() {
 async function package_Simulator() {
 
   corrent_package.tracking_number = await get_track_number();
-  corrent_package.received = 0;// did not received by the customer yet
   var num_items = Math.floor(Math.random() * max_items) + 1;
   insert_items(num_items);
   if (num_items < 3) {

@@ -17,13 +17,9 @@ module.exports = async function qrcode_create(package_json, track_num) {
 	try {
 		await QRCode.toFile(file_name, text);
 		console.log("create qrcode png")
-		ok_go =  await firebase_up(num);
+		 await firebase_up(num);
 	} catch (err) {
 		console.log(err);
-	}
-	finally{
-		 fs.unlink(file_name);
-		return 1;
 	}
 }
 

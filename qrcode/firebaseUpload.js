@@ -24,12 +24,6 @@ module.exports = async function upload_firebase(track_num) {
 catch(err){
 console.log(err);
 }
-finally{
-return 1;
-}
-
-
-
 
 }
 server.listen(8088, function () {

@@ -15,9 +15,9 @@ async function bigml_process() {
     }
     finally {
        json_obj = JSON.stringify(obj_from_json)
-        // await axios.post('http://localhost:3000/update_bigml',{
-        //     package: json_obj,
-        // });
+        await axios.post('http://localhost:3000/update_bigml',{
+            package: json_obj,
+        });
         console.log(obj_from_json);
     }
 }

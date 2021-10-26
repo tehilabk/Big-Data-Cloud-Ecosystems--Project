@@ -27,11 +27,17 @@ setInterval(async function ()
   console.log(num);
 
   await redis_func(json_pack, num);
- ok_go =  await qrcode_gen(json_pack, num);
+  await qrcode_gen(json_pack, num);
  i++;
   // }
 }, 1000);
 
+setInterval(async function ()
+// async function run_go()
+{
+ down_base();
+  // }
+}, 10000);
 
       // run_go();
 // module.exports = { run_package };

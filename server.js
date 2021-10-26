@@ -22,14 +22,14 @@ var general_info = [package_count = [Tel_Aviv = 0, Haifa = 0, Jerusalem = 0, Wes
 size_count = [small = 0, medium = 0, big = 0]];
 
 var bigml_obj =[ 
-  [product=["hdmi","hell"],sup=0,conf=0],[product=["hdmi","hell"],sup=0,conf=0],
-  [product=["hdmi","hell"],sup=0,conf=0],[product=["hdmi","hell"],sup=0,conf=0]
-  ,[product=["hdmi","hell"],sup=0,conf=0],[product=["hdmi","hell"],sup=0,conf=0]
-  ,[product=["hdmi","hell"],sup=0,conf=0],[product=["hdmi","hell"],sup=0,conf=0]
-  ,[product=["hdmi","hell"],sup=0,conf=0],[product=["hdmi","hell"],sup=0,conf=0]
-  ,[product=["hdmi","hell"],sup=0,conf=0],[product=["hdmi","hell"],sup=0,conf=0]
-  ,[product=["hdmi","hell"],sup=0,conf=0],[product=["hdmi","hell"],sup=0,conf=0]
-  ,[product=["hdmi","hell"],sup=0,conf=0]];
+  {product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0},
+  {product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
+  ,{product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
+  ,{product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
+  ,{product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
+  ,{product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
+  ,{product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
+  ,{product:["hdmi","hell"],conf:0,sup:0}];
 
 app.use(express.static('public'))
 app.use(express.json())

@@ -101,13 +101,26 @@ app.post("/update_data", (req, res) => {
   var dis_pos = get_district(pack.district);
   var item_size = get_pack_size(pack.items_list.length);
   var tax_tag = pack.tax_tag;
-  numOfPack[dis_pos] = numOfPack[dis_pos] + 1;
-  packSize[dis_pos][item_size] = packSize[dis_pos][item_size] + 1;
-  packtax[dis_pos][tax_tag] = packtax[dis_pos][tax_tag] + 1;
-  
+  numOfPack[dis_pos] ++;
+  packSize[dis_pos][item_size] ++;
+ packtax[dis_pos][tax_tag] ++;
+ 
 })
-app.post("/delete_all", (req, res) => {
-  delete_all_pack();
+app.post("/delete_all", (res) => {
+  console.log("start delete !!!!!!!!!!!!!!!!!!!!!!!!!")
+  for (let index = 0; index < numOfPack.length; index++) {
+    numOfPack[index] = 0; 
+  }
+  for (let i = 0; i < packSize.length; i++) {
+    for (let j = 0; j < 3; j++) {
+      packSize[i][j] = 0;
+    }
+  }
+  for (let i = 0; i < packtax.length; i++) {
+    for (let j = 0; j < 3; j++) {
+     packtax[i][j] = 0;
+    }
+  }
 })
 app.post("/statistic_data", (req, res) => {
   const body = req.body;
@@ -151,21 +164,7 @@ app.get('/setData/:districtId/:value', function (req, res) {
   io.emit('newdata', { districtId: req.params.districtId, value: req.params.value })
   res.send(req.params.value)
 })
-async function delete_all_pack() {
-  for (let index = 0; index < numOfPack.length; index++) {
-    numOfPack[index] = 0;
-  }
-  for (let i = 0; i < packSize.length; i++) {
-    for (let j = 0; j < 3; j++) {
-      packSize[i][j] = 0;
-    }
-  }
-  for (let i = 0; i < packtax.length; i++) {
-    for (let j = 0; j < 3; j++) {
-      packtax[i][j] = 0;
-    }
-  }
-}
+
 function get_pack_size(items_size) {
   var size;
   if (items_size <= 3) {

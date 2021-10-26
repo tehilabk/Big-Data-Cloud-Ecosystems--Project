@@ -8,28 +8,12 @@ var sub = redis.createClient()
 var myobj;
 
 // for explanations : https://www.sitepoint.com/using-redis-node-js/
-async function delete_key(key) {
-    redisClient.del(key, function (err, reply) {
-        console.log("delete key " + key );
-  
-    });
-    redisClient.publish("update", key, function (err) {
-        if (err) {
-            console.log(err);
-        }
-        else
-            console.log('updated')
+module.exports =  async function delete_key() {
+    redisClient.flushdb( function (err, succeeded) {
+        console.log(succeeded); // will be true if successfull
     });
 
-}
-async function publish_delete() {
-    redisClient.publish("delete_all", "ok", function (err) {
-        if (err) {
-            console.log(err);
-        }
-        else
-            console.log('delete')
-    });
+
 }
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -45,4 +29,3 @@ server.listen(6063, function () {
     console.log('Sender is running on port 6063');
 });
 
-module.exports = { delete_key, publish_delete };

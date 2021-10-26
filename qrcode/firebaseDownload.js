@@ -6,12 +6,10 @@ const { number } = require('mathjs');
 const { nextTick } = require('process');
 var server = require('http').Server(app);
 const qrcode_read = require("../qrcode/qrcodeReader.js");
-const redis_del = require("../redis/RedisDeleteInfo.js");
 const redis_func = require("../redis/RedisDeleteInfo.js");
-
+var axios = require('axios').default;
 // module.exports = async
-
-module.exports = function get_all_files() {
+module.exports =async function get_all_files() {
   const storage = new Storage({
     keyFilename: "../qrcode/qr-package-firebase-adminsdk-h96h8-39f11ec4bc.json",
   });
@@ -23,23 +21,26 @@ module.exports = function get_all_files() {
     try {
       await delte_dir(dir);
       await create_dir(dir);
-      await redis_func.publish_delete("ok");
+      await redis_func();
+      axios.post('http://localhost:3000/delete_all');
+
       const [files] = await storage.bucket(bucketName).getFiles();
-      await Promise.all(files.map(async (file) => {
+      
+    files.map(async (file) => {
         try {
           let file_name = file.name;
-          var key = get_png_and_key(file_name,storage,bucketName);
+          await get_png_and_key(file_name, storage, bucketName);
         }
         catch (err) {
           console.log(err);
         }
-        finally {
-          await redis_func.delete_key(key);
-        }
-      }));
+      });
     }
     catch (err) {
       console.log(err);
+    }
+    finally{
+  //  delete_from_redis(list_key)
     }
   }
   deliv_process();
@@ -50,20 +51,18 @@ server.listen(8089, function () {
   console.log('firebase is running on port 8089');
 });
 
-async function get_png_and_key(file_name,storage,bucketName) {
+async function get_png_and_key(file_name, storage, bucketName) {
   try {
-    var key = file_name.replace('.png', '');
+  
     let destFilename = '../qrcode/downloaded_qrcode/' + file_name;
     let options = { destination: destFilename, };
     await storage.bucket(bucketName).file(file_name).download(options);
     // await read_key(file_name);
     await storage.bucket(bucketName).file(file_name).delete();
+     console.log("delete " +file_name );
   }
   catch (err) {
     console.log(err);
-  }
-  finally {
-    return key;
   }
 }
 
@@ -80,15 +79,4 @@ async function create_dir(dir) {
       console.log(err)
     }
   });
-}
-async function read_key(file_name) {
-  key = await qrcode_read.do_all(file_name);
-  return file_name.replace('.png', '');
-  try {
-    await qrcode_read.do_all(file_name);
-  }
-  catch
-  {
-    console.log("qr code read")
-  }
 }

@@ -5,7 +5,6 @@ var redis = require('redis');
 var redisClient = redis.createClient();
 var sub = redis.createClient()
 var mongo_in = require("../mongodb/mongoInsertData.js");
-var mongo_up = require("../mongodb/mongoUpdateData.js");
 var axios = require('axios').default;
 
 module.exports = async function reciv_data() {
@@ -28,25 +27,15 @@ module.exports = async function reciv_data() {
         });
     });
 
-    ;
+    
     redisClient.on("message", async function (channel, json_package) {
         if (channel == "insert") {
             mongo_in(json_package);
-            var pack_obj = JSON.parse(json_package);
-           await axios.post('http://localhost:3000/update_data',{
+            await axios.post('http://localhost:3000/update_data', {
                 package: json_package,
             });
-            
+
             console.log("mongo insert")
-        }
-        else if (channel == "update") {
-            mongo_up(key);
-            console.log("mongo update");
-        }
-        else {
-            axios.post('http://localhost:3000/delete_all',{
-                package: pack_obj,
-            });
         }
     });
 }

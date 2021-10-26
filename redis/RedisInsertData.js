@@ -23,11 +23,6 @@ module.exports = async function redis_update(json_package, key) {
      redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
         console.log(reply);
     });
-    
-    
-    
-
-  
 }
     // catch 404 and forward to error handler
     app.use(function (req, res, next) {

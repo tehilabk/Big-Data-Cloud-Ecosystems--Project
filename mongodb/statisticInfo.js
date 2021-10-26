@@ -1,4 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
+var axios = require('axios').default;
 const url = "mongodb+srv://liel_berniker:liel1995@cluster0.2ohvu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 var general_info = [package_count = [Tel_Aviv = 0, Haifa = 0, Jerusalem = 0, West_Bank = 0, Central = 0, South = 0, North = 0],
@@ -6,7 +7,7 @@ size_count = [small = 0, medium = 0, big = 0]];
 var dis_name = ["Tel Aviv", "Haifa", "Jerusalem", "West Bank", "Central", "South", "North"];
 var pack_size = ["small", "medium", "big"];
 
-async function mongodb_data() {
+module.exports =  async function mongodb_data() {
 
 
     const collection_name = "packages";
@@ -20,12 +21,15 @@ async function mongodb_data() {
     catch (err) {
         console.log(err);
     } finally {
-        console.log(general_info);
+        json_obj = JSON.stringify(general_info)
+        await axios.post('http://localhost:3000/statistic_data',{
+            package: json_obj,
+        });
     }
 
 
 }
-mongodb_data();
+
 
 
 async function mongodb_find_count(query, collection_name, db_name1, callback) {

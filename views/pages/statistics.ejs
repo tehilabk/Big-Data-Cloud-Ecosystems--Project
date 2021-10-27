@@ -4,7 +4,8 @@
 <head>
   <%- include("../partials/headers") %>
     <!--ariel ws-->
-    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script src="statistic.js"></script>
     <script>
       var socket = io.connect();
       function setWs() {
@@ -20,6 +21,7 @@
 </head>
 
 <body class="" onload="setWs()" style="background-color:rgb(201, 178, 177);">
+ 
   <div class="wrapper ">
     <%- include("../partials/sidebar") %>
 
@@ -37,25 +39,11 @@
           </div>
         </div>
 
-        <div style="position:absolute; width:100%; height:100%;">
-          <button id="btn" style="margin-left:85%">
-            Refrash Data
-          </button>
-        </div>
-
       </div>
   </div>
   <%- include("../partials/dashcode") %>
-
-    <script type="text/javascript">
-      $("#btn").click(function () {
-        location.reload(true);
-      });
-
-    </script>
-
-
-
+   
+   
 </body>
 
 </html>

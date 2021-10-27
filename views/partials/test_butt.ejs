@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/coldPathDash-Dashboard.css">
+        <title>Document</title>
+    </head>
+<body>
+    <main class="main-section">
+            <div class="train-btn-wrapper">
+              <h1>Association Table</h1>
+              <button class="train-btn">Train</button>
+            </div>
+            <table classs="content-table">
+              <tr>
+                <th>Anticident</th>
+                <th>Consequent</th>
+                <th>Support</th>
+                <th>Confidence Score</th>
+              </tr>
+              <% if(associations.length == 0){ %>
+                <p>No Associations Found, Please Wait and Press "Train"</p>
+              <% } else { %>
+              <% associations.forEach(function(association){ %>
+                <%- include ("../partials/tableRow", association) %>
+              <% }) }%>  
+            </table>
+    </main>
+    <script src="js/core/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

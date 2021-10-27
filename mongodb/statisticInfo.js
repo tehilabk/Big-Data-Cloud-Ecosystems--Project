@@ -7,12 +7,13 @@ size_count = [small = 0, medium = 0, big = 0]];
 var dis_name = ["Tel Aviv", "Haifa", "Jerusalem", "West Bank", "Central", "South", "North"];
 var pack_size = ["small", "medium", "big"];
 
-module.exports =  async function mongodb_data() {
+ module.exports =  async function mongodb_data() {
 
 
     const collection_name = "packages";
     const db_name = "base1";
     try {
+        console.log("hello im in");
         general_info[0] = await get_for(dis_name.length, 0, collection_name, db_name, function () {
         });
         general_info[1] = await get_for(pack_size.length, 1, collection_name, db_name, function () {

@@ -7,7 +7,7 @@ size_count = [small = 0, medium = 0, big = 0]];
 var dis_name = ["Tel Aviv", "Haifa", "Jerusalem", "West Bank", "Central", "South", "North"];
 var pack_size = ["small", "medium", "big"];
 
-module.exports =  async function mongodb_data() {
+async function mongodb_data() {
 
 
     const collection_name = "packages";
@@ -26,9 +26,11 @@ module.exports =  async function mongodb_data() {
             package: json_obj,
         });
     }
-
+    console.log("njbjkvycuk")
 
 }
+
+mongodb_data()
 
 
 

@@ -17,7 +17,7 @@
     <!--ariel ws -->
 </head>
 
-<body class="" onload="setWs()" style="background-color:rgb(201, 178, 177);">
+<body class="" onload="setWs()" style="background-color:rgb(34, 34, 41);">
   <div class="wrapper ">
     <%- include("../partials/sidebar") %>
 
@@ -31,31 +31,18 @@
           </div>
         </div>
 
-        <div style="position:absolute; width:100%; height:100%;">
-          <button id="btn" style="margin-left:85%">
-            Refrash Data
-          </button>
-        </div>
-
       </div>
   </div>
   <%- include("../partials/dashcode") %>
     table
 
-    <script type="text/javascript">
-      $("#btn").click(function () {
-        location.reload(true);
-      });
-    </script>
-
-<script>
-  window.setInterval('refresh()', 45000); 
-
-  // Refresh or reload page.
-  function refresh() {
-      window .location.reload();
-  }
-</script>
+    <script>
+      window.setInterval('refresh()', 45000); 	
+      // Refresh or reload page.
+      function refresh() {
+          window .location.reload();
+      }
+  </script>
 </body>
 
 </html>

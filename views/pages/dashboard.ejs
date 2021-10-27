@@ -28,12 +28,12 @@ The above copyright notice and this permission notice shall be included in all c
     <!--ariel ws -->
 </head>
 
-  <body class="" onload="setWs()" style="background-color:rgb(201, 178, 177);">
+  <body class="" onload="setWs()" style="background-color:rgb(34, 34, 41);">
     <div class="wrapper ">
       <%- include("../partials/sidebar") %>
         <div class="main-panel">
             <div class="content">
-              <h2 style= "color: rgb(73, 76, 78);">~information about the packages that has been sent~</h2>
+              <center><h1 style= "color:  white;  font-family:Cambria  ">Information about the <br >  packages that has been sent</br>  </h1> </center>
               <div class="container-fluid">
                 <div class="row">
                   <!--start-->
@@ -44,7 +44,7 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
                 <div class="row">
                   <%- include("../partials/graphs") %>
-                  
+                
                  
                 </div>
                 
@@ -55,8 +55,7 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
     <%- include("../partials/dashcode") %>  
     <script>
-      window.setInterval('refresh()', 20000); 
-  
+      window.setInterval('refresh()', 15000); 	
       // Refresh or reload page.
       function refresh() {
           window .location.reload();

@@ -12,12 +12,22 @@ async function package_create() {
   await package_Simulator();
   return corrent_package;
 }
-
+// create a package with the information:
+// - tracking_number
+// - items_list - contain an items
+// - tax_tag - for the amount of tax pay
+// - total_price 
+// - size - is small/medium/big
+// - district - one of the sevem districts
+// - address - contain the address 
+// cretae the package and return it
 async function package_Simulator() {
 
   corrent_package.tracking_number = await get_track_number();
   var num_items = Math.floor(Math.random() * max_items) + 1;
+  
   insert_items(num_items);
+  // fing the package size by items
   if (num_items < 3) {
     corrent_package.size = "small";
   }
@@ -31,6 +41,7 @@ async function package_Simulator() {
   get_distract_and_address(num_district);
 
 }
+//  random track number
  async function get_track_number() { // get a uniqe number for the package tracking number
   var digits = 10;
   var num_length = 12;
@@ -40,6 +51,7 @@ async function package_Simulator() {
   }
   return track_num;
 }
+// insert items to the package randomly
 function insert_items(num_item) { // insert items to the package 
       let total_price = 0;
       corrent_package.items_list = [];
@@ -61,6 +73,7 @@ function insert_items(num_item) { // insert items to the package
       }
       corrent_package.total_price = total_price;
     }
+    // get the address bt the district
 function get_distract_and_address(district_num) { // get the district and random an address
       var address_num = Math.floor(Math.random() * (district - 1));
       switch (district_num) {

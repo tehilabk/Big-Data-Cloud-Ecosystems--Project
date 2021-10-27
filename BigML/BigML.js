@@ -23,6 +23,7 @@ module.exports = async function bigml_connect(callback) {
                   model.get(modelInfo.resource,
                     true,
                     'only_model=true;limit=-1',
+                    // create a json with the information of the association about the products
                    async function (error, resource) {
                       if (!error && resource) {
                         fs.writeFileSync('../BigML/dataset.json', JSON.stringify(resource, null, "  "));

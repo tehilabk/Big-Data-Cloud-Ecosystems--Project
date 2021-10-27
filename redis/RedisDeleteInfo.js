@@ -8,6 +8,7 @@ var sub = redis.createClient()
 var myobj;
 
 // for explanations : https://www.sitepoint.com/using-redis-node-js/
+// delete information from redis
 module.exports =  async function delete_key() {
     redisClient.flushdb( function (err, succeeded) {
         console.log(succeeded); // will be true if successfull

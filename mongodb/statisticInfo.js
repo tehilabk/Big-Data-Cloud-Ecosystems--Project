@@ -6,14 +6,11 @@ var general_info = [package_count = [Tel_Aviv = 0, Haifa = 0, Jerusalem = 0, Wes
 size_count = [small = 0, medium = 0, big = 0]];
 var dis_name = ["Tel Aviv", "Haifa", "Jerusalem", "West Bank", "Central", "South", "North"];
 var pack_size = ["small", "medium", "big"];
-
+// create an object that contain an info about the packages in mongodb and send the datat to the server
  module.exports =  async function mongodb_data() {
-
-
     const collection_name = "packages";
     const db_name = "base1";
     try {
-        console.log("hello im in");
         general_info[0] = await get_for(dis_name.length, 0, collection_name, db_name, function () {
         });
         general_info[1] = await get_for(pack_size.length, 1, collection_name, db_name, function () {
@@ -32,7 +29,7 @@ var pack_size = ["small", "medium", "big"];
 }
 
 
-
+// find the information from the mongodb by the query
 async function mongodb_find_count(query, collection_name, db_name1, callback) {
 
    var db = await MongoClient.connect(url, { useNewUrlParser: true })
@@ -53,7 +50,7 @@ async function mongodb_find_count(query, collection_name, db_name1, callback) {
 }
 
 
-
+// go over all the information base on the position of the information
 async function get_for(size, pos_1,collection_name, db_name, callback) {
     var cur_list = [];
     try {

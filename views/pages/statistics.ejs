@@ -20,7 +20,7 @@
     <!--ariel ws -->
 </head>
 
-<body class="" onload="setWs()" style="background-color:rgb(201, 178, 177);">
+<body class="" onload="setWs()" style="background-color:rgb(34, 34, 41);">
  
   <div class="wrapper ">
     <%- include("../partials/sidebar") %>
@@ -31,8 +31,8 @@
 
         <div class="content">
           <header>
-            <h1>General information about the packages </h1>
-            <p>in this page you can view data about all the packages that has been order </p>
+            <h1 style=" color:white;  font-family:Cambria" >General information about the packages </h1>
+            <p style=" color:white">in this page you can view data about all the packages that has been order </p>
           </header>
           <div>
             <%- include("../partials/statisticsGraph") %>
@@ -42,14 +42,14 @@
       </div>
   </div>
   <%- include("../partials/dashcode") %>
-   
   <script>
-    window.setInterval('refresh()', 40000); 	
+    window.setInterval('refresh()', 30000); 	
     // Refresh or reload page.
     function refresh() {
         window .location.reload();
     }
 </script>
+   
 </body>
 
 </html>

@@ -54,6 +54,14 @@ The above copyright notice and this permission notice shall be included in all c
         </div>
     </div>
     <%- include("../partials/dashcode") %>  
+    <script>
+      window.setInterval('refresh()', 20000); 
+  
+      // Refresh or reload page.
+      function refresh() {
+          window .location.reload();
+      }
+  </script>
   </body>
 
 </html>

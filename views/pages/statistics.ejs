@@ -43,7 +43,13 @@
   </div>
   <%- include("../partials/dashcode") %>
    
-   
+  <script>
+    window.setInterval('refresh()', 40000); 	
+    // Refresh or reload page.
+    function refresh() {
+        window .location.reload();
+    }
+</script>
 </body>
 
 </html>

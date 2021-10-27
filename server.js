@@ -104,11 +104,10 @@ app.post("/update_data", (req, res) => {
   numOfPack[dis_pos] ++;
   packSize[dis_pos][item_size] ++;
  packtax[dis_pos][tax_tag] ++;
-//  res.redirect(req.get('pages/dashboard'));
+
 
 })
 app.post("/delete_all", (res) => {
-  console.log("start delete !!!!!!!!!!!!!!!!!!!!!!!!!")
   for (let index = 0; index < numOfPack.length; index++) {
     numOfPack[index] = 0; 
   }

@@ -9,10 +9,11 @@ var sub = redis.createClient()
 var myobj;
 
 // for explanations : https://www.sitepoint.com/using-redis-node-js/
+// insert information to redis by the key the function gets , and publish an insert item
 module.exports = async function redis_update(json_package, key) {
 
     myobj = JSON.parse(json_package);
-    // Store string  
+    // publish that redis has been inserted item
     redisClient.publish("insert", json_package, function (err){
         if(err){
             console.log(err);
@@ -20,6 +21,7 @@ module.exports = async function redis_update(json_package, key) {
         else 
         console.log('published')
     });
+    // Store json by key in redis db
      redisClient.set(key, JSON.stringify(myobj), function (err, reply) {
         console.log(reply);
     });

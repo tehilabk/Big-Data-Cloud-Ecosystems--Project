@@ -4,7 +4,10 @@ var read_json = require('../BigML/readjson.js');
 const bigml = require('bigml');
 var axios = require('axios').default;
 var glob_ok;
-async function bigml_process() {
+module.exports = async function bigml_process() {
+    //  crate a csv file with the information from mongodb
+    // connect to the bigml ,create association and create a json
+    // create an object from the json
     try {
         glob_ok = await csv_create(function () { });
         glob_ok = await bigml_cunnect(function () { });
@@ -21,4 +24,3 @@ async function bigml_process() {
         console.log(obj_from_json);
     }
 }
-bigml_process();

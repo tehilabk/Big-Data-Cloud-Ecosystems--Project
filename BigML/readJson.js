@@ -6,12 +6,13 @@ const { SSL_OP_TLS_D5_BUG } = require('constants');
 
     try {
 
-        const rowdata = fs.readFileSync('./dataset.json', 'utf8');
+        const rowdata = fs.readFileSync('../BigML/dataset.json', 'utf8');
 
         // parse JSON string to JSON object
         const data = JSON.parse(rowdata);
 
-
+        //  determine the form of the object list
+        // crate a list base on the json information, with the products with the top suppurt and confidence
         var items = data['object']['associations']['items'];
         var i = 0;
         data['object']['associations']['rules'].map(obj => {

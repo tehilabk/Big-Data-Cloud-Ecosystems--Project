@@ -27,8 +27,9 @@ module.exports = async function reciv_data() {
         });
     });
 
-    
+    // subscribe to a publish 
     redisClient.on("message", async function (channel, json_package) {
+        // when use the channel insert send data to view and call mongodb functuon of insert
         if (channel == "insert") {
             mongo_in(json_package);
             await axios.post('http://localhost:3000/update_data', {

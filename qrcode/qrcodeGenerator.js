@@ -6,6 +6,7 @@ let file_name;
 let num;
 var ok_go;
 const firebase_up = require("../qrcode/firebaseUpload.js");
+// generate a qrcode
 module.exports = async function qrcode_create(package_json, track_num) {
 
 		// directory path
@@ -13,6 +14,7 @@ module.exports = async function qrcode_create(package_json, track_num) {
 		num = track_num;
 		ok_go =  await generateQR(file_name,package_json,num);
 }
+// generate a qrcode and upload it to firebase
  async function generateQR(file_name,text,num) {
 	try {
 		await QRCode.toFile(file_name, text);

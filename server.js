@@ -39,13 +39,13 @@ app.set('view engine', 'ejs')
 app.get('/dashboard.ejs', (req, res) => {
   var data = {
     cards: [
-      { districtId: "haifa", title: "HAIFA", value: numOfPack[1], unit: "packages", fotterIcon: "", fotterText: "נפח ממוצע", icon: "location_city" },
-      { districtId: "north", title: "NORTH", value: numOfPack[6], unit: "packages", fotterIcon: "", fotterText: "נפח ממוצע", icon: "cloud_queue" },
-      { districtId: "central", title: "CENTRAL", value: numOfPack[4], unit: "packages", fotterIcon: "", fotterText: "נפח ממוצע", icon: "time_to_leave" },
-      { districtId: "south", title: "SOUTH", value: numOfPack[5], unit: "packages", fotterIcon: "", fotterText: "נפח ממוצע", icon: "filter_hdr" },
-      { districtId: "jerusalem", title: "JERUSALEM", value: numOfPack[2], unit: "packages", fotterIcon: "", fotterText: "נפח ממוצע", icon: "account_balance" },
-      { districtId: "tel-aviv", title: "TEL-AVIV", value: numOfPack[0], unit: "packages", fotterIcon: "", fotterText: "נפח ממוצע", icon: "domain" },
-      { districtId: "west-bank", title: "WEST-BENK", value: numOfPack[3], unit: "packages", fotterIcon: "", fotterText: "נפח ממוצע", icon: "filter_b_and_w" }
+      { districtId: "haifa", title: "HAIFA", value: numOfPack[1], unit: "packages", fotterIcon: "", fotterText: "currently sending", icon: "location_city" },
+      { districtId: "north", title: "NORTH", value: numOfPack[6], unit: "packages", fotterIcon: "", fotterText: "currently sending", icon: "cloud_queue" },
+      { districtId: "central", title: "CENTRAL", value: numOfPack[4], unit: "packages", fotterIcon: "", fotterText: "currently sending", icon: "time_to_leave" },
+      { districtId: "south", title: "SOUTH", value: numOfPack[5], unit: "packages", fotterIcon: "", fotterText: "currently sending", icon: "filter_hdr" },
+      { districtId: "jerusalem", title: "JERUSALEM", value: numOfPack[2], unit: "packages", fotterIcon: "", fotterText: "currently sending", icon: "account_balance" },
+      { districtId: "tel-aviv", title: "TEL-AVIV", value: numOfPack[0], unit: "packages", fotterIcon: "", fotterText: "currently sending", icon: "domain" },
+      { districtId: "west-bank", title: "WEST-BENK", value: numOfPack[3], unit: "packages", fotterIcon: "", fotterText: "currently sending", icon: "filter_b_and_w" }
     ],
     sizes: [
       { title: 'center', small: packSize[4][0], medium: packSize[4][1], large: packSize[4][2] },

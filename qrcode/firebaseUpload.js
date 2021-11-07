@@ -4,6 +4,7 @@ const fileSystem = require("fs");
 var app = require('express')();
 const { number } = require('mathjs');
 var server = require('http').Server(app);
+// connect and upload a png by path to firebase
 module.exports = async function upload_firebase(track_num) {
     // const app = new express();
 

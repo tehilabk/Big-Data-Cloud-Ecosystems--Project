@@ -1,10 +1,13 @@
 # Tracking Shipments Simulator
 
 
+-----------------------------------------------------------------------------------------------------
+
 ![image](https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/diagram.PNG)
 
 
 
+-----------------------------------------------------------------------------------------------------
 
 To run the program on the localhost in Windows:
 
@@ -12,8 +15,16 @@ To run the program on the localhost in Windows:
 2. install from [redis site](https://hub.docker.com/_/redis) the redis image.
 3. run Redis image on Docker with the 6379 port.
 4. run command `$ node app.js` or `$ npm start` in the program terminal.
-5. go to http://localhost:3000 and have fun 😊
+5. go to  http://localhost:3000/dashboard.ejs and have fun 😊
 
+
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+## :question: *About:*
+### The project is a system which simulates shipment services.
 • The system enable viewing the characteristics of packages that are on their way to Israel: the display is organized in a district section, and shows a number
 Packages along the way and you can also request a graph showing the size distribution and tax billing nature of a particular district.
 We built a simulator that simulates a tracking shipments with details of Packages that send to an address in a particular district,
@@ -30,9 +41,9 @@ The data from MongoDB will be taken and saved in a csv file that will be sent to
 
 ![image](https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/bigml.PNG)
 
-• MongoDB (examle):
+*__HOT-LINE:__  We'll display the data from Redis' cache in the Dashboard for every package which is departed to it's destination and update that data in Real-time. The Dashboard also includes statistics such as number of packages per country district, charts and graphs of packages' size distribution per district and type of tax billing distribution per district.*
 
-![image](https://user-images.githubusercontent.com/57085913/126963373-3e81fdf1-60e5-43da-8909-b6264629e12d.png)
+*__COLD-LINE:__  The packages' information will also be stored in MongoDB database service as history of all shipments. We'll use the data from MongoDB to generate a unique CSV file which holds only the information about the packages' items, the CSV file will be exported to BigML service in order to generate an Associations Model based on Apriori algorithm for frequent item set mining and association rule learning over relational databases, this model will get us prediction of support and confidence for every item.*
 
 
 

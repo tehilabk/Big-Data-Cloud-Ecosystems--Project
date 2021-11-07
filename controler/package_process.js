@@ -4,6 +4,7 @@ const qrcode_gen = require("../qrcode/qrcodeGenerator.js");
 const redis_func = require("../redis/RedisInsertData.js");
 const redis_sub = require("../redis/RedissubscribetData.js");
 const down_base = require("../qrcode/firebaseDownload.js");
+const statistic = require("../mongodb/statisticInfo.js");
 const fs = require("fs");
 var flag = true;
 var i = 0;
@@ -23,7 +24,7 @@ setInterval(async function ()
     await redis_func(json_pack, num);
     await qrcode_gen(json_pack, num);
   // }
-}, 2000);
+},1500);
 
 setInterval(async function ()
 // async function run_go()
@@ -33,7 +34,13 @@ setInterval(async function ()
   // }
 }, 45000);
 
-
+setInterval(async function ()
+// async function run_go()
+{
+     statistic();
+  
+  // }
+}, 35000);
 
 
       // run_go();

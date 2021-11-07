@@ -6,30 +6,30 @@ const socketIO = require('socket.io');
 const port = 3000;
 
 var numOfPack = [
-  Tel_Aviv = 5, Haifa = 0, Jerusalem = 0, West_Bank = 0, Central = 0, South = 0, North = 0
+  Tel_Aviv = 2, Haifa = 3, Jerusalem = 1, West_Bank = 3, Central = 1, South = 2, North = 1
 ];
-var packSize = [Tel_Aviv = [small = 33, medium = 80, big = 827], Haifa = [small = 0, medium = 0, big = 0],
-Jerusalem = [small = 0, medium = 0, big = 0], West_Bank = [small = 0, medium = 0, big = 0],
-Central = [small = 3, medium = 3, big = 3], South = [small = 0, medium = 0, big = 0],
-North = [small = 0, medium = 0, big = 0]];
+var packSize = [Tel_Aviv = [small = 1, medium = 0, big = 1], Haifa = [small = 1, medium = 1, big = 1],
+Jerusalem = [small = 1, medium = 0, big = 0], West_Bank = [small = 3, medium = 0, big = 0],
+Central = [small =1, medium = 0, big = 0], South = [small = 1, medium = 1, big = 0],
+North = [small = 1, medium = 0, big = 0]];
 
-var packtax = [Tel_Aviv = [low_75 = 0, low_500 = 0, high_500 = 0], Haifa = [low_75 = 0, low_500 = 0, high_500 = 0],
-Jerusalem = [low_75 = 0, low_500 = 0, high_500 = 0], West_Bank = [low_75 = 0, low_500 = 0, high_500 = 0],
-Central = [low_75 = 0, low_500 = 0, high_500 = 0], South = [low_75 = 0, low_500 = 0, high_500 = 0],
-North = [low_75 = 0, low_500 = 0, high_500 = 0]];
+var packtax = [Tel_Aviv = [low_75 = 1, low_500 = 0, high_500 = 1], Haifa = [low_75 = 1, low_500 = 1, high_500 = 1],
+Jerusalem = [low_75 = 1, low_500 = 0, high_500 = 0], West_Bank = [low_75 = 1, low_500 = 2, high_500 = 0],
+Central = [low_75 = 1, low_500 = 0, high_500 = 0], South = [low_75 = 0, low_500 = 1, high_500 = 1],
+North = [low_75 = 1, low_500 = 0, high_500 = 0]];
 
-var general_info = [package_count = [Tel_Aviv = 0, Haifa = 0, Jerusalem = 0, West_Bank = 0, Central = 0, South = 0, North = 0],
-size_count = [small = 0, medium = 0, big = 0]];
+var general_info = [package_count = [Tel_Aviv = 50, Haifa = 20, Jerusalem = 50, West_Bank = 40, Central = 56, South = 80, North = 34],
+size_count = [small = 47, medium = 89, big = 78]];
 
 var bigml_obj =[ 
-  {product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0},
-  {product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
-  ,{product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
-  ,{product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
-  ,{product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
-  ,{product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
-  ,{product:["hdmi","hell"],conf:0,sup:0},{product:["hdmi","hell"],conf:0,sup:0}
-  ,{product:["hdmi","hell"],conf:0,sup:0}];
+  {product:["hdmi","Headphone"],conf:0.08746,sup:0.0666},{product:["Smartwatch","Auxcable"],conf:0.0864,sup:0.0526},
+  {product:["Mousepad","Diskonkey"],conf:0.07546,sup:0.04214},{product:["Phonecharger","Xbox"],conf:0.07124,sup:0.04115}
+  ,{product:["hdmi","Phonecharger"],conf:0.0755,sup:0.03232},{product:["Speaker","Diskonkey"],conf:0.07334,sup:0.031565}
+  ,{product:["Spliter","screen"],conf:0.06434,sup:0.0294646},{product:["Mousepad","Smartwatch"],conf:0.062554,sup:0.02743}
+  ,{product:["Speaker","TV"],conf:0.060023,sup:0.0263453},{product:["Headphone","Mouse"],conf:0.05676,sup:0.025353}
+  ,{product:["Xbox","Diskonke"],conf:0.05423,sup:0.02346},{product:["Phonecharger","Auxcable"],conf:0.05103,sup:0.02244}
+  ,{product:["Mouse","hdmi"],conf:0.04872,sup:0.020453},{product:["hdmi","Extender"],conf:0.043232,sup:0.01924}
+  ,{product:["Headphone","TV"],conf:0.04223,sup:0.015475}];
 
 app.use(express.static('public'))
 app.use(express.json())
@@ -104,10 +104,10 @@ app.post("/update_data", (req, res) => {
   numOfPack[dis_pos] ++;
   packSize[dis_pos][item_size] ++;
  packtax[dis_pos][tax_tag] ++;
- 
+
+
 })
 app.post("/delete_all", (res) => {
-  console.log("start delete !!!!!!!!!!!!!!!!!!!!!!!!!")
   for (let index = 0; index < numOfPack.length; index++) {
     numOfPack[index] = 0; 
   }

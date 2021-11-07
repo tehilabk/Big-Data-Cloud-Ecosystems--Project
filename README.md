@@ -23,7 +23,7 @@ To run the program on the localhost in Windows:
 -----------------------------------------------------------------------------------------------------
 
 
-## :question: *About:*
+## *About:*
 ### The project is a system which simulates shipment services.
 • The system enable viewing the characteristics of packages that are on their way to Israel: the display is organized in a district section, and shows a number
 Packages along the way and you can also request a graph showing the size distribution and tax billing nature of a particular district.

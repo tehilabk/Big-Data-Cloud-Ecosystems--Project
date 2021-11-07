@@ -18,7 +18,7 @@ To run the program on the localhost in Windows:
 5. go to  http://localhost:3000/dashboard.ejs and have fun 😊
 
 
-
+![image](https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/redis.jpeg)
 
 -----------------------------------------------------------------------------------------------------
 
@@ -35,15 +35,26 @@ such as: tracking Number, list of items, size (small, large, medium), tax charge
 • The simulator simulates scanning packages before sending them to Israel and will update their departure via message. To simulate arrival the simulator will generate
 Randomly a QRCODE sticker that will be stored in a cloud storage service.
 
+![image](https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/qrcode.jpeg)
+
+![image](https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/firebase.jpeg)
+
 In the dashboard we will display the information taken from the Redis that run on the Docker.
 
 The data from MongoDB will be taken and saved in a csv file that will be sent to bigML which we will use to create a learning model which will give us the prediction of support and confidence of all items.
 
 ![image](https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/bigml.PNG)
 
-*__HOT-LINE:__  We'll display the data from Redis' cache in the Dashboard for every package which is departed to it's destination and update that data in Real-time. The Dashboard also includes statistics such as number of packages per country district, charts and graphs of packages' size distribution per district and type of tax billing distribution per district.*
 
-*__COLD-LINE:__  The packages' information will also be stored in MongoDB database service as history of all shipments. We'll use the data from MongoDB to generate a unique CSV file which holds only the information about the packages' items, the CSV file will be exported to BigML service in order to generate an Associations Model based on Apriori algorithm for frequent item set mining and association rule learning over relational databases, this model will get us prediction of support and confidence for every item.*
+![image](https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/mongo.jpeg)
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+HOT-LINE: We'll display the data from Redis' cache in the Dashboard for every package which is departed to it's destination and update that data in Real-time. The Dashboard also includes statistics such as number of packages per country district, charts and graphs of packages' size distribution per district and type of tax billing distribution per district.
+
+COLD-LINE:  The packages' information will also be stored in MongoDB database service as history of all shipments. We'll use the data from MongoDB to generate a unique CSV file which holds only the information about the packages' items, the CSV file will be exported to BigML service in order to generate an Associations Model based on Apriori algorithm for frequent item set mining and association rule learning over relational databases, this model will get us prediction of support and confidence for every item.
 
 
 

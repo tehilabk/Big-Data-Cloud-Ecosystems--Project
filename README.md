@@ -14,8 +14,9 @@ To run the program on the localhost in Windows:
 1. install npm.
 2. install from [redis site](https://hub.docker.com/_/redis) the redis image.
 3. run Redis image on Docker with the 6379 port.
-4. run command `$ node app.js` or `$ npm start` in the program terminal.
-5. go to  http://localhost:3000/dashboard.ejs and have fun 😊
+4. run command `$ npm start` in the program terminal.
+5. run command `$ start controler\package_process.js>` in the program terminal.
+6. go to  http://localhost:3000/dashboard.ejs and have fun 😊
 
 
 ![image](https://github.com/tehilabk/Big-Data-Cloud-Ecosystems-Project/blob/master/public/images/redis.jpeg)
